@@ -1,6 +1,6 @@
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+The objective of this project is to showcase the increased performance and efficiency of using custom computing rather than a fixed processor architecture by bench-marking the FPGA implementation of deep learning kernels against the GPU implementation. Code created during this project will be given to the open source community to increase awareness of configurable hardware and demonstrate the utility of FPGAs for deep learning. In doing so, students will become more familiar with programming for an FPGA as well as applying deep learning in a real-world application: diabetic retinopathy. The project will also showcase the power of using deep CNNs for computer vision by creating a binary classification system for breast invasive carcinoma tissue images.
 
 ## Code Example
 
@@ -8,7 +8,12 @@ Show what the library does as concisely as possible, developers should be able t
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+We propose to create a "scalable," energy efficient method of deep machine learning that helps the diagnosis in the field of medicine with more accuracy and less time. We will be applying this method to classify severity in diabetic retinopathy images; in the field of cancer we will be applying this to breast invasive carcinoma for classifying the tumor grade or absence of tumor. <br  /> <br  />
+
+The implementation will be taking the most widely used machine learning open source algorithm that will be benchmarked against multiple implementations for energy efficiency study. Three of the most popular deep learning packages are Theano, Torch, and Caffe. We will select the most widely used open source software package that is used by the deep learning community and rewrite the kernels for a field-programmable gate array (FPGA) and compare it with other implementations (GPU) for energy efficiency study. All of the code will be shared with the open source community. 
+
+
+
 
 ## Installation
 
