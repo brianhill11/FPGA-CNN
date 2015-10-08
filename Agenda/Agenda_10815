@@ -3,6 +3,8 @@ Agenda for team meeting (Oct 8,2015)
   Meta Data Management System
     GitHub Repo:  Use for SCV
       - To be setup
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
 
     Use Gist for code snippit
 
