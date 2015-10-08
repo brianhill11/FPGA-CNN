@@ -30,6 +30,7 @@ Describe and show how to run the tests with code examples.
 ## Contributors
 
 Brian Hill
+Sophia Zhang
 
 ## License
 
