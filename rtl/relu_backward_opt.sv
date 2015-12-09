@@ -5,7 +5,6 @@ module relu_backward_opt( input   logic         clk,        //clock signal
                           output  reg   [31:0]  out_data);  //32-bit float
 
     parameter NEGATIVE_SLOPE = 0;
-    parameter WIDTH = 256;
   
     //at rising edge of clock
     always_ff @(posedge clk, negedge reset) begin 

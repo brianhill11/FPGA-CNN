@@ -22,7 +22,6 @@ module relu_backward_opt_tb();
     end
 
     relu_backward_opt #(.NEGATIVE_SLOPE(NEG_SLOPE)) relu( .clk(clk), .reset(reset), .in_data(a), .out_data(b) );
-    //relu_backward_opt relu( .clk(clk), .reset(reset), .in_data(a), .out_data(b) );
 
     int i;
     initial begin
