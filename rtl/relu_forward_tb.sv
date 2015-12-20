@@ -61,21 +61,32 @@ module relu_forward_tb();
 
                                 // if the last bit of the input value is equal to zero, then the
                                 // output should be the same as the input
-                                if($bitstoshortreal(a[31]) == 0e0) begin
+                                if($bitstoshortreal(a[j]) > 0e0) begin
                                         $display("The last bit %f is equal to zero: %b\n", a[j], a[j]);
-                                        $display("a[31]: %b c: %b\n", a[j], b[j]);
+                                        $display("The output should equal the input. a[31]: %b c: %b\n", a[j], b[j]);
                                         assert(a[j] == b[j]);
                                 end
+
+				// Check if the output equals the product of the input and the negative_slope (floating
+				// point multiplication).
+				else if($bitstoshortreal(a[j]) <= 0e0) begin
+					$display("The output equals the product of the input and the negative_slope");
+					$display(" (floating point multiplication\n");
+					$display("%f is less than or equal to zero: %b\n", a[j], a[j]);
+					$display("input a: %b\n", a[j]);
+					$display("negative_slope: %b\n, negative_slope);
+				end
 
                                 // Otherwise, if the last bit of the input value is equal to one,
                                 // then the output should be the product of the input and the
                                 // negative slope.
                                 else begin
+					$display("The output is a product of the input and the negative slope\n");
                                         $display("%f is greater than 0: %b\n", a[j], a[j]);
                                         $display("input a: %b\n",  a[j]);
                                         $display("negative_slope: %b\n", negative_slope);
-                                        //$display("a: %b c: %b\n", a, c);
                                 end
+
                         end
 
                 end

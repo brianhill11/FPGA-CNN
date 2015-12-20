@@ -18,9 +18,7 @@ module relu_forward #(parameter negative_slope = 0, parameter WIDTH = 4)
                         output reg [31:0]  out_data [WIDTH-1:0]         //data vector of floats
                 );
 
-//default negative slope is 0
 
-//int i;
         generate
                 genvar i;
                 for(i = 0; i < WIDTH; i = i+1) begin
