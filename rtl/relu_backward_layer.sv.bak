@@ -12,7 +12,7 @@ module relu_backward_layer #(parameter WIDTH = 4, parameter NEGATIVE_SLOPE = 0)
     generate
         genvar i;
     
-        for (i = 0; i < WIDTH; i = i+1) begin : RELU_BACKWARD
+        for (i = 0; i < WIDTH; i = i+1) begin
             relu_backward_opt #(.NEGATIVE_SLOPE(NEGATIVE_SLOPE)) 
                 relu_ops ( .clk(clk), .reset(reset), 
                             .in_data(in_vec[i]), .out_data(out_vec[i]) );
