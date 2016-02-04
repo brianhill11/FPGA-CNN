@@ -6,9 +6,6 @@ module relu_backward_layer #(parameter WIDTH = 4, parameter NEGATIVE_SLOPE = 0)
                             output  reg   [31:0]    out_vec [WIDTH-1:0] //vector of floats
                           );
 
-    //parameter NEGATIVE_SLOPE = 0;
-    //parameter WIDTH = 4;
- 
     generate
         genvar i;
     
