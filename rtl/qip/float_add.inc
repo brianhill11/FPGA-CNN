@@ -16,7 +16,7 @@
 
 FUNCTION float_add 
 (
-	clk_en,
+	aclr,
 	clock,
 	dataa[31..0],
 	datab[31..0]

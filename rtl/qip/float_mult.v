@@ -34,7 +34,7 @@
 //agreement for further details.
 
 
-//altfp_mult CBX_AUTO_BLACKBOX="ALL" DEDICATED_MULTIPLIER_CIRCUITRY="YES" DENORMAL_SUPPORT="NO" DEVICE_FAMILY="Stratix V" EXCEPTION_HANDLING="NO" PIPELINE=5 REDUCED_FUNCTIONALITY="NO" ROUNDING="TO_NEAREST" WIDTH_EXP=8 WIDTH_MAN=23 clk_en clock dataa datab result
+//altfp_mult CBX_AUTO_BLACKBOX="ALL" DEDICATED_MULTIPLIER_CIRCUITRY="NO" DENORMAL_SUPPORT="NO" DEVICE_FAMILY="Stratix V" EXCEPTION_HANDLING="NO" PIPELINE=5 REDUCED_FUNCTIONALITY="NO" ROUNDING="TO_NEAREST" WIDTH_EXP=8 WIDTH_MAN=23 clk_en clock dataa datab result
 //VERSION_BEGIN 15.1 cbx_alt_ded_mult_y 2015:11:24:18:49:55:SJ cbx_altbarrel_shift 2015:11:24:18:49:55:SJ cbx_altera_mult_add 2015:11:24:18:49:55:SJ cbx_altera_mult_add_rtl 2015:11:24:18:49:55:SJ cbx_altfp_mult 2015:11:24:18:49:55:SJ cbx_altmult_add 2015:11:24:18:49:55:SJ cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_lpm_compare 2015:11:24:18:49:55:SJ cbx_lpm_mult 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_padd 2015:11:24:18:49:55:SJ cbx_parallel_add 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ cbx_util_mgl 2015:11:24:18:49:55:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
@@ -44,7 +44,7 @@
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
-module  float_mult_altfp_mult_t9o
+module  float_mult_altfp_mult_96o
 	( 
 	clk_en,
 	clock,
@@ -484,7 +484,7 @@ module  float_mult_altfp_mult_t9o
 		man_product2_mult.lpm_widthp = 48,
 		man_product2_mult.lpm_widths = 1,
 		man_product2_mult.lpm_type = "lpm_mult",
-		man_product2_mult.lpm_hint = "DEDICATED_MULTIPLIER_CIRCUITRY=YES";
+		man_product2_mult.lpm_hint = "DEDICATED_MULTIPLIER_CIRCUITRY=NO";
 	assign
 		aclr = 1'b0,
 		bias = {{3{1'b0}}, {7{1'b1}}},
@@ -507,7 +507,7 @@ module  float_mult_altfp_mult_t9o
 		round_bit = man_shift_full[0],
 		round_carry = (round_dffe & (lsb_dffe | sticky_dffe)),
 		sticky_bit = {(sticky_bit[21] | (wire_man_product2_mult_result[47] & wire_man_product2_mult_result[22])), (sticky_bit[20] | wire_man_product2_mult_result[21]), (sticky_bit[19] | wire_man_product2_mult_result[20]), (sticky_bit[18] | wire_man_product2_mult_result[19]), (sticky_bit[17] | wire_man_product2_mult_result[18]), (sticky_bit[16] | wire_man_product2_mult_result[17]), (sticky_bit[15] | wire_man_product2_mult_result[16]), (sticky_bit[14] | wire_man_product2_mult_result[15]), (sticky_bit[13] | wire_man_product2_mult_result[14]), (sticky_bit[12] | wire_man_product2_mult_result[13]), (sticky_bit[11] | wire_man_product2_mult_result[12]), (sticky_bit[10] | wire_man_product2_mult_result[11]), (sticky_bit[9] | wire_man_product2_mult_result[10]), (sticky_bit[8] | wire_man_product2_mult_result[9]), (sticky_bit[7] | wire_man_product2_mult_result[8]), (sticky_bit[6] | wire_man_product2_mult_result[7]), (sticky_bit[5] | wire_man_product2_mult_result[6]), (sticky_bit[4] | wire_man_product2_mult_result[5]), (sticky_bit[3] | wire_man_product2_mult_result[4]), (sticky_bit[2] | wire_man_product2_mult_result[3]), (sticky_bit[1] | wire_man_product2_mult_result[2]), (sticky_bit[0] | wire_man_product2_mult_result[1]), wire_man_product2_mult_result[0]};
-endmodule //float_mult_altfp_mult_t9o
+endmodule //float_mult_altfp_mult_96o
 //VALID FILE
 
 
@@ -530,7 +530,7 @@ module float_mult (
 	wire [31:0] sub_wire0;
 	wire [31:0] result = sub_wire0[31:0];
 
-	float_mult_altfp_mult_t9o	float_mult_altfp_mult_t9o_component (
+	float_mult_altfp_mult_96o	float_mult_altfp_mult_96o_component (
 				.clk_en (clk_en),
 				.clock (clock),
 				.dataa (dataa),
@@ -545,7 +545,7 @@ endmodule
 // Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 // Retrieval info: PRIVATE: FPM_FORMAT STRING "Single"
 // Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Stratix V"
-// Retrieval info: CONSTANT: DEDICATED_MULTIPLIER_CIRCUITRY STRING "YES"
+// Retrieval info: CONSTANT: DEDICATED_MULTIPLIER_CIRCUITRY STRING "NO"
 // Retrieval info: CONSTANT: DENORMAL_SUPPORT STRING "NO"
 // Retrieval info: CONSTANT: EXCEPTION_HANDLING STRING "NO"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "UNUSED"

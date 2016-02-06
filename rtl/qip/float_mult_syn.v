@@ -34,7 +34,7 @@
 //agreement for further details.
 
 
-//altfp_mult DEDICATED_MULTIPLIER_CIRCUITRY="YES" DENORMAL_SUPPORT="NO" DEVICE_FAMILY="Stratix V" EXCEPTION_HANDLING="NO" PIPELINE=5 REDUCED_FUNCTIONALITY="NO" ROUNDING="TO_NEAREST" WIDTH_EXP=8 WIDTH_MAN=23 clk_en clock dataa datab result
+//altfp_mult DEDICATED_MULTIPLIER_CIRCUITRY="NO" DENORMAL_SUPPORT="NO" DEVICE_FAMILY="Stratix V" EXCEPTION_HANDLING="NO" PIPELINE=5 REDUCED_FUNCTIONALITY="NO" ROUNDING="TO_NEAREST" WIDTH_EXP=8 WIDTH_MAN=23 clk_en clock dataa datab result
 //VERSION_BEGIN 15.1 cbx_alt_ded_mult_y 2015:11:24:18:49:55:SJ cbx_altbarrel_shift 2015:11:24:18:49:55:SJ cbx_altera_mult_add 2015:11:24:18:49:55:SJ cbx_altera_mult_add_rtl 2015:11:24:18:49:55:SJ cbx_altfp_mult 2015:11:24:18:49:55:SJ cbx_altmult_add 2015:11:24:18:49:55:SJ cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_lpm_compare 2015:11:24:18:49:55:SJ cbx_lpm_mult 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_padd 2015:11:24:18:49:55:SJ cbx_parallel_add 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ cbx_util_mgl 2015:11:24:18:49:55:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
@@ -57,10 +57,82 @@
 //VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
 
 
-//lpm_mult DEDICATED_MULTIPLIER_CIRCUITRY="YES" DEVICE_FAMILY="Stratix V" LPM_PIPELINE=2 LPM_REPRESENTATION="UNSIGNED" LPM_WIDTHA=24 LPM_WIDTHB=24 LPM_WIDTHP=48 LPM_WIDTHS=1 aclr clken clock dataa datab result
+//lpm_mult DEDICATED_MULTIPLIER_CIRCUITRY="NO" DEVICE_FAMILY="Stratix V" LPM_PIPELINE=2 LPM_REPRESENTATION="UNSIGNED" LPM_WIDTHA=24 LPM_WIDTHB=24 LPM_WIDTHP=48 LPM_WIDTHS=1 aclr clken clock dataa datab result
 //VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_lpm_mult 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_padd 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ cbx_util_mgl 2015:11:24:18:49:55:SJ  VERSION_END
 
-//synthesis_resources = 
+
+//adder DEVICE_FAMILY="Stratix V" WIDTH=47 dataa datab datac result
+//VERSION_BEGIN 15.1 cbx_mgl 2015:11:24:20:43:33:SJ cbx_stratixii 2015:11:24:18:49:55:SJ cbx_util_mgl 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//adder DEVICE_FAMILY="Stratix V" WIDTH=39 dataa datab datac result
+//VERSION_BEGIN 15.1 cbx_mgl 2015:11:24:20:43:33:SJ cbx_stratixii 2015:11:24:18:49:55:SJ cbx_util_mgl 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//adder DEVICE_FAMILY="Stratix V" WIDTH=31 dataa datab datac result
+//VERSION_BEGIN 15.1 cbx_mgl 2015:11:24:20:43:33:SJ cbx_stratixii 2015:11:24:18:49:55:SJ cbx_util_mgl 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//adder DEVICE_FAMILY="Stratix V" WIDTH=23 dataa datab datac result
+//VERSION_BEGIN 15.1 cbx_mgl 2015:11:24:20:43:33:SJ cbx_stratixii 2015:11:24:18:49:55:SJ cbx_util_mgl 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//adder DEVICE_FAMILY="Stratix V" WIDTH=15 dataa datab datac result
+//VERSION_BEGIN 15.1 cbx_mgl 2015:11:24:20:43:33:SJ cbx_stratixii 2015:11:24:18:49:55:SJ cbx_util_mgl 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//adder DEVICE_FAMILY="Stratix V" WIDTH=7 dataa datab datac result
+//VERSION_BEGIN 15.1 cbx_mgl 2015:11:24:20:43:33:SJ cbx_stratixii 2015:11:24:18:49:55:SJ cbx_util_mgl 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//lpm_add_sub DEVICE_FAMILY="Stratix V" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=25 dataa datab result
+//VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//lpm_add_sub DEVICE_FAMILY="Stratix V" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=25 dataa datab result
+//VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//lpm_add_sub DEVICE_FAMILY="Stratix V" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=25 dataa datab result
+//VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//lpm_add_sub DEVICE_FAMILY="Stratix V" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=25 dataa datab result
+//VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//lpm_add_sub DEVICE_FAMILY="Stratix V" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=25 dataa datab result
+//VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//lpm_add_sub DEVICE_FAMILY="Stratix V" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=25 dataa datab result
+//VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//lpm_add_sub DEVICE_FAMILY="Stratix V" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=25 dataa datab result
+//VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//lpm_add_sub DEVICE_FAMILY="Stratix V" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=25 dataa datab result
+//VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//lpm_add_sub DEVICE_FAMILY="Stratix V" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=25 dataa datab result
+//VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//lpm_add_sub DEVICE_FAMILY="Stratix V" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=25 dataa datab result
+//VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//lpm_add_sub DEVICE_FAMILY="Stratix V" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=25 dataa datab result
+//VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
+
+
+//lpm_add_sub DEVICE_FAMILY="Stratix V" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=25 dataa datab result
+//VERSION_BEGIN 15.1 cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
+
+//synthesis_resources = lut 624 reg 338 
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
@@ -88,44 +160,5872 @@ module  float_mult_mult
 // synopsys translate_on
 `endif
 
-	reg  [23:0]  dataa_input_reg;
-	reg  [23:0]  datab_input_reg;
-	reg  [47:0]  result_output_reg;
-	wire [23:0]    dataa_wire;
-	wire [23:0]    datab_wire;
-	wire [47:0]    result_wire;
+	wire	[46:0]	wire_add340_result;
+	wire	[38:0]	wire_add345_result;
+	wire	[30:0]	wire_add350_result;
+	wire	[22:0]	wire_add355_result;
+	wire	[14:0]	wire_add360_result;
+	wire	[6:0]	wire_add365_result;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe10;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe100;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe101;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe102;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe103;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe104;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe105;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe106;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe107;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe108;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe109;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe11;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe110;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe111;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe112;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe113;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe114;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe115;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe116;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe117;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe118;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe119;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe12;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe120;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe121;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe122;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe123;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe124;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe125;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe126;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe127;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe128;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe129;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe13;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe130;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe131;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe132;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe133;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe134;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe135;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe136;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe137;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe138;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe139;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe14;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe140;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe141;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe142;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe143;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe144;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe145;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe146;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe147;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe148;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe149;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe15;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe150;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe151;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe152;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe153;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe154;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe155;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe156;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe157;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe158;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe159;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe16;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe160;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe161;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe162;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe163;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe164;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe165;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe166;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe167;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe168;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe169;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe17;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe170;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe171;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe172;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe173;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe174;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe175;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe176;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe177;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe178;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe179;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe18;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe180;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe181;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe182;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe183;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe184;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe185;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe186;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe187;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe188;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe189;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe19;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe190;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe191;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe192;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe193;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe194;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe195;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe196;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe197;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe198;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe199;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe2;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe20;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe200;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe201;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe202;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe203;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe204;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe205;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe206;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe207;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe208;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe209;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe21;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe210;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe211;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe212;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe213;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe214;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe215;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe216;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe217;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe218;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe219;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe22;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe220;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe221;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe222;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe223;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe224;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe225;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe226;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe227;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe228;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe229;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe23;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe230;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe231;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe232;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe233;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe234;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe235;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe236;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe237;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe238;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe239;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe24;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe240;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe241;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe242;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe243;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe244;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe245;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe246;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe247;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe248;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe249;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe25;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe250;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe251;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe252;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe253;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe254;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe255;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe256;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe257;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe258;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe259;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe26;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe260;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe261;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe262;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe263;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe264;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe265;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe266;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe267;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe268;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe269;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe27;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe270;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe271;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe272;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe273;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe274;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe275;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe276;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe277;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe278;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe279;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe28;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe280;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe281;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe282;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe283;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe284;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe285;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe286;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe287;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe288;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe289;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe29;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe290;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe291;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe292;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe293;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe294;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe295;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe296;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe297;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe298;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe299;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe3;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe30;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe300;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe301;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe302;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe303;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe304;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe305;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe306;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe307;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe308;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe309;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe31;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe310;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe311;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe312;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe313;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe314;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe315;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe316;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe317;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe318;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe319;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe32;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe320;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe321;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe322;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe323;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe324;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe325;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe326;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe327;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe328;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe329;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe33;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe330;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe331;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe332;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe333;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe334;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe335;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe336;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe337;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe338;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe339;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe34;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe35;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe36;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe37;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe38;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe39;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe4;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe40;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe41;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe42;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe43;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe44;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe45;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe46;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe47;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe48;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe49;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe5;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe50;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe51;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe52;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe53;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe54;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe55;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe56;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe57;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe58;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe59;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe6;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe60;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe61;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe62;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe63;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe64;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe65;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe66;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe67;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe68;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe69;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe7;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe70;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe71;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe72;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe73;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe74;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe75;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe76;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe77;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe78;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe79;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe8;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe80;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe81;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe82;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe83;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe84;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe85;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe86;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe87;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe88;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe89;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe9;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe90;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe91;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe92;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe93;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe94;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe95;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe96;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe97;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe98;
+	(* ALTERA_ATTRIBUTE = {"POWER_UP_LEVEL=LOW"} *)
+	reg	dffe99;
+	wire	[24:0]	wire_sum_adder1aa_0dataa;
+	wire	[24:0]	wire_sum_adder1aa_0datab;
+	wire	[24:0]	wire_sum_adder1aa_0result;
+	wire	[24:0]	wire_sum_adder1aa_1dataa;
+	wire	[24:0]	wire_sum_adder1aa_1datab;
+	wire	[24:0]	wire_sum_adder1aa_1result;
+	wire	[24:0]	wire_sum_adder1aa_2dataa;
+	wire	[24:0]	wire_sum_adder1aa_2datab;
+	wire	[24:0]	wire_sum_adder1aa_2result;
+	wire	[24:0]	wire_sum_adder1aa_3dataa;
+	wire	[24:0]	wire_sum_adder1aa_3datab;
+	wire	[24:0]	wire_sum_adder1aa_3result;
+	wire	[24:0]	wire_sum_adder1aa_4dataa;
+	wire	[24:0]	wire_sum_adder1aa_4datab;
+	wire	[24:0]	wire_sum_adder1aa_4result;
+	wire	[24:0]	wire_sum_adder1aa_5dataa;
+	wire	[24:0]	wire_sum_adder1aa_5datab;
+	wire	[24:0]	wire_sum_adder1aa_5result;
+	wire	[24:0]	wire_sum_adder1aa_6dataa;
+	wire	[24:0]	wire_sum_adder1aa_6datab;
+	wire	[24:0]	wire_sum_adder1aa_6result;
+	wire	[24:0]	wire_sum_adder1aa_7dataa;
+	wire	[24:0]	wire_sum_adder1aa_7datab;
+	wire	[24:0]	wire_sum_adder1aa_7result;
+	wire	[24:0]	wire_sum_adder1aa_8dataa;
+	wire	[24:0]	wire_sum_adder1aa_8datab;
+	wire	[24:0]	wire_sum_adder1aa_8result;
+	wire	[24:0]	wire_sum_adder1aa_9dataa;
+	wire	[24:0]	wire_sum_adder1aa_9datab;
+	wire	[24:0]	wire_sum_adder1aa_9result;
+	wire	[24:0]	wire_sum_adder1aa_10dataa;
+	wire	[24:0]	wire_sum_adder1aa_10datab;
+	wire	[24:0]	wire_sum_adder1aa_10result;
+	wire	[24:0]	wire_sum_adder1aa_11dataa;
+	wire	[24:0]	wire_sum_adder1aa_11datab;
+	wire	[24:0]	wire_sum_adder1aa_11result;
+	wire  [46:0]   wire_sft341a_in;
+	wire  [46:0]   wire_sft341a_out;
+	wire  [46:0]   wire_sft342a_in;
+	wire  [46:0]   wire_sft342a_out;
+	wire  [46:0]   wire_sft343a_in;
+	wire  [46:0]   wire_sft343a_out;
+	wire  [46:0]   wire_sft344a_in;
+	wire  [46:0]   wire_sft344a_out;
+	wire  [38:0]   wire_sft346a_in;
+	wire  [38:0]   wire_sft346a_out;
+	wire  [38:0]   wire_sft347a_in;
+	wire  [38:0]   wire_sft347a_out;
+	wire  [38:0]   wire_sft348a_in;
+	wire  [38:0]   wire_sft348a_out;
+	wire  [38:0]   wire_sft349a_in;
+	wire  [38:0]   wire_sft349a_out;
+	wire  [30:0]   wire_sft351a_in;
+	wire  [30:0]   wire_sft351a_out;
+	wire  [30:0]   wire_sft352a_in;
+	wire  [30:0]   wire_sft352a_out;
+	wire  [30:0]   wire_sft353a_in;
+	wire  [30:0]   wire_sft353a_out;
+	wire  [30:0]   wire_sft354a_in;
+	wire  [30:0]   wire_sft354a_out;
+	wire  [22:0]   wire_sft356a_in;
+	wire  [22:0]   wire_sft356a_out;
+	wire  [22:0]   wire_sft357a_in;
+	wire  [22:0]   wire_sft357a_out;
+	wire  [22:0]   wire_sft358a_in;
+	wire  [22:0]   wire_sft358a_out;
+	wire  [22:0]   wire_sft359a_in;
+	wire  [22:0]   wire_sft359a_out;
+	wire  [14:0]   wire_sft361a_in;
+	wire  [14:0]   wire_sft361a_out;
+	wire  [14:0]   wire_sft362a_in;
+	wire  [14:0]   wire_sft362a_out;
+	wire  [14:0]   wire_sft363a_in;
+	wire  [14:0]   wire_sft363a_out;
+	wire  [14:0]   wire_sft364a_in;
+	wire  [14:0]   wire_sft364a_out;
+	wire  [6:0]   wire_sft366a_in;
+	wire  [6:0]   wire_sft366a_out;
+	wire  [6:0]   wire_sft367a_in;
+	wire  [6:0]   wire_sft367a_out;
+	wire  [6:0]   wire_sft368a_in;
+	wire  [6:0]   wire_sft368a_out;
+	wire  [6:0]   wire_sft369a_in;
+	wire  [6:0]   wire_sft369a_out;
+	wire  [23:0]  dataa_node;
+	wire  [23:0]  datab_node;
+	wire  [47:0]  final_result_node;
+	wire  w1233w;
+	wire  [48:0]  w1868w;
+	wire  [575:0]  w_decoder_node496w;
+	wire  [23:0]  w_le_datab_node495w;
+	wire  [311:0]  w_sum_node497w;
 
-
+	assign
+		wire_add340_result = wire_sft341a_out + wire_sft342a_out + wire_sft343a_out;
+	assign
+		wire_add345_result = wire_sft346a_out + wire_sft347a_out + wire_sft348a_out;
+	assign
+		wire_add350_result = wire_sft351a_out + wire_sft352a_out + wire_sft353a_out;
+	assign
+		wire_add355_result = wire_sft356a_out + wire_sft357a_out + wire_sft358a_out;
+	assign
+		wire_add360_result = wire_sft361a_out + wire_sft362a_out + wire_sft363a_out;
+	assign
+		wire_add365_result = wire_sft366a_out + wire_sft367a_out + wire_sft368a_out;
 	// synopsys translate_off
 	initial
-		dataa_input_reg = 0;
+		dffe10 = 0;
 	// synopsys translate_on
-	always @(posedge clock or posedge aclr)
-		if (aclr == 1'b1)    dataa_input_reg <= 24'b0;
-		else if (clken == 1'b1)	dataa_input_reg <= dataa;
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe10 <= 1'b0;
+		else if  (clken == 1'b1)   dffe10 <= w_sum_node497w[3];
 	// synopsys translate_off
 	initial
-		datab_input_reg = 0;
+		dffe100 = 0;
 	// synopsys translate_on
-	always @(posedge clock or posedge aclr)
-		if (aclr == 1'b1)    datab_input_reg <= 24'b0;
-		else if (clken == 1'b1)	datab_input_reg <= datab;
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe100 <= 1'b0;
+		else if  (clken == 1'b1)   dffe100 <= wire_sft344a_out[15];
 	// synopsys translate_off
 	initial
-		result_output_reg = 0;
+		dffe101 = 0;
 	// synopsys translate_on
-	always @(posedge clock or posedge aclr)
-		if (aclr == 1'b1)    result_output_reg <= 48'b0;
-		else if (clken == 1'b1)	result_output_reg <= result_wire[47:0];
-
-	assign dataa_wire = dataa_input_reg;
-	assign datab_wire = datab_input_reg;
-	assign result_wire = dataa_wire * datab_wire;
-	assign result = ({result_output_reg});
-
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe101 <= 1'b0;
+		else if  (clken == 1'b1)   dffe101 <= w_sum_node497w[89];
+	// synopsys translate_off
+	initial
+		dffe102 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe102 <= 1'b0;
+		else if  (clken == 1'b1)   dffe102 <= w_sum_node497w[65];
+	// synopsys translate_off
+	initial
+		dffe103 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe103 <= 1'b0;
+		else if  (clken == 1'b1)   dffe103 <= w_sum_node497w[113];
+	// synopsys translate_off
+	initial
+		dffe104 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe104 <= 1'b0;
+		else if  (clken == 1'b1)   dffe104 <= w_sum_node497w[137];
+	// synopsys translate_off
+	initial
+		dffe105 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe105 <= 1'b0;
+		else if  (clken == 1'b1)   dffe105 <= w_sum_node497w[41];
+	// synopsys translate_off
+	initial
+		dffe106 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe106 <= 1'b0;
+		else if  (clken == 1'b1)   dffe106 <= w_sum_node497w[161];
+	// synopsys translate_off
+	initial
+		dffe107 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe107 <= 1'b0;
+		else if  (clken == 1'b1)   dffe107 <= w_sum_node497w[185];
+	// synopsys translate_off
+	initial
+		dffe108 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe108 <= 1'b0;
+		else if  (clken == 1'b1)   dffe108 <= w_sum_node497w[17];
+	// synopsys translate_off
+	initial
+		dffe109 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe109 <= 1'b0;
+		else if  (clken == 1'b1)   dffe109 <= w_sum_node497w[209];
+	// synopsys translate_off
+	initial
+		dffe11 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe11 <= 1'b0;
+		else if  (clken == 1'b1)   dffe11 <= w_sum_node497w[27];
+	// synopsys translate_off
+	initial
+		dffe110 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe110 <= 1'b0;
+		else if  (clken == 1'b1)   dffe110 <= wire_sft344a_out[16];
+	// synopsys translate_off
+	initial
+		dffe111 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe111 <= 1'b0;
+		else if  (clken == 1'b1)   dffe111 <= w_sum_node497w[90];
+	// synopsys translate_off
+	initial
+		dffe112 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe112 <= 1'b0;
+		else if  (clken == 1'b1)   dffe112 <= w_sum_node497w[66];
+	// synopsys translate_off
+	initial
+		dffe113 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe113 <= 1'b0;
+		else if  (clken == 1'b1)   dffe113 <= wire_sft364a_out[0];
+	// synopsys translate_off
+	initial
+		dffe114 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe114 <= 1'b0;
+		else if  (clken == 1'b1)   dffe114 <= w_sum_node497w[138];
+	// synopsys translate_off
+	initial
+		dffe115 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe115 <= 1'b0;
+		else if  (clken == 1'b1)   dffe115 <= w_sum_node497w[42];
+	// synopsys translate_off
+	initial
+		dffe116 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe116 <= 1'b0;
+		else if  (clken == 1'b1)   dffe116 <= w_sum_node497w[162];
+	// synopsys translate_off
+	initial
+		dffe117 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe117 <= 1'b0;
+		else if  (clken == 1'b1)   dffe117 <= w_sum_node497w[186];
+	// synopsys translate_off
+	initial
+		dffe118 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe118 <= 1'b0;
+		else if  (clken == 1'b1)   dffe118 <= w_sum_node497w[18];
+	// synopsys translate_off
+	initial
+		dffe119 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe119 <= 1'b0;
+		else if  (clken == 1'b1)   dffe119 <= w_sum_node497w[210];
+	// synopsys translate_off
+	initial
+		dffe12 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe12 <= 1'b0;
+		else if  (clken == 1'b1)   dffe12 <= wire_sft344a_out[2];
+	// synopsys translate_off
+	initial
+		dffe120 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe120 <= 1'b0;
+		else if  (clken == 1'b1)   dffe120 <= wire_sft344a_out[17];
+	// synopsys translate_off
+	initial
+		dffe121 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe121 <= 1'b0;
+		else if  (clken == 1'b1)   dffe121 <= w_sum_node497w[91];
+	// synopsys translate_off
+	initial
+		dffe122 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe122 <= 1'b0;
+		else if  (clken == 1'b1)   dffe122 <= w_sum_node497w[67];
+	// synopsys translate_off
+	initial
+		dffe123 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe123 <= 1'b0;
+		else if  (clken == 1'b1)   dffe123 <= wire_sft364a_out[1];
+	// synopsys translate_off
+	initial
+		dffe124 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe124 <= 1'b0;
+		else if  (clken == 1'b1)   dffe124 <= w_sum_node497w[139];
+	// synopsys translate_off
+	initial
+		dffe125 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe125 <= 1'b0;
+		else if  (clken == 1'b1)   dffe125 <= w_sum_node497w[43];
+	// synopsys translate_off
+	initial
+		dffe126 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe126 <= 1'b0;
+		else if  (clken == 1'b1)   dffe126 <= w_sum_node497w[163];
+	// synopsys translate_off
+	initial
+		dffe127 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe127 <= 1'b0;
+		else if  (clken == 1'b1)   dffe127 <= w_sum_node497w[187];
+	// synopsys translate_off
+	initial
+		dffe128 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe128 <= 1'b0;
+		else if  (clken == 1'b1)   dffe128 <= w_sum_node497w[19];
+	// synopsys translate_off
+	initial
+		dffe129 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe129 <= 1'b0;
+		else if  (clken == 1'b1)   dffe129 <= w_sum_node497w[211];
+	// synopsys translate_off
+	initial
+		dffe13 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe13 <= 1'b0;
+		else if  (clken == 1'b1)   dffe13 <= w_sum_node497w[4];
+	// synopsys translate_off
+	initial
+		dffe130 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe130 <= 1'b0;
+		else if  (clken == 1'b1)   dffe130 <= wire_sft344a_out[18];
+	// synopsys translate_off
+	initial
+		dffe131 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe131 <= 1'b0;
+		else if  (clken == 1'b1)   dffe131 <= w_sum_node497w[92];
+	// synopsys translate_off
+	initial
+		dffe132 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe132 <= 1'b0;
+		else if  (clken == 1'b1)   dffe132 <= w_sum_node497w[68];
+	// synopsys translate_off
+	initial
+		dffe133 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe133 <= 1'b0;
+		else if  (clken == 1'b1)   dffe133 <= wire_sft364a_out[2];
+	// synopsys translate_off
+	initial
+		dffe134 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe134 <= 1'b0;
+		else if  (clken == 1'b1)   dffe134 <= w_sum_node497w[140];
+	// synopsys translate_off
+	initial
+		dffe135 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe135 <= 1'b0;
+		else if  (clken == 1'b1)   dffe135 <= w_sum_node497w[44];
+	// synopsys translate_off
+	initial
+		dffe136 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe136 <= 1'b0;
+		else if  (clken == 1'b1)   dffe136 <= w_sum_node497w[164];
+	// synopsys translate_off
+	initial
+		dffe137 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe137 <= 1'b0;
+		else if  (clken == 1'b1)   dffe137 <= w_sum_node497w[188];
+	// synopsys translate_off
+	initial
+		dffe138 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe138 <= 1'b0;
+		else if  (clken == 1'b1)   dffe138 <= w_sum_node497w[20];
+	// synopsys translate_off
+	initial
+		dffe139 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe139 <= 1'b0;
+		else if  (clken == 1'b1)   dffe139 <= w_sum_node497w[212];
+	// synopsys translate_off
+	initial
+		dffe14 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe14 <= 1'b0;
+		else if  (clken == 1'b1)   dffe14 <= w_sum_node497w[28];
+	// synopsys translate_off
+	initial
+		dffe140 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe140 <= 1'b0;
+		else if  (clken == 1'b1)   dffe140 <= wire_sft344a_out[19];
+	// synopsys translate_off
+	initial
+		dffe141 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe141 <= 1'b0;
+		else if  (clken == 1'b1)   dffe141 <= w_sum_node497w[93];
+	// synopsys translate_off
+	initial
+		dffe142 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe142 <= 1'b0;
+		else if  (clken == 1'b1)   dffe142 <= w_sum_node497w[69];
+	// synopsys translate_off
+	initial
+		dffe143 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe143 <= 1'b0;
+		else if  (clken == 1'b1)   dffe143 <= wire_sft364a_out[3];
+	// synopsys translate_off
+	initial
+		dffe144 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe144 <= 1'b0;
+		else if  (clken == 1'b1)   dffe144 <= w_sum_node497w[141];
+	// synopsys translate_off
+	initial
+		dffe145 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe145 <= 1'b0;
+		else if  (clken == 1'b1)   dffe145 <= w_sum_node497w[45];
+	// synopsys translate_off
+	initial
+		dffe146 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe146 <= 1'b0;
+		else if  (clken == 1'b1)   dffe146 <= w_sum_node497w[165];
+	// synopsys translate_off
+	initial
+		dffe147 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe147 <= 1'b0;
+		else if  (clken == 1'b1)   dffe147 <= w_sum_node497w[189];
+	// synopsys translate_off
+	initial
+		dffe148 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe148 <= 1'b0;
+		else if  (clken == 1'b1)   dffe148 <= w_sum_node497w[21];
+	// synopsys translate_off
+	initial
+		dffe149 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe149 <= 1'b0;
+		else if  (clken == 1'b1)   dffe149 <= w_sum_node497w[213];
+	// synopsys translate_off
+	initial
+		dffe15 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe15 <= 1'b0;
+		else if  (clken == 1'b1)   dffe15 <= w_sum_node497w[52];
+	// synopsys translate_off
+	initial
+		dffe150 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe150 <= 1'b0;
+		else if  (clken == 1'b1)   dffe150 <= wire_sft344a_out[20];
+	// synopsys translate_off
+	initial
+		dffe151 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe151 <= 1'b0;
+		else if  (clken == 1'b1)   dffe151 <= w_sum_node497w[94];
+	// synopsys translate_off
+	initial
+		dffe152 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe152 <= 1'b0;
+		else if  (clken == 1'b1)   dffe152 <= w_sum_node497w[70];
+	// synopsys translate_off
+	initial
+		dffe153 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe153 <= 1'b0;
+		else if  (clken == 1'b1)   dffe153 <= wire_sft364a_out[4];
+	// synopsys translate_off
+	initial
+		dffe154 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe154 <= 1'b0;
+		else if  (clken == 1'b1)   dffe154 <= w_sum_node497w[142];
+	// synopsys translate_off
+	initial
+		dffe155 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe155 <= 1'b0;
+		else if  (clken == 1'b1)   dffe155 <= w_sum_node497w[46];
+	// synopsys translate_off
+	initial
+		dffe156 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe156 <= 1'b0;
+		else if  (clken == 1'b1)   dffe156 <= wire_sft369a_out[0];
+	// synopsys translate_off
+	initial
+		dffe157 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe157 <= 1'b0;
+		else if  (clken == 1'b1)   dffe157 <= w_sum_node497w[190];
+	// synopsys translate_off
+	initial
+		dffe158 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe158 <= 1'b0;
+		else if  (clken == 1'b1)   dffe158 <= w_sum_node497w[22];
+	// synopsys translate_off
+	initial
+		dffe159 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe159 <= 1'b0;
+		else if  (clken == 1'b1)   dffe159 <= w_sum_node497w[214];
+	// synopsys translate_off
+	initial
+		dffe16 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe16 <= 1'b0;
+		else if  (clken == 1'b1)   dffe16 <= wire_sft344a_out[3];
+	// synopsys translate_off
+	initial
+		dffe160 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe160 <= 1'b0;
+		else if  (clken == 1'b1)   dffe160 <= wire_sft344a_out[21];
+	// synopsys translate_off
+	initial
+		dffe161 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe161 <= 1'b0;
+		else if  (clken == 1'b1)   dffe161 <= w_sum_node497w[95];
+	// synopsys translate_off
+	initial
+		dffe162 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe162 <= 1'b0;
+		else if  (clken == 1'b1)   dffe162 <= w_sum_node497w[71];
+	// synopsys translate_off
+	initial
+		dffe163 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe163 <= 1'b0;
+		else if  (clken == 1'b1)   dffe163 <= wire_sft364a_out[5];
+	// synopsys translate_off
+	initial
+		dffe164 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe164 <= 1'b0;
+		else if  (clken == 1'b1)   dffe164 <= w_sum_node497w[143];
+	// synopsys translate_off
+	initial
+		dffe165 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe165 <= 1'b0;
+		else if  (clken == 1'b1)   dffe165 <= w_sum_node497w[47];
+	// synopsys translate_off
+	initial
+		dffe166 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe166 <= 1'b0;
+		else if  (clken == 1'b1)   dffe166 <= wire_sft369a_out[1];
+	// synopsys translate_off
+	initial
+		dffe167 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe167 <= 1'b0;
+		else if  (clken == 1'b1)   dffe167 <= w_sum_node497w[191];
+	// synopsys translate_off
+	initial
+		dffe168 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe168 <= 1'b0;
+		else if  (clken == 1'b1)   dffe168 <= w_sum_node497w[23];
+	// synopsys translate_off
+	initial
+		dffe169 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe169 <= 1'b0;
+		else if  (clken == 1'b1)   dffe169 <= w_sum_node497w[215];
+	// synopsys translate_off
+	initial
+		dffe17 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe17 <= 1'b0;
+		else if  (clken == 1'b1)   dffe17 <= w_sum_node497w[5];
+	// synopsys translate_off
+	initial
+		dffe170 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe170 <= 1'b0;
+		else if  (clken == 1'b1)   dffe170 <= wire_sft344a_out[22];
+	// synopsys translate_off
+	initial
+		dffe171 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe171 <= 1'b0;
+		else if  (clken == 1'b1)   dffe171 <= w_sum_node497w[96];
+	// synopsys translate_off
+	initial
+		dffe172 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe172 <= 1'b0;
+		else if  (clken == 1'b1)   dffe172 <= w_sum_node497w[72];
+	// synopsys translate_off
+	initial
+		dffe173 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe173 <= 1'b0;
+		else if  (clken == 1'b1)   dffe173 <= wire_sft364a_out[6];
+	// synopsys translate_off
+	initial
+		dffe174 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe174 <= 1'b0;
+		else if  (clken == 1'b1)   dffe174 <= w_sum_node497w[144];
+	// synopsys translate_off
+	initial
+		dffe175 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe175 <= 1'b0;
+		else if  (clken == 1'b1)   dffe175 <= w_sum_node497w[48];
+	// synopsys translate_off
+	initial
+		dffe176 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe176 <= 1'b0;
+		else if  (clken == 1'b1)   dffe176 <= wire_sft369a_out[2];
+	// synopsys translate_off
+	initial
+		dffe177 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe177 <= 1'b0;
+		else if  (clken == 1'b1)   dffe177 <= w_sum_node497w[192];
+	// synopsys translate_off
+	initial
+		dffe178 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe178 <= 1'b0;
+		else if  (clken == 1'b1)   dffe178 <= w_sum_node497w[24];
+	// synopsys translate_off
+	initial
+		dffe179 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe179 <= 1'b0;
+		else if  (clken == 1'b1)   dffe179 <= w_sum_node497w[216];
+	// synopsys translate_off
+	initial
+		dffe18 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe18 <= 1'b0;
+		else if  (clken == 1'b1)   dffe18 <= w_sum_node497w[29];
+	// synopsys translate_off
+	initial
+		dffe180 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe180 <= 1'b0;
+		else if  (clken == 1'b1)   dffe180 <= wire_sft344a_out[23];
+	// synopsys translate_off
+	initial
+		dffe181 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe181 <= 1'b0;
+		else if  (clken == 1'b1)   dffe181 <= w_sum_node497w[97];
+	// synopsys translate_off
+	initial
+		dffe182 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe182 <= 1'b0;
+		else if  (clken == 1'b1)   dffe182 <= w_sum_node497w[73];
+	// synopsys translate_off
+	initial
+		dffe183 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe183 <= 1'b0;
+		else if  (clken == 1'b1)   dffe183 <= wire_sft364a_out[7];
+	// synopsys translate_off
+	initial
+		dffe184 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe184 <= 1'b0;
+		else if  (clken == 1'b1)   dffe184 <= w_sum_node497w[145];
+	// synopsys translate_off
+	initial
+		dffe185 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe185 <= 1'b0;
+		else if  (clken == 1'b1)   dffe185 <= w_sum_node497w[49];
+	// synopsys translate_off
+	initial
+		dffe186 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe186 <= 1'b0;
+		else if  (clken == 1'b1)   dffe186 <= wire_sft369a_out[3];
+	// synopsys translate_off
+	initial
+		dffe187 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe187 <= 1'b0;
+		else if  (clken == 1'b1)   dffe187 <= w_sum_node497w[193];
+	// synopsys translate_off
+	initial
+		dffe188 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe188 <= 1'b0;
+		else if  (clken == 1'b1)   dffe188 <= w_sum_node497w[25];
+	// synopsys translate_off
+	initial
+		dffe189 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe189 <= 1'b0;
+		else if  (clken == 1'b1)   dffe189 <= w_sum_node497w[217];
+	// synopsys translate_off
+	initial
+		dffe19 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe19 <= 1'b0;
+		else if  (clken == 1'b1)   dffe19 <= w_sum_node497w[53];
+	// synopsys translate_off
+	initial
+		dffe190 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe190 <= 1'b0;
+		else if  (clken == 1'b1)   dffe190 <= wire_sft344a_out[24];
+	// synopsys translate_off
+	initial
+		dffe191 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe191 <= 1'b0;
+		else if  (clken == 1'b1)   dffe191 <= w_sum_node497w[122];
+	// synopsys translate_off
+	initial
+		dffe192 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe192 <= 1'b0;
+		else if  (clken == 1'b1)   dffe192 <= w_sum_node497w[98];
+	// synopsys translate_off
+	initial
+		dffe193 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe193 <= 1'b0;
+		else if  (clken == 1'b1)   dffe193 <= wire_sft364a_out[8];
+	// synopsys translate_off
+	initial
+		dffe194 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe194 <= 1'b0;
+		else if  (clken == 1'b1)   dffe194 <= w_sum_node497w[194];
+	// synopsys translate_off
+	initial
+		dffe195 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe195 <= 1'b0;
+		else if  (clken == 1'b1)   dffe195 <= w_sum_node497w[74];
+	// synopsys translate_off
+	initial
+		dffe196 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe196 <= 1'b0;
+		else if  (clken == 1'b1)   dffe196 <= wire_sft369a_out[4];
+	// synopsys translate_off
+	initial
+		dffe197 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe197 <= 1'b0;
+		else if  (clken == 1'b1)   dffe197 <= w_sum_node497w[218];
+	// synopsys translate_off
+	initial
+		dffe198 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe198 <= 1'b0;
+		else if  (clken == 1'b1)   dffe198 <= w_sum_node497w[50];
+	// synopsys translate_off
+	initial
+		dffe199 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe199 <= 1'b0;
+		else if  (clken == 1'b1)   dffe199 <= w_sum_node497w[242];
+	// synopsys translate_off
+	initial
+		dffe2 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe2 <= 1'b0;
+		else if  (clken == 1'b1)   dffe2 <= dffe3;
+	// synopsys translate_off
+	initial
+		dffe20 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe20 <= 1'b0;
+		else if  (clken == 1'b1)   dffe20 <= wire_sft344a_out[4];
+	// synopsys translate_off
+	initial
+		dffe200 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe200 <= 1'b0;
+		else if  (clken == 1'b1)   dffe200 <= wire_sft344a_out[25];
+	// synopsys translate_off
+	initial
+		dffe201 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe201 <= 1'b0;
+		else if  (clken == 1'b1)   dffe201 <= w_sum_node497w[123];
+	// synopsys translate_off
+	initial
+		dffe202 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe202 <= 1'b0;
+		else if  (clken == 1'b1)   dffe202 <= w_sum_node497w[99];
+	// synopsys translate_off
+	initial
+		dffe203 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe203 <= 1'b0;
+		else if  (clken == 1'b1)   dffe203 <= wire_sft364a_out[9];
+	// synopsys translate_off
+	initial
+		dffe204 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe204 <= 1'b0;
+		else if  (clken == 1'b1)   dffe204 <= w_sum_node497w[195];
+	// synopsys translate_off
+	initial
+		dffe205 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe205 <= 1'b0;
+		else if  (clken == 1'b1)   dffe205 <= w_sum_node497w[75];
+	// synopsys translate_off
+	initial
+		dffe206 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe206 <= 1'b0;
+		else if  (clken == 1'b1)   dffe206 <= wire_sft369a_out[5];
+	// synopsys translate_off
+	initial
+		dffe207 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe207 <= 1'b0;
+		else if  (clken == 1'b1)   dffe207 <= w_sum_node497w[219];
+	// synopsys translate_off
+	initial
+		dffe208 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe208 <= 1'b0;
+		else if  (clken == 1'b1)   dffe208 <= w_sum_node497w[51];
+	// synopsys translate_off
+	initial
+		dffe209 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe209 <= 1'b0;
+		else if  (clken == 1'b1)   dffe209 <= w_sum_node497w[243];
+	// synopsys translate_off
+	initial
+		dffe21 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe21 <= 1'b0;
+		else if  (clken == 1'b1)   dffe21 <= w_sum_node497w[6];
+	// synopsys translate_off
+	initial
+		dffe210 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe210 <= 1'b0;
+		else if  (clken == 1'b1)   dffe210 <= wire_sft344a_out[26];
+	// synopsys translate_off
+	initial
+		dffe211 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe211 <= 1'b0;
+		else if  (clken == 1'b1)   dffe211 <= w_sum_node497w[148];
+	// synopsys translate_off
+	initial
+		dffe212 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe212 <= 1'b0;
+		else if  (clken == 1'b1)   dffe212 <= w_sum_node497w[124];
+	// synopsys translate_off
+	initial
+		dffe213 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe213 <= 1'b0;
+		else if  (clken == 1'b1)   dffe213 <= wire_sft364a_out[10];
+	// synopsys translate_off
+	initial
+		dffe214 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe214 <= 1'b0;
+		else if  (clken == 1'b1)   dffe214 <= w_sum_node497w[220];
+	// synopsys translate_off
+	initial
+		dffe215 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe215 <= 1'b0;
+		else if  (clken == 1'b1)   dffe215 <= w_sum_node497w[100];
+	// synopsys translate_off
+	initial
+		dffe216 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe216 <= 1'b0;
+		else if  (clken == 1'b1)   dffe216 <= wire_sft369a_out[6];
+	// synopsys translate_off
+	initial
+		dffe217 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe217 <= 1'b0;
+		else if  (clken == 1'b1)   dffe217 <= w_sum_node497w[244];
+	// synopsys translate_off
+	initial
+		dffe218 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe218 <= 1'b0;
+		else if  (clken == 1'b1)   dffe218 <= w_sum_node497w[76];
+	// synopsys translate_off
+	initial
+		dffe219 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe219 <= 1'b0;
+		else if  (clken == 1'b1)   dffe219 <= w_sum_node497w[268];
+	// synopsys translate_off
+	initial
+		dffe22 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe22 <= 1'b0;
+		else if  (clken == 1'b1)   dffe22 <= w_sum_node497w[30];
+	// synopsys translate_off
+	initial
+		dffe220 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe220 <= 1'b0;
+		else if  (clken == 1'b1)   dffe220 <= wire_sft344a_out[27];
+	// synopsys translate_off
+	initial
+		dffe221 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe221 <= 1'b0;
+		else if  (clken == 1'b1)   dffe221 <= w_sum_node497w[149];
+	// synopsys translate_off
+	initial
+		dffe222 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe222 <= 1'b0;
+		else if  (clken == 1'b1)   dffe222 <= w_sum_node497w[125];
+	// synopsys translate_off
+	initial
+		dffe223 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe223 <= 1'b0;
+		else if  (clken == 1'b1)   dffe223 <= wire_sft364a_out[11];
+	// synopsys translate_off
+	initial
+		dffe224 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe224 <= 1'b0;
+		else if  (clken == 1'b1)   dffe224 <= w_sum_node497w[197];
+	// synopsys translate_off
+	initial
+		dffe225 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe225 <= 1'b0;
+		else if  (clken == 1'b1)   dffe225 <= w_sum_node497w[101];
+	// synopsys translate_off
+	initial
+		dffe226 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe226 <= 1'b0;
+		else if  (clken == 1'b1)   dffe226 <= w_sum_node497w[221];
+	// synopsys translate_off
+	initial
+		dffe227 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe227 <= 1'b0;
+		else if  (clken == 1'b1)   dffe227 <= w_sum_node497w[245];
+	// synopsys translate_off
+	initial
+		dffe228 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe228 <= 1'b0;
+		else if  (clken == 1'b1)   dffe228 <= w_sum_node497w[77];
+	// synopsys translate_off
+	initial
+		dffe229 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe229 <= 1'b0;
+		else if  (clken == 1'b1)   dffe229 <= w_sum_node497w[269];
+	// synopsys translate_off
+	initial
+		dffe23 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe23 <= 1'b0;
+		else if  (clken == 1'b1)   dffe23 <= w_sum_node497w[78];
+	// synopsys translate_off
+	initial
+		dffe230 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe230 <= 1'b0;
+		else if  (clken == 1'b1)   dffe230 <= wire_sft344a_out[28];
+	// synopsys translate_off
+	initial
+		dffe231 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe231 <= 1'b0;
+		else if  (clken == 1'b1)   dffe231 <= w_sum_node497w[198];
+	// synopsys translate_off
+	initial
+		dffe232 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe232 <= 1'b0;
+		else if  (clken == 1'b1)   dffe232 <= w_sum_node497w[150];
+	// synopsys translate_off
+	initial
+		dffe233 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe233 <= 1'b0;
+		else if  (clken == 1'b1)   dffe233 <= wire_sft364a_out[12];
+	// synopsys translate_off
+	initial
+		dffe234 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe234 <= 1'b0;
+		else if  (clken == 1'b1)   dffe234 <= w_sum_node497w[222];
+	// synopsys translate_off
+	initial
+		dffe235 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe235 <= 1'b0;
+		else if  (clken == 1'b1)   dffe235 <= w_sum_node497w[126];
+	// synopsys translate_off
+	initial
+		dffe236 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe236 <= 1'b0;
+		else if  (clken == 1'b1)   dffe236 <= w_sum_node497w[246];
+	// synopsys translate_off
+	initial
+		dffe237 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe237 <= 1'b0;
+		else if  (clken == 1'b1)   dffe237 <= w_sum_node497w[270];
+	// synopsys translate_off
+	initial
+		dffe238 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe238 <= 1'b0;
+		else if  (clken == 1'b1)   dffe238 <= w_sum_node497w[102];
+	// synopsys translate_off
+	initial
+		dffe239 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe239 <= 1'b0;
+		else if  (clken == 1'b1)   dffe239 <= w_sum_node497w[294];
+	// synopsys translate_off
+	initial
+		dffe24 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe24 <= 1'b0;
+		else if  (clken == 1'b1)   dffe24 <= w_sum_node497w[54];
+	// synopsys translate_off
+	initial
+		dffe240 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe240 <= 1'b0;
+		else if  (clken == 1'b1)   dffe240 <= wire_sft344a_out[29];
+	// synopsys translate_off
+	initial
+		dffe241 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe241 <= 1'b0;
+		else if  (clken == 1'b1)   dffe241 <= w_sum_node497w[199];
+	// synopsys translate_off
+	initial
+		dffe242 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe242 <= 1'b0;
+		else if  (clken == 1'b1)   dffe242 <= w_sum_node497w[151];
+	// synopsys translate_off
+	initial
+		dffe243 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe243 <= 1'b0;
+		else if  (clken == 1'b1)   dffe243 <= wire_sft364a_out[13];
+	// synopsys translate_off
+	initial
+		dffe244 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe244 <= 1'b0;
+		else if  (clken == 1'b1)   dffe244 <= w_sum_node497w[223];
+	// synopsys translate_off
+	initial
+		dffe245 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe245 <= 1'b0;
+		else if  (clken == 1'b1)   dffe245 <= w_sum_node497w[127];
+	// synopsys translate_off
+	initial
+		dffe246 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe246 <= 1'b0;
+		else if  (clken == 1'b1)   dffe246 <= w_sum_node497w[247];
+	// synopsys translate_off
+	initial
+		dffe247 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe247 <= 1'b0;
+		else if  (clken == 1'b1)   dffe247 <= w_sum_node497w[271];
+	// synopsys translate_off
+	initial
+		dffe248 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe248 <= 1'b0;
+		else if  (clken == 1'b1)   dffe248 <= w_sum_node497w[103];
+	// synopsys translate_off
+	initial
+		dffe249 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe249 <= 1'b0;
+		else if  (clken == 1'b1)   dffe249 <= w_sum_node497w[295];
+	// synopsys translate_off
+	initial
+		dffe25 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe25 <= 1'b0;
+		else if  (clken == 1'b1)   dffe25 <= wire_sft344a_out[5];
+	// synopsys translate_off
+	initial
+		dffe250 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe250 <= 1'b0;
+		else if  (clken == 1'b1)   dffe250 <= wire_sft344a_out[30];
+	// synopsys translate_off
+	initial
+		dffe251 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe251 <= 1'b0;
+		else if  (clken == 1'b1)   dffe251 <= w_sum_node497w[224];
+	// synopsys translate_off
+	initial
+		dffe252 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe252 <= 1'b0;
+		else if  (clken == 1'b1)   dffe252 <= w_sum_node497w[176];
+	// synopsys translate_off
+	initial
+		dffe253 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe253 <= 1'b0;
+		else if  (clken == 1'b1)   dffe253 <= wire_sft364a_out[14];
+	// synopsys translate_off
+	initial
+		dffe254 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe254 <= 1'b0;
+		else if  (clken == 1'b1)   dffe254 <= w_sum_node497w[248];
+	// synopsys translate_off
+	initial
+		dffe255 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe255 <= 1'b0;
+		else if  (clken == 1'b1)   dffe255 <= w_sum_node497w[152];
+	// synopsys translate_off
+	initial
+		dffe256 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe256 <= 1'b0;
+		else if  (clken == 1'b1)   dffe256 <= w_sum_node497w[272];
+	// synopsys translate_off
+	initial
+		dffe257 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe257 <= 1'b0;
+		else if  (clken == 1'b1)   dffe257 <= w_sum_node497w[296];
+	// synopsys translate_off
+	initial
+		dffe258 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe258 <= 1'b0;
+		else if  (clken == 1'b1)   dffe258 <= w_sum_node497w[128];
+	// synopsys translate_off
+	initial
+		dffe259 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe259 <= 1'b0;
+		else if  (clken == 1'b1)   dffe259 <= w_sum_node497w[200];
+	// synopsys translate_off
+	initial
+		dffe26 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe26 <= 1'b0;
+		else if  (clken == 1'b1)   dffe26 <= w_sum_node497w[7];
+	// synopsys translate_off
+	initial
+		dffe260 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe260 <= 1'b0;
+		else if  (clken == 1'b1)   dffe260 <= wire_sft344a_out[31];
+	// synopsys translate_off
+	initial
+		dffe261 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe261 <= 1'b0;
+		else if  (clken == 1'b1)   dffe261 <= w_sum_node497w[201];
+	// synopsys translate_off
+	initial
+		dffe262 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe262 <= 1'b0;
+		else if  (clken == 1'b1)   dffe262 <= w_sum_node497w[177];
+	// synopsys translate_off
+	initial
+		dffe263 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe263 <= 1'b0;
+		else if  (clken == 1'b1)   dffe263 <= w_sum_node497w[225];
+	// synopsys translate_off
+	initial
+		dffe264 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe264 <= 1'b0;
+		else if  (clken == 1'b1)   dffe264 <= w_sum_node497w[249];
+	// synopsys translate_off
+	initial
+		dffe265 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe265 <= 1'b0;
+		else if  (clken == 1'b1)   dffe265 <= w_sum_node497w[153];
+	// synopsys translate_off
+	initial
+		dffe266 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe266 <= 1'b0;
+		else if  (clken == 1'b1)   dffe266 <= w_sum_node497w[273];
+	// synopsys translate_off
+	initial
+		dffe267 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe267 <= 1'b0;
+		else if  (clken == 1'b1)   dffe267 <= w_sum_node497w[297];
+	// synopsys translate_off
+	initial
+		dffe268 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe268 <= 1'b0;
+		else if  (clken == 1'b1)   dffe268 <= w_sum_node497w[129];
+	// synopsys translate_off
+	initial
+		dffe269 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe269 <= 1'b0;
+		else if  (clken == 1'b1)   dffe269 <= wire_sft344a_out[32];
+	// synopsys translate_off
+	initial
+		dffe27 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe27 <= 1'b0;
+		else if  (clken == 1'b1)   dffe27 <= w_sum_node497w[31];
+	// synopsys translate_off
+	initial
+		dffe270 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe270 <= 1'b0;
+		else if  (clken == 1'b1)   dffe270 <= w_sum_node497w[226];
+	// synopsys translate_off
+	initial
+		dffe271 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe271 <= 1'b0;
+		else if  (clken == 1'b1)   dffe271 <= w_sum_node497w[202];
+	// synopsys translate_off
+	initial
+		dffe272 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe272 <= 1'b0;
+		else if  (clken == 1'b1)   dffe272 <= w_sum_node497w[250];
+	// synopsys translate_off
+	initial
+		dffe273 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe273 <= 1'b0;
+		else if  (clken == 1'b1)   dffe273 <= w_sum_node497w[274];
+	// synopsys translate_off
+	initial
+		dffe274 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe274 <= 1'b0;
+		else if  (clken == 1'b1)   dffe274 <= w_sum_node497w[178];
+	// synopsys translate_off
+	initial
+		dffe275 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe275 <= 1'b0;
+		else if  (clken == 1'b1)   dffe275 <= w_sum_node497w[298];
+	// synopsys translate_off
+	initial
+		dffe276 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe276 <= 1'b0;
+		else if  (clken == 1'b1)   dffe276 <= w_sum_node497w[154];
+	// synopsys translate_off
+	initial
+		dffe277 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe277 <= 1'b0;
+		else if  (clken == 1'b1)   dffe277 <= wire_sft344a_out[33];
+	// synopsys translate_off
+	initial
+		dffe278 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe278 <= 1'b0;
+		else if  (clken == 1'b1)   dffe278 <= w_sum_node497w[227];
+	// synopsys translate_off
+	initial
+		dffe279 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe279 <= 1'b0;
+		else if  (clken == 1'b1)   dffe279 <= w_sum_node497w[203];
+	// synopsys translate_off
+	initial
+		dffe28 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe28 <= 1'b0;
+		else if  (clken == 1'b1)   dffe28 <= w_sum_node497w[79];
+	// synopsys translate_off
+	initial
+		dffe280 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe280 <= 1'b0;
+		else if  (clken == 1'b1)   dffe280 <= w_sum_node497w[251];
+	// synopsys translate_off
+	initial
+		dffe281 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe281 <= 1'b0;
+		else if  (clken == 1'b1)   dffe281 <= w_sum_node497w[275];
+	// synopsys translate_off
+	initial
+		dffe282 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe282 <= 1'b0;
+		else if  (clken == 1'b1)   dffe282 <= w_sum_node497w[179];
+	// synopsys translate_off
+	initial
+		dffe283 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe283 <= 1'b0;
+		else if  (clken == 1'b1)   dffe283 <= w_sum_node497w[299];
+	// synopsys translate_off
+	initial
+		dffe284 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe284 <= 1'b0;
+		else if  (clken == 1'b1)   dffe284 <= w_sum_node497w[155];
+	// synopsys translate_off
+	initial
+		dffe285 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe285 <= 1'b0;
+		else if  (clken == 1'b1)   dffe285 <= wire_sft344a_out[34];
+	// synopsys translate_off
+	initial
+		dffe286 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe286 <= 1'b0;
+		else if  (clken == 1'b1)   dffe286 <= w_sum_node497w[252];
+	// synopsys translate_off
+	initial
+		dffe287 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe287 <= 1'b0;
+		else if  (clken == 1'b1)   dffe287 <= w_sum_node497w[228];
+	// synopsys translate_off
+	initial
+		dffe288 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe288 <= 1'b0;
+		else if  (clken == 1'b1)   dffe288 <= w_sum_node497w[276];
+	// synopsys translate_off
+	initial
+		dffe289 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe289 <= 1'b0;
+		else if  (clken == 1'b1)   dffe289 <= w_sum_node497w[300];
+	// synopsys translate_off
+	initial
+		dffe29 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe29 <= 1'b0;
+		else if  (clken == 1'b1)   dffe29 <= w_sum_node497w[55];
+	// synopsys translate_off
+	initial
+		dffe290 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe290 <= 1'b0;
+		else if  (clken == 1'b1)   dffe290 <= w_sum_node497w[204];
+	// synopsys translate_off
+	initial
+		dffe291 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe291 <= 1'b0;
+		else if  (clken == 1'b1)   dffe291 <= w_sum_node497w[180];
+	// synopsys translate_off
+	initial
+		dffe292 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe292 <= 1'b0;
+		else if  (clken == 1'b1)   dffe292 <= wire_sft344a_out[35];
+	// synopsys translate_off
+	initial
+		dffe293 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe293 <= 1'b0;
+		else if  (clken == 1'b1)   dffe293 <= w_sum_node497w[181];
+	// synopsys translate_off
+	initial
+		dffe294 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe294 <= 1'b0;
+		else if  (clken == 1'b1)   dffe294 <= w_sum_node497w[253];
+	// synopsys translate_off
+	initial
+		dffe295 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe295 <= 1'b0;
+		else if  (clken == 1'b1)   dffe295 <= w_sum_node497w[229];
+	// synopsys translate_off
+	initial
+		dffe296 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe296 <= 1'b0;
+		else if  (clken == 1'b1)   dffe296 <= w_sum_node497w[277];
+	// synopsys translate_off
+	initial
+		dffe297 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe297 <= 1'b0;
+		else if  (clken == 1'b1)   dffe297 <= w_sum_node497w[301];
+	// synopsys translate_off
+	initial
+		dffe298 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe298 <= 1'b0;
+		else if  (clken == 1'b1)   dffe298 <= w_sum_node497w[205];
+	// synopsys translate_off
+	initial
+		dffe299 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe299 <= 1'b0;
+		else if  (clken == 1'b1)   dffe299 <= wire_sft344a_out[36];
+	// synopsys translate_off
+	initial
+		dffe3 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe3 <= 1'b0;
+		else if  (clken == 1'b1)   dffe3 <= w_sum_node497w[0];
+	// synopsys translate_off
+	initial
+		dffe30 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe30 <= 1'b0;
+		else if  (clken == 1'b1)   dffe30 <= wire_sft344a_out[6];
+	// synopsys translate_off
+	initial
+		dffe300 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe300 <= 1'b0;
+		else if  (clken == 1'b1)   dffe300 <= w_sum_node497w[230];
+	// synopsys translate_off
+	initial
+		dffe301 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe301 <= 1'b0;
+		else if  (clken == 1'b1)   dffe301 <= w_sum_node497w[278];
+	// synopsys translate_off
+	initial
+		dffe302 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe302 <= 1'b0;
+		else if  (clken == 1'b1)   dffe302 <= w_sum_node497w[254];
+	// synopsys translate_off
+	initial
+		dffe303 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe303 <= 1'b0;
+		else if  (clken == 1'b1)   dffe303 <= w_sum_node497w[302];
+	// synopsys translate_off
+	initial
+		dffe304 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe304 <= 1'b0;
+		else if  (clken == 1'b1)   dffe304 <= w_sum_node497w[206];
+	// synopsys translate_off
+	initial
+		dffe305 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe305 <= 1'b0;
+		else if  (clken == 1'b1)   dffe305 <= wire_sft344a_out[37];
+	// synopsys translate_off
+	initial
+		dffe306 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe306 <= 1'b0;
+		else if  (clken == 1'b1)   dffe306 <= w_sum_node497w[231];
+	// synopsys translate_off
+	initial
+		dffe307 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe307 <= 1'b0;
+		else if  (clken == 1'b1)   dffe307 <= w_sum_node497w[279];
+	// synopsys translate_off
+	initial
+		dffe308 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe308 <= 1'b0;
+		else if  (clken == 1'b1)   dffe308 <= w_sum_node497w[255];
+	// synopsys translate_off
+	initial
+		dffe309 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe309 <= 1'b0;
+		else if  (clken == 1'b1)   dffe309 <= w_sum_node497w[303];
+	// synopsys translate_off
+	initial
+		dffe31 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe31 <= 1'b0;
+		else if  (clken == 1'b1)   dffe31 <= w_sum_node497w[8];
+	// synopsys translate_off
+	initial
+		dffe310 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe310 <= 1'b0;
+		else if  (clken == 1'b1)   dffe310 <= w_sum_node497w[207];
+	// synopsys translate_off
+	initial
+		dffe311 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe311 <= 1'b0;
+		else if  (clken == 1'b1)   dffe311 <= wire_sft344a_out[38];
+	// synopsys translate_off
+	initial
+		dffe312 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe312 <= 1'b0;
+		else if  (clken == 1'b1)   dffe312 <= w_sum_node497w[256];
+	// synopsys translate_off
+	initial
+		dffe313 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe313 <= 1'b0;
+		else if  (clken == 1'b1)   dffe313 <= w_sum_node497w[304];
+	// synopsys translate_off
+	initial
+		dffe314 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe314 <= 1'b0;
+		else if  (clken == 1'b1)   dffe314 <= w_sum_node497w[280];
+	// synopsys translate_off
+	initial
+		dffe315 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe315 <= 1'b0;
+		else if  (clken == 1'b1)   dffe315 <= w_sum_node497w[232];
+	// synopsys translate_off
+	initial
+		dffe316 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe316 <= 1'b0;
+		else if  (clken == 1'b1)   dffe316 <= wire_sft344a_out[39];
+	// synopsys translate_off
+	initial
+		dffe317 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe317 <= 1'b0;
+		else if  (clken == 1'b1)   dffe317 <= w_sum_node497w[233];
+	// synopsys translate_off
+	initial
+		dffe318 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe318 <= 1'b0;
+		else if  (clken == 1'b1)   dffe318 <= w_sum_node497w[257];
+	// synopsys translate_off
+	initial
+		dffe319 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe319 <= 1'b0;
+		else if  (clken == 1'b1)   dffe319 <= w_sum_node497w[305];
+	// synopsys translate_off
+	initial
+		dffe32 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe32 <= 1'b0;
+		else if  (clken == 1'b1)   dffe32 <= w_sum_node497w[32];
+	// synopsys translate_off
+	initial
+		dffe320 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe320 <= 1'b0;
+		else if  (clken == 1'b1)   dffe320 <= w_sum_node497w[281];
+	// synopsys translate_off
+	initial
+		dffe321 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe321 <= 1'b0;
+		else if  (clken == 1'b1)   dffe321 <= wire_sft344a_out[40];
+	// synopsys translate_off
+	initial
+		dffe322 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe322 <= 1'b0;
+		else if  (clken == 1'b1)   dffe322 <= w_sum_node497w[306];
+	// synopsys translate_off
+	initial
+		dffe323 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe323 <= 1'b0;
+		else if  (clken == 1'b1)   dffe323 <= w_sum_node497w[282];
+	// synopsys translate_off
+	initial
+		dffe324 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe324 <= 1'b0;
+		else if  (clken == 1'b1)   dffe324 <= w_sum_node497w[258];
+	// synopsys translate_off
+	initial
+		dffe325 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe325 <= 1'b0;
+		else if  (clken == 1'b1)   dffe325 <= wire_sft344a_out[41];
+	// synopsys translate_off
+	initial
+		dffe326 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe326 <= 1'b0;
+		else if  (clken == 1'b1)   dffe326 <= w_sum_node497w[307];
+	// synopsys translate_off
+	initial
+		dffe327 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe327 <= 1'b0;
+		else if  (clken == 1'b1)   dffe327 <= w_sum_node497w[283];
+	// synopsys translate_off
+	initial
+		dffe328 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe328 <= 1'b0;
+		else if  (clken == 1'b1)   dffe328 <= w_sum_node497w[259];
+	// synopsys translate_off
+	initial
+		dffe329 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe329 <= 1'b0;
+		else if  (clken == 1'b1)   dffe329 <= wire_sft344a_out[42];
+	// synopsys translate_off
+	initial
+		dffe33 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe33 <= 1'b0;
+		else if  (clken == 1'b1)   dffe33 <= w_sum_node497w[80];
+	// synopsys translate_off
+	initial
+		dffe330 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe330 <= 1'b0;
+		else if  (clken == 1'b1)   dffe330 <= w_sum_node497w[284];
+	// synopsys translate_off
+	initial
+		dffe331 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe331 <= 1'b0;
+		else if  (clken == 1'b1)   dffe331 <= w_sum_node497w[308];
+	// synopsys translate_off
+	initial
+		dffe332 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe332 <= 1'b0;
+		else if  (clken == 1'b1)   dffe332 <= wire_sft344a_out[43];
+	// synopsys translate_off
+	initial
+		dffe333 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe333 <= 1'b0;
+		else if  (clken == 1'b1)   dffe333 <= w_sum_node497w[285];
+	// synopsys translate_off
+	initial
+		dffe334 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe334 <= 1'b0;
+		else if  (clken == 1'b1)   dffe334 <= w_sum_node497w[309];
+	// synopsys translate_off
+	initial
+		dffe335 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe335 <= 1'b0;
+		else if  (clken == 1'b1)   dffe335 <= wire_sft344a_out[44];
+	// synopsys translate_off
+	initial
+		dffe336 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe336 <= 1'b0;
+		else if  (clken == 1'b1)   dffe336 <= w_sum_node497w[310];
+	// synopsys translate_off
+	initial
+		dffe337 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe337 <= 1'b0;
+		else if  (clken == 1'b1)   dffe337 <= wire_sft344a_out[45];
+	// synopsys translate_off
+	initial
+		dffe338 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe338 <= 1'b0;
+		else if  (clken == 1'b1)   dffe338 <= w_sum_node497w[311];
+	// synopsys translate_off
+	initial
+		dffe339 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe339 <= 1'b0;
+		else if  (clken == 1'b1)   dffe339 <= wire_sft344a_out[46];
+	// synopsys translate_off
+	initial
+		dffe34 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe34 <= 1'b0;
+		else if  (clken == 1'b1)   dffe34 <= w_sum_node497w[56];
+	// synopsys translate_off
+	initial
+		dffe35 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe35 <= 1'b0;
+		else if  (clken == 1'b1)   dffe35 <= w_sum_node497w[104];
+	// synopsys translate_off
+	initial
+		dffe36 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe36 <= 1'b0;
+		else if  (clken == 1'b1)   dffe36 <= wire_sft344a_out[7];
+	// synopsys translate_off
+	initial
+		dffe37 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe37 <= 1'b0;
+		else if  (clken == 1'b1)   dffe37 <= w_sum_node497w[9];
+	// synopsys translate_off
+	initial
+		dffe38 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe38 <= 1'b0;
+		else if  (clken == 1'b1)   dffe38 <= w_sum_node497w[33];
+	// synopsys translate_off
+	initial
+		dffe39 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe39 <= 1'b0;
+		else if  (clken == 1'b1)   dffe39 <= w_sum_node497w[81];
+	// synopsys translate_off
+	initial
+		dffe4 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe4 <= 1'b0;
+		else if  (clken == 1'b1)   dffe4 <= dffe5;
+	// synopsys translate_off
+	initial
+		dffe40 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe40 <= 1'b0;
+		else if  (clken == 1'b1)   dffe40 <= w_sum_node497w[57];
+	// synopsys translate_off
+	initial
+		dffe41 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe41 <= 1'b0;
+		else if  (clken == 1'b1)   dffe41 <= w_sum_node497w[105];
+	// synopsys translate_off
+	initial
+		dffe42 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe42 <= 1'b0;
+		else if  (clken == 1'b1)   dffe42 <= wire_sft344a_out[8];
+	// synopsys translate_off
+	initial
+		dffe43 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe43 <= 1'b0;
+		else if  (clken == 1'b1)   dffe43 <= w_sum_node497w[10];
+	// synopsys translate_off
+	initial
+		dffe44 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe44 <= 1'b0;
+		else if  (clken == 1'b1)   dffe44 <= w_sum_node497w[82];
+	// synopsys translate_off
+	initial
+		dffe45 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe45 <= 1'b0;
+		else if  (clken == 1'b1)   dffe45 <= w_sum_node497w[58];
+	// synopsys translate_off
+	initial
+		dffe46 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe46 <= 1'b0;
+		else if  (clken == 1'b1)   dffe46 <= w_sum_node497w[106];
+	// synopsys translate_off
+	initial
+		dffe47 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe47 <= 1'b0;
+		else if  (clken == 1'b1)   dffe47 <= w_sum_node497w[130];
+	// synopsys translate_off
+	initial
+		dffe48 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe48 <= 1'b0;
+		else if  (clken == 1'b1)   dffe48 <= w_sum_node497w[34];
+	// synopsys translate_off
+	initial
+		dffe49 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe49 <= 1'b0;
+		else if  (clken == 1'b1)   dffe49 <= wire_sft344a_out[9];
+	// synopsys translate_off
+	initial
+		dffe5 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe5 <= 1'b0;
+		else if  (clken == 1'b1)   dffe5 <= w_sum_node497w[1];
+	// synopsys translate_off
+	initial
+		dffe50 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe50 <= 1'b0;
+		else if  (clken == 1'b1)   dffe50 <= w_sum_node497w[11];
+	// synopsys translate_off
+	initial
+		dffe51 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe51 <= 1'b0;
+		else if  (clken == 1'b1)   dffe51 <= w_sum_node497w[83];
+	// synopsys translate_off
+	initial
+		dffe52 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe52 <= 1'b0;
+		else if  (clken == 1'b1)   dffe52 <= w_sum_node497w[59];
+	// synopsys translate_off
+	initial
+		dffe53 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe53 <= 1'b0;
+		else if  (clken == 1'b1)   dffe53 <= w_sum_node497w[107];
+	// synopsys translate_off
+	initial
+		dffe54 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe54 <= 1'b0;
+		else if  (clken == 1'b1)   dffe54 <= w_sum_node497w[131];
+	// synopsys translate_off
+	initial
+		dffe55 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe55 <= 1'b0;
+		else if  (clken == 1'b1)   dffe55 <= w_sum_node497w[35];
+	// synopsys translate_off
+	initial
+		dffe56 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe56 <= 1'b0;
+		else if  (clken == 1'b1)   dffe56 <= wire_sft344a_out[10];
+	// synopsys translate_off
+	initial
+		dffe57 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe57 <= 1'b0;
+		else if  (clken == 1'b1)   dffe57 <= w_sum_node497w[12];
+	// synopsys translate_off
+	initial
+		dffe58 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe58 <= 1'b0;
+		else if  (clken == 1'b1)   dffe58 <= w_sum_node497w[84];
+	// synopsys translate_off
+	initial
+		dffe59 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe59 <= 1'b0;
+		else if  (clken == 1'b1)   dffe59 <= w_sum_node497w[60];
+	// synopsys translate_off
+	initial
+		dffe6 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe6 <= 1'b0;
+		else if  (clken == 1'b1)   dffe6 <= wire_sft344a_out[0];
+	// synopsys translate_off
+	initial
+		dffe60 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe60 <= 1'b0;
+		else if  (clken == 1'b1)   dffe60 <= w_sum_node497w[108];
+	// synopsys translate_off
+	initial
+		dffe61 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe61 <= 1'b0;
+		else if  (clken == 1'b1)   dffe61 <= w_sum_node497w[132];
+	// synopsys translate_off
+	initial
+		dffe62 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe62 <= 1'b0;
+		else if  (clken == 1'b1)   dffe62 <= w_sum_node497w[36];
+	// synopsys translate_off
+	initial
+		dffe63 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe63 <= 1'b0;
+		else if  (clken == 1'b1)   dffe63 <= w_sum_node497w[156];
+	// synopsys translate_off
+	initial
+		dffe64 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe64 <= 1'b0;
+		else if  (clken == 1'b1)   dffe64 <= wire_sft344a_out[11];
+	// synopsys translate_off
+	initial
+		dffe65 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe65 <= 1'b0;
+		else if  (clken == 1'b1)   dffe65 <= w_sum_node497w[13];
+	// synopsys translate_off
+	initial
+		dffe66 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe66 <= 1'b0;
+		else if  (clken == 1'b1)   dffe66 <= w_sum_node497w[85];
+	// synopsys translate_off
+	initial
+		dffe67 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe67 <= 1'b0;
+		else if  (clken == 1'b1)   dffe67 <= w_sum_node497w[61];
+	// synopsys translate_off
+	initial
+		dffe68 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe68 <= 1'b0;
+		else if  (clken == 1'b1)   dffe68 <= w_sum_node497w[109];
+	// synopsys translate_off
+	initial
+		dffe69 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe69 <= 1'b0;
+		else if  (clken == 1'b1)   dffe69 <= w_sum_node497w[133];
+	// synopsys translate_off
+	initial
+		dffe7 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe7 <= 1'b0;
+		else if  (clken == 1'b1)   dffe7 <= w_sum_node497w[2];
+	// synopsys translate_off
+	initial
+		dffe70 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe70 <= 1'b0;
+		else if  (clken == 1'b1)   dffe70 <= w_sum_node497w[37];
+	// synopsys translate_off
+	initial
+		dffe71 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe71 <= 1'b0;
+		else if  (clken == 1'b1)   dffe71 <= w_sum_node497w[157];
+	// synopsys translate_off
+	initial
+		dffe72 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe72 <= 1'b0;
+		else if  (clken == 1'b1)   dffe72 <= wire_sft344a_out[12];
+	// synopsys translate_off
+	initial
+		dffe73 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe73 <= 1'b0;
+		else if  (clken == 1'b1)   dffe73 <= w_sum_node497w[86];
+	// synopsys translate_off
+	initial
+		dffe74 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe74 <= 1'b0;
+		else if  (clken == 1'b1)   dffe74 <= w_sum_node497w[62];
+	// synopsys translate_off
+	initial
+		dffe75 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe75 <= 1'b0;
+		else if  (clken == 1'b1)   dffe75 <= w_sum_node497w[110];
+	// synopsys translate_off
+	initial
+		dffe76 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe76 <= 1'b0;
+		else if  (clken == 1'b1)   dffe76 <= w_sum_node497w[134];
+	// synopsys translate_off
+	initial
+		dffe77 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe77 <= 1'b0;
+		else if  (clken == 1'b1)   dffe77 <= w_sum_node497w[38];
+	// synopsys translate_off
+	initial
+		dffe78 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe78 <= 1'b0;
+		else if  (clken == 1'b1)   dffe78 <= w_sum_node497w[158];
+	// synopsys translate_off
+	initial
+		dffe79 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe79 <= 1'b0;
+		else if  (clken == 1'b1)   dffe79 <= w_sum_node497w[182];
+	// synopsys translate_off
+	initial
+		dffe8 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe8 <= 1'b0;
+		else if  (clken == 1'b1)   dffe8 <= w_sum_node497w[26];
+	// synopsys translate_off
+	initial
+		dffe80 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe80 <= 1'b0;
+		else if  (clken == 1'b1)   dffe80 <= w_sum_node497w[14];
+	// synopsys translate_off
+	initial
+		dffe81 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe81 <= 1'b0;
+		else if  (clken == 1'b1)   dffe81 <= wire_sft344a_out[13];
+	// synopsys translate_off
+	initial
+		dffe82 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe82 <= 1'b0;
+		else if  (clken == 1'b1)   dffe82 <= w_sum_node497w[87];
+	// synopsys translate_off
+	initial
+		dffe83 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe83 <= 1'b0;
+		else if  (clken == 1'b1)   dffe83 <= w_sum_node497w[63];
+	// synopsys translate_off
+	initial
+		dffe84 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe84 <= 1'b0;
+		else if  (clken == 1'b1)   dffe84 <= w_sum_node497w[111];
+	// synopsys translate_off
+	initial
+		dffe85 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe85 <= 1'b0;
+		else if  (clken == 1'b1)   dffe85 <= w_sum_node497w[135];
+	// synopsys translate_off
+	initial
+		dffe86 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe86 <= 1'b0;
+		else if  (clken == 1'b1)   dffe86 <= w_sum_node497w[39];
+	// synopsys translate_off
+	initial
+		dffe87 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe87 <= 1'b0;
+		else if  (clken == 1'b1)   dffe87 <= w_sum_node497w[159];
+	// synopsys translate_off
+	initial
+		dffe88 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe88 <= 1'b0;
+		else if  (clken == 1'b1)   dffe88 <= w_sum_node497w[183];
+	// synopsys translate_off
+	initial
+		dffe89 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe89 <= 1'b0;
+		else if  (clken == 1'b1)   dffe89 <= w_sum_node497w[15];
+	// synopsys translate_off
+	initial
+		dffe9 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe9 <= 1'b0;
+		else if  (clken == 1'b1)   dffe9 <= wire_sft344a_out[1];
+	// synopsys translate_off
+	initial
+		dffe90 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe90 <= 1'b0;
+		else if  (clken == 1'b1)   dffe90 <= wire_sft344a_out[14];
+	// synopsys translate_off
+	initial
+		dffe91 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe91 <= 1'b0;
+		else if  (clken == 1'b1)   dffe91 <= w_sum_node497w[88];
+	// synopsys translate_off
+	initial
+		dffe92 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe92 <= 1'b0;
+		else if  (clken == 1'b1)   dffe92 <= w_sum_node497w[64];
+	// synopsys translate_off
+	initial
+		dffe93 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe93 <= 1'b0;
+		else if  (clken == 1'b1)   dffe93 <= w_sum_node497w[112];
+	// synopsys translate_off
+	initial
+		dffe94 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe94 <= 1'b0;
+		else if  (clken == 1'b1)   dffe94 <= w_sum_node497w[136];
+	// synopsys translate_off
+	initial
+		dffe95 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe95 <= 1'b0;
+		else if  (clken == 1'b1)   dffe95 <= w_sum_node497w[40];
+	// synopsys translate_off
+	initial
+		dffe96 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe96 <= 1'b0;
+		else if  (clken == 1'b1)   dffe96 <= w_sum_node497w[160];
+	// synopsys translate_off
+	initial
+		dffe97 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe97 <= 1'b0;
+		else if  (clken == 1'b1)   dffe97 <= w_sum_node497w[184];
+	// synopsys translate_off
+	initial
+		dffe98 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe98 <= 1'b0;
+		else if  (clken == 1'b1)   dffe98 <= w_sum_node497w[16];
+	// synopsys translate_off
+	initial
+		dffe99 = 0;
+	// synopsys translate_on
+	always @ ( posedge clock or  posedge aclr)
+		if (aclr == 1'b1) dffe99 <= 1'b0;
+		else if  (clken == 1'b1)   dffe99 <= w_sum_node497w[208];
+	assign
+		wire_sum_adder1aa_0result = wire_sum_adder1aa_0dataa + wire_sum_adder1aa_0datab;
+	assign
+		wire_sum_adder1aa_0dataa = {1'b0, w_decoder_node496w[47:24]},
+		wire_sum_adder1aa_0datab = {{2{1'b0}}, w_decoder_node496w[23:1]};
+	assign
+		wire_sum_adder1aa_1result = wire_sum_adder1aa_1dataa + wire_sum_adder1aa_1datab;
+	assign
+		wire_sum_adder1aa_1dataa = {1'b0, w_decoder_node496w[95:72]},
+		wire_sum_adder1aa_1datab = {{2{1'b0}}, w_decoder_node496w[71:49]};
+	assign
+		wire_sum_adder1aa_2result = wire_sum_adder1aa_2dataa + wire_sum_adder1aa_2datab;
+	assign
+		wire_sum_adder1aa_2dataa = {1'b0, w_decoder_node496w[143:120]},
+		wire_sum_adder1aa_2datab = {{2{1'b0}}, w_decoder_node496w[119:97]};
+	assign
+		wire_sum_adder1aa_3result = wire_sum_adder1aa_3dataa + wire_sum_adder1aa_3datab;
+	assign
+		wire_sum_adder1aa_3dataa = {1'b0, w_decoder_node496w[191:168]},
+		wire_sum_adder1aa_3datab = {{2{1'b0}}, w_decoder_node496w[167:145]};
+	assign
+		wire_sum_adder1aa_4result = wire_sum_adder1aa_4dataa + wire_sum_adder1aa_4datab;
+	assign
+		wire_sum_adder1aa_4dataa = {1'b0, w_decoder_node496w[239:216]},
+		wire_sum_adder1aa_4datab = {{2{1'b0}}, w_decoder_node496w[215:193]};
+	assign
+		wire_sum_adder1aa_5result = wire_sum_adder1aa_5dataa + wire_sum_adder1aa_5datab;
+	assign
+		wire_sum_adder1aa_5dataa = {1'b0, w_decoder_node496w[287:264]},
+		wire_sum_adder1aa_5datab = {{2{1'b0}}, w_decoder_node496w[263:241]};
+	assign
+		wire_sum_adder1aa_6result = wire_sum_adder1aa_6dataa + wire_sum_adder1aa_6datab;
+	assign
+		wire_sum_adder1aa_6dataa = {1'b0, w_decoder_node496w[335:312]},
+		wire_sum_adder1aa_6datab = {{2{1'b0}}, w_decoder_node496w[311:289]};
+	assign
+		wire_sum_adder1aa_7result = wire_sum_adder1aa_7dataa + wire_sum_adder1aa_7datab;
+	assign
+		wire_sum_adder1aa_7dataa = {1'b0, w_decoder_node496w[383:360]},
+		wire_sum_adder1aa_7datab = {{2{1'b0}}, w_decoder_node496w[359:337]};
+	assign
+		wire_sum_adder1aa_8result = wire_sum_adder1aa_8dataa + wire_sum_adder1aa_8datab;
+	assign
+		wire_sum_adder1aa_8dataa = {1'b0, w_decoder_node496w[431:408]},
+		wire_sum_adder1aa_8datab = {{2{1'b0}}, w_decoder_node496w[407:385]};
+	assign
+		wire_sum_adder1aa_9result = wire_sum_adder1aa_9dataa + wire_sum_adder1aa_9datab;
+	assign
+		wire_sum_adder1aa_9dataa = {1'b0, w_decoder_node496w[479:456]},
+		wire_sum_adder1aa_9datab = {{2{1'b0}}, w_decoder_node496w[455:433]};
+	assign
+		wire_sum_adder1aa_10result = wire_sum_adder1aa_10dataa + wire_sum_adder1aa_10datab;
+	assign
+		wire_sum_adder1aa_10dataa = {1'b0, w_decoder_node496w[527:504]},
+		wire_sum_adder1aa_10datab = {{2{1'b0}}, w_decoder_node496w[503:481]};
+	assign
+		wire_sum_adder1aa_11result = wire_sum_adder1aa_11dataa + wire_sum_adder1aa_11datab;
+	assign
+		wire_sum_adder1aa_11dataa = {1'b0, w_decoder_node496w[575:552]},
+		wire_sum_adder1aa_11datab = {{2{1'b0}}, w_decoder_node496w[551:529]};
+	soft   sft341a_0
+	( 
+	.in(wire_sft341a_in[0:0]),
+	.out(wire_sft341a_out[0:0]));
+	soft   sft341a_1
+	( 
+	.in(wire_sft341a_in[1:1]),
+	.out(wire_sft341a_out[1:1]));
+	soft   sft341a_2
+	( 
+	.in(wire_sft341a_in[2:2]),
+	.out(wire_sft341a_out[2:2]));
+	soft   sft341a_3
+	( 
+	.in(wire_sft341a_in[3:3]),
+	.out(wire_sft341a_out[3:3]));
+	soft   sft341a_4
+	( 
+	.in(wire_sft341a_in[4:4]),
+	.out(wire_sft341a_out[4:4]));
+	soft   sft341a_5
+	( 
+	.in(wire_sft341a_in[5:5]),
+	.out(wire_sft341a_out[5:5]));
+	soft   sft341a_6
+	( 
+	.in(wire_sft341a_in[6:6]),
+	.out(wire_sft341a_out[6:6]));
+	soft   sft341a_7
+	( 
+	.in(wire_sft341a_in[7:7]),
+	.out(wire_sft341a_out[7:7]));
+	soft   sft341a_8
+	( 
+	.in(wire_sft341a_in[8:8]),
+	.out(wire_sft341a_out[8:8]));
+	soft   sft341a_9
+	( 
+	.in(wire_sft341a_in[9:9]),
+	.out(wire_sft341a_out[9:9]));
+	soft   sft341a_10
+	( 
+	.in(wire_sft341a_in[10:10]),
+	.out(wire_sft341a_out[10:10]));
+	soft   sft341a_11
+	( 
+	.in(wire_sft341a_in[11:11]),
+	.out(wire_sft341a_out[11:11]));
+	soft   sft341a_12
+	( 
+	.in(wire_sft341a_in[12:12]),
+	.out(wire_sft341a_out[12:12]));
+	soft   sft341a_13
+	( 
+	.in(wire_sft341a_in[13:13]),
+	.out(wire_sft341a_out[13:13]));
+	soft   sft341a_14
+	( 
+	.in(wire_sft341a_in[14:14]),
+	.out(wire_sft341a_out[14:14]));
+	soft   sft341a_15
+	( 
+	.in(wire_sft341a_in[15:15]),
+	.out(wire_sft341a_out[15:15]));
+	soft   sft341a_16
+	( 
+	.in(wire_sft341a_in[16:16]),
+	.out(wire_sft341a_out[16:16]));
+	soft   sft341a_17
+	( 
+	.in(wire_sft341a_in[17:17]),
+	.out(wire_sft341a_out[17:17]));
+	soft   sft341a_18
+	( 
+	.in(wire_sft341a_in[18:18]),
+	.out(wire_sft341a_out[18:18]));
+	soft   sft341a_19
+	( 
+	.in(wire_sft341a_in[19:19]),
+	.out(wire_sft341a_out[19:19]));
+	soft   sft341a_20
+	( 
+	.in(wire_sft341a_in[20:20]),
+	.out(wire_sft341a_out[20:20]));
+	soft   sft341a_21
+	( 
+	.in(wire_sft341a_in[21:21]),
+	.out(wire_sft341a_out[21:21]));
+	soft   sft341a_22
+	( 
+	.in(wire_sft341a_in[22:22]),
+	.out(wire_sft341a_out[22:22]));
+	soft   sft341a_23
+	( 
+	.in(wire_sft341a_in[23:23]),
+	.out(wire_sft341a_out[23:23]));
+	soft   sft341a_24
+	( 
+	.in(wire_sft341a_in[24:24]),
+	.out(wire_sft341a_out[24:24]));
+	soft   sft341a_25
+	( 
+	.in(wire_sft341a_in[25:25]),
+	.out(wire_sft341a_out[25:25]));
+	soft   sft341a_26
+	( 
+	.in(wire_sft341a_in[26:26]),
+	.out(wire_sft341a_out[26:26]));
+	soft   sft341a_27
+	( 
+	.in(wire_sft341a_in[27:27]),
+	.out(wire_sft341a_out[27:27]));
+	soft   sft341a_28
+	( 
+	.in(wire_sft341a_in[28:28]),
+	.out(wire_sft341a_out[28:28]));
+	soft   sft341a_29
+	( 
+	.in(wire_sft341a_in[29:29]),
+	.out(wire_sft341a_out[29:29]));
+	soft   sft341a_30
+	( 
+	.in(wire_sft341a_in[30:30]),
+	.out(wire_sft341a_out[30:30]));
+	soft   sft341a_31
+	( 
+	.in(wire_sft341a_in[31:31]),
+	.out(wire_sft341a_out[31:31]));
+	soft   sft341a_32
+	( 
+	.in(wire_sft341a_in[32:32]),
+	.out(wire_sft341a_out[32:32]));
+	soft   sft341a_33
+	( 
+	.in(wire_sft341a_in[33:33]),
+	.out(wire_sft341a_out[33:33]));
+	soft   sft341a_34
+	( 
+	.in(wire_sft341a_in[34:34]),
+	.out(wire_sft341a_out[34:34]));
+	soft   sft341a_35
+	( 
+	.in(wire_sft341a_in[35:35]),
+	.out(wire_sft341a_out[35:35]));
+	soft   sft341a_36
+	( 
+	.in(wire_sft341a_in[36:36]),
+	.out(wire_sft341a_out[36:36]));
+	soft   sft341a_37
+	( 
+	.in(wire_sft341a_in[37:37]),
+	.out(wire_sft341a_out[37:37]));
+	soft   sft341a_38
+	( 
+	.in(wire_sft341a_in[38:38]),
+	.out(wire_sft341a_out[38:38]));
+	soft   sft341a_39
+	( 
+	.in(wire_sft341a_in[39:39]),
+	.out(wire_sft341a_out[39:39]));
+	soft   sft341a_40
+	( 
+	.in(wire_sft341a_in[40:40]),
+	.out(wire_sft341a_out[40:40]));
+	soft   sft341a_41
+	( 
+	.in(wire_sft341a_in[41:41]),
+	.out(wire_sft341a_out[41:41]));
+	soft   sft341a_42
+	( 
+	.in(wire_sft341a_in[42:42]),
+	.out(wire_sft341a_out[42:42]));
+	soft   sft341a_43
+	( 
+	.in(wire_sft341a_in[43:43]),
+	.out(wire_sft341a_out[43:43]));
+	soft   sft341a_44
+	( 
+	.in(wire_sft341a_in[44:44]),
+	.out(wire_sft341a_out[44:44]));
+	soft   sft341a_45
+	( 
+	.in(wire_sft341a_in[45:45]),
+	.out(wire_sft341a_out[45:45]));
+	soft   sft341a_46
+	( 
+	.in(wire_sft341a_in[46:46]),
+	.out(wire_sft341a_out[46:46]));
+	assign
+		wire_sft341a_in = {w1233w, {dffe338, {dffe336, {dffe333, {dffe330, {dffe326, {dffe322, {dffe317, {dffe312, {dffe306, {dffe300, {dffe293, {wire_sft349a_out[30], {wire_sft349a_out[29], {wire_sft349a_out[28], {wire_sft349a_out[27], {wire_sft349a_out[26], {wire_sft349a_out[25], {wire_sft349a_out[24], {wire_sft349a_out[23], {wire_sft349a_out[22], {wire_sft349a_out[21], {wire_sft349a_out[20], {wire_sft349a_out[19], {wire_sft349a_out[18], {wire_sft349a_out[17], {wire_sft349a_out[16], {wire_sft349a_out[15], {wire_sft349a_out[14], {wire_sft349a_out[13], {wire_sft349a_out[12], {wire_sft349a_out[11], {wire_sft349a_out[10], {wire_sft349a_out[9], {wire_sft349a_out[8], {dffe65, {dffe57, {dffe50, {dffe43, {dffe37, {dffe31, {dffe26, {dffe21, {dffe17, {dffe13, {dffe10, dffe7}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
+	soft   sft342a_0
+	( 
+	.in(wire_sft342a_in[0:0]),
+	.out(wire_sft342a_out[0:0]));
+	soft   sft342a_1
+	( 
+	.in(wire_sft342a_in[1:1]),
+	.out(wire_sft342a_out[1:1]));
+	soft   sft342a_2
+	( 
+	.in(wire_sft342a_in[2:2]),
+	.out(wire_sft342a_out[2:2]));
+	soft   sft342a_3
+	( 
+	.in(wire_sft342a_in[3:3]),
+	.out(wire_sft342a_out[3:3]));
+	soft   sft342a_4
+	( 
+	.in(wire_sft342a_in[4:4]),
+	.out(wire_sft342a_out[4:4]));
+	soft   sft342a_5
+	( 
+	.in(wire_sft342a_in[5:5]),
+	.out(wire_sft342a_out[5:5]));
+	soft   sft342a_6
+	( 
+	.in(wire_sft342a_in[6:6]),
+	.out(wire_sft342a_out[6:6]));
+	soft   sft342a_7
+	( 
+	.in(wire_sft342a_in[7:7]),
+	.out(wire_sft342a_out[7:7]));
+	soft   sft342a_8
+	( 
+	.in(wire_sft342a_in[8:8]),
+	.out(wire_sft342a_out[8:8]));
+	soft   sft342a_9
+	( 
+	.in(wire_sft342a_in[9:9]),
+	.out(wire_sft342a_out[9:9]));
+	soft   sft342a_10
+	( 
+	.in(wire_sft342a_in[10:10]),
+	.out(wire_sft342a_out[10:10]));
+	soft   sft342a_11
+	( 
+	.in(wire_sft342a_in[11:11]),
+	.out(wire_sft342a_out[11:11]));
+	soft   sft342a_12
+	( 
+	.in(wire_sft342a_in[12:12]),
+	.out(wire_sft342a_out[12:12]));
+	soft   sft342a_13
+	( 
+	.in(wire_sft342a_in[13:13]),
+	.out(wire_sft342a_out[13:13]));
+	soft   sft342a_14
+	( 
+	.in(wire_sft342a_in[14:14]),
+	.out(wire_sft342a_out[14:14]));
+	soft   sft342a_15
+	( 
+	.in(wire_sft342a_in[15:15]),
+	.out(wire_sft342a_out[15:15]));
+	soft   sft342a_16
+	( 
+	.in(wire_sft342a_in[16:16]),
+	.out(wire_sft342a_out[16:16]));
+	soft   sft342a_17
+	( 
+	.in(wire_sft342a_in[17:17]),
+	.out(wire_sft342a_out[17:17]));
+	soft   sft342a_18
+	( 
+	.in(wire_sft342a_in[18:18]),
+	.out(wire_sft342a_out[18:18]));
+	soft   sft342a_19
+	( 
+	.in(wire_sft342a_in[19:19]),
+	.out(wire_sft342a_out[19:19]));
+	soft   sft342a_20
+	( 
+	.in(wire_sft342a_in[20:20]),
+	.out(wire_sft342a_out[20:20]));
+	soft   sft342a_21
+	( 
+	.in(wire_sft342a_in[21:21]),
+	.out(wire_sft342a_out[21:21]));
+	soft   sft342a_22
+	( 
+	.in(wire_sft342a_in[22:22]),
+	.out(wire_sft342a_out[22:22]));
+	soft   sft342a_23
+	( 
+	.in(wire_sft342a_in[23:23]),
+	.out(wire_sft342a_out[23:23]));
+	soft   sft342a_24
+	( 
+	.in(wire_sft342a_in[24:24]),
+	.out(wire_sft342a_out[24:24]));
+	soft   sft342a_25
+	( 
+	.in(wire_sft342a_in[25:25]),
+	.out(wire_sft342a_out[25:25]));
+	soft   sft342a_26
+	( 
+	.in(wire_sft342a_in[26:26]),
+	.out(wire_sft342a_out[26:26]));
+	soft   sft342a_27
+	( 
+	.in(wire_sft342a_in[27:27]),
+	.out(wire_sft342a_out[27:27]));
+	soft   sft342a_28
+	( 
+	.in(wire_sft342a_in[28:28]),
+	.out(wire_sft342a_out[28:28]));
+	soft   sft342a_29
+	( 
+	.in(wire_sft342a_in[29:29]),
+	.out(wire_sft342a_out[29:29]));
+	soft   sft342a_30
+	( 
+	.in(wire_sft342a_in[30:30]),
+	.out(wire_sft342a_out[30:30]));
+	soft   sft342a_31
+	( 
+	.in(wire_sft342a_in[31:31]),
+	.out(wire_sft342a_out[31:31]));
+	soft   sft342a_32
+	( 
+	.in(wire_sft342a_in[32:32]),
+	.out(wire_sft342a_out[32:32]));
+	soft   sft342a_33
+	( 
+	.in(wire_sft342a_in[33:33]),
+	.out(wire_sft342a_out[33:33]));
+	soft   sft342a_34
+	( 
+	.in(wire_sft342a_in[34:34]),
+	.out(wire_sft342a_out[34:34]));
+	soft   sft342a_35
+	( 
+	.in(wire_sft342a_in[35:35]),
+	.out(wire_sft342a_out[35:35]));
+	soft   sft342a_36
+	( 
+	.in(wire_sft342a_in[36:36]),
+	.out(wire_sft342a_out[36:36]));
+	soft   sft342a_37
+	( 
+	.in(wire_sft342a_in[37:37]),
+	.out(wire_sft342a_out[37:37]));
+	soft   sft342a_38
+	( 
+	.in(wire_sft342a_in[38:38]),
+	.out(wire_sft342a_out[38:38]));
+	soft   sft342a_39
+	( 
+	.in(wire_sft342a_in[39:39]),
+	.out(wire_sft342a_out[39:39]));
+	soft   sft342a_40
+	( 
+	.in(wire_sft342a_in[40:40]),
+	.out(wire_sft342a_out[40:40]));
+	soft   sft342a_41
+	( 
+	.in(wire_sft342a_in[41:41]),
+	.out(wire_sft342a_out[41:41]));
+	soft   sft342a_42
+	( 
+	.in(wire_sft342a_in[42:42]),
+	.out(wire_sft342a_out[42:42]));
+	soft   sft342a_43
+	( 
+	.in(wire_sft342a_in[43:43]),
+	.out(wire_sft342a_out[43:43]));
+	soft   sft342a_44
+	( 
+	.in(wire_sft342a_in[44:44]),
+	.out(wire_sft342a_out[44:44]));
+	soft   sft342a_45
+	( 
+	.in(wire_sft342a_in[45:45]),
+	.out(wire_sft342a_out[45:45]));
+	soft   sft342a_46
+	( 
+	.in(wire_sft342a_in[46:46]),
+	.out(wire_sft342a_out[46:46]));
+	assign
+		wire_sft342a_in = {w1233w, {w1233w, {w1233w, {dffe334, {dffe331, {dffe327, {dffe323, {dffe318, {wire_sft349a_out[34], {wire_sft349a_out[33], {wire_sft349a_out[32], {wire_sft349a_out[31], {wire_sft354a_out[26], {wire_sft354a_out[25], {wire_sft354a_out[24], {wire_sft354a_out[23], {wire_sft354a_out[22], {wire_sft354a_out[21], {wire_sft354a_out[20], {wire_sft354a_out[19], {wire_sft354a_out[18], {wire_sft354a_out[17], {wire_sft354a_out[16], {wire_sft354a_out[15], {wire_sft354a_out[14], {wire_sft354a_out[13], {wire_sft354a_out[12], {wire_sft354a_out[11], {wire_sft354a_out[10], {wire_sft354a_out[9], {wire_sft354a_out[8], {wire_sft354a_out[7], {wire_sft354a_out[6], {wire_sft354a_out[5], {wire_sft354a_out[4], {wire_sft349a_out[7], {wire_sft349a_out[6], {wire_sft349a_out[5], {wire_sft349a_out[4], {dffe38, {dffe32, {dffe27, {dffe22, {dffe18, {dffe14, {dffe11, dffe8}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
+	soft   sft343a_0
+	( 
+	.in(wire_sft343a_in[0:0]),
+	.out(wire_sft343a_out[0:0]));
+	soft   sft343a_1
+	( 
+	.in(wire_sft343a_in[1:1]),
+	.out(wire_sft343a_out[1:1]));
+	soft   sft343a_2
+	( 
+	.in(wire_sft343a_in[2:2]),
+	.out(wire_sft343a_out[2:2]));
+	soft   sft343a_3
+	( 
+	.in(wire_sft343a_in[3:3]),
+	.out(wire_sft343a_out[3:3]));
+	soft   sft343a_4
+	( 
+	.in(wire_sft343a_in[4:4]),
+	.out(wire_sft343a_out[4:4]));
+	soft   sft343a_5
+	( 
+	.in(wire_sft343a_in[5:5]),
+	.out(wire_sft343a_out[5:5]));
+	soft   sft343a_6
+	( 
+	.in(wire_sft343a_in[6:6]),
+	.out(wire_sft343a_out[6:6]));
+	soft   sft343a_7
+	( 
+	.in(wire_sft343a_in[7:7]),
+	.out(wire_sft343a_out[7:7]));
+	soft   sft343a_8
+	( 
+	.in(wire_sft343a_in[8:8]),
+	.out(wire_sft343a_out[8:8]));
+	soft   sft343a_9
+	( 
+	.in(wire_sft343a_in[9:9]),
+	.out(wire_sft343a_out[9:9]));
+	soft   sft343a_10
+	( 
+	.in(wire_sft343a_in[10:10]),
+	.out(wire_sft343a_out[10:10]));
+	soft   sft343a_11
+	( 
+	.in(wire_sft343a_in[11:11]),
+	.out(wire_sft343a_out[11:11]));
+	soft   sft343a_12
+	( 
+	.in(wire_sft343a_in[12:12]),
+	.out(wire_sft343a_out[12:12]));
+	soft   sft343a_13
+	( 
+	.in(wire_sft343a_in[13:13]),
+	.out(wire_sft343a_out[13:13]));
+	soft   sft343a_14
+	( 
+	.in(wire_sft343a_in[14:14]),
+	.out(wire_sft343a_out[14:14]));
+	soft   sft343a_15
+	( 
+	.in(wire_sft343a_in[15:15]),
+	.out(wire_sft343a_out[15:15]));
+	soft   sft343a_16
+	( 
+	.in(wire_sft343a_in[16:16]),
+	.out(wire_sft343a_out[16:16]));
+	soft   sft343a_17
+	( 
+	.in(wire_sft343a_in[17:17]),
+	.out(wire_sft343a_out[17:17]));
+	soft   sft343a_18
+	( 
+	.in(wire_sft343a_in[18:18]),
+	.out(wire_sft343a_out[18:18]));
+	soft   sft343a_19
+	( 
+	.in(wire_sft343a_in[19:19]),
+	.out(wire_sft343a_out[19:19]));
+	soft   sft343a_20
+	( 
+	.in(wire_sft343a_in[20:20]),
+	.out(wire_sft343a_out[20:20]));
+	soft   sft343a_21
+	( 
+	.in(wire_sft343a_in[21:21]),
+	.out(wire_sft343a_out[21:21]));
+	soft   sft343a_22
+	( 
+	.in(wire_sft343a_in[22:22]),
+	.out(wire_sft343a_out[22:22]));
+	soft   sft343a_23
+	( 
+	.in(wire_sft343a_in[23:23]),
+	.out(wire_sft343a_out[23:23]));
+	soft   sft343a_24
+	( 
+	.in(wire_sft343a_in[24:24]),
+	.out(wire_sft343a_out[24:24]));
+	soft   sft343a_25
+	( 
+	.in(wire_sft343a_in[25:25]),
+	.out(wire_sft343a_out[25:25]));
+	soft   sft343a_26
+	( 
+	.in(wire_sft343a_in[26:26]),
+	.out(wire_sft343a_out[26:26]));
+	soft   sft343a_27
+	( 
+	.in(wire_sft343a_in[27:27]),
+	.out(wire_sft343a_out[27:27]));
+	soft   sft343a_28
+	( 
+	.in(wire_sft343a_in[28:28]),
+	.out(wire_sft343a_out[28:28]));
+	soft   sft343a_29
+	( 
+	.in(wire_sft343a_in[29:29]),
+	.out(wire_sft343a_out[29:29]));
+	soft   sft343a_30
+	( 
+	.in(wire_sft343a_in[30:30]),
+	.out(wire_sft343a_out[30:30]));
+	soft   sft343a_31
+	( 
+	.in(wire_sft343a_in[31:31]),
+	.out(wire_sft343a_out[31:31]));
+	soft   sft343a_32
+	( 
+	.in(wire_sft343a_in[32:32]),
+	.out(wire_sft343a_out[32:32]));
+	soft   sft343a_33
+	( 
+	.in(wire_sft343a_in[33:33]),
+	.out(wire_sft343a_out[33:33]));
+	soft   sft343a_34
+	( 
+	.in(wire_sft343a_in[34:34]),
+	.out(wire_sft343a_out[34:34]));
+	soft   sft343a_35
+	( 
+	.in(wire_sft343a_in[35:35]),
+	.out(wire_sft343a_out[35:35]));
+	soft   sft343a_36
+	( 
+	.in(wire_sft343a_in[36:36]),
+	.out(wire_sft343a_out[36:36]));
+	soft   sft343a_37
+	( 
+	.in(wire_sft343a_in[37:37]),
+	.out(wire_sft343a_out[37:37]));
+	soft   sft343a_38
+	( 
+	.in(wire_sft343a_in[38:38]),
+	.out(wire_sft343a_out[38:38]));
+	soft   sft343a_39
+	( 
+	.in(wire_sft343a_in[39:39]),
+	.out(wire_sft343a_out[39:39]));
+	soft   sft343a_40
+	( 
+	.in(wire_sft343a_in[40:40]),
+	.out(wire_sft343a_out[40:40]));
+	soft   sft343a_41
+	( 
+	.in(wire_sft343a_in[41:41]),
+	.out(wire_sft343a_out[41:41]));
+	soft   sft343a_42
+	( 
+	.in(wire_sft343a_in[42:42]),
+	.out(wire_sft343a_out[42:42]));
+	soft   sft343a_43
+	( 
+	.in(wire_sft343a_in[43:43]),
+	.out(wire_sft343a_out[43:43]));
+	soft   sft343a_44
+	( 
+	.in(wire_sft343a_in[44:44]),
+	.out(wire_sft343a_out[44:44]));
+	soft   sft343a_45
+	( 
+	.in(wire_sft343a_in[45:45]),
+	.out(wire_sft343a_out[45:45]));
+	soft   sft343a_46
+	( 
+	.in(wire_sft343a_in[46:46]),
+	.out(wire_sft343a_out[46:46]));
+	assign
+		wire_sft343a_in = {w1233w, {w1233w, {w1233w, {w1233w, {wire_sft349a_out[38], {wire_sft349a_out[37], {wire_sft349a_out[36], {wire_sft349a_out[35], {wire_sft354a_out[30], {wire_sft354a_out[29], {wire_sft354a_out[28], {wire_sft354a_out[27], {wire_sft359a_out[22], {wire_sft359a_out[21], {wire_sft359a_out[20], {wire_sft359a_out[19], {wire_sft359a_out[18], {wire_sft359a_out[17], {wire_sft359a_out[16], {wire_sft359a_out[15], {wire_sft359a_out[14], {wire_sft359a_out[13], {wire_sft359a_out[12], {wire_sft359a_out[11], {wire_sft359a_out[10], {wire_sft359a_out[9], {wire_sft359a_out[8], {wire_sft359a_out[7], {wire_sft359a_out[6], {wire_sft359a_out[5], {wire_sft359a_out[4], {wire_sft359a_out[3], {wire_sft359a_out[2], {wire_sft359a_out[1], {wire_sft359a_out[0], {wire_sft354a_out[3], {wire_sft354a_out[2], {wire_sft354a_out[1], {wire_sft354a_out[0], {wire_sft349a_out[3], {wire_sft349a_out[2], {wire_sft349a_out[1], {wire_sft349a_out[0], {dffe19, {dffe15, {2{w1233w}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
+	soft   sft344a_0
+	( 
+	.in(wire_sft344a_in[0:0]),
+	.out(wire_sft344a_out[0:0]));
+	soft   sft344a_1
+	( 
+	.in(wire_sft344a_in[1:1]),
+	.out(wire_sft344a_out[1:1]));
+	soft   sft344a_2
+	( 
+	.in(wire_sft344a_in[2:2]),
+	.out(wire_sft344a_out[2:2]));
+	soft   sft344a_3
+	( 
+	.in(wire_sft344a_in[3:3]),
+	.out(wire_sft344a_out[3:3]));
+	soft   sft344a_4
+	( 
+	.in(wire_sft344a_in[4:4]),
+	.out(wire_sft344a_out[4:4]));
+	soft   sft344a_5
+	( 
+	.in(wire_sft344a_in[5:5]),
+	.out(wire_sft344a_out[5:5]));
+	soft   sft344a_6
+	( 
+	.in(wire_sft344a_in[6:6]),
+	.out(wire_sft344a_out[6:6]));
+	soft   sft344a_7
+	( 
+	.in(wire_sft344a_in[7:7]),
+	.out(wire_sft344a_out[7:7]));
+	soft   sft344a_8
+	( 
+	.in(wire_sft344a_in[8:8]),
+	.out(wire_sft344a_out[8:8]));
+	soft   sft344a_9
+	( 
+	.in(wire_sft344a_in[9:9]),
+	.out(wire_sft344a_out[9:9]));
+	soft   sft344a_10
+	( 
+	.in(wire_sft344a_in[10:10]),
+	.out(wire_sft344a_out[10:10]));
+	soft   sft344a_11
+	( 
+	.in(wire_sft344a_in[11:11]),
+	.out(wire_sft344a_out[11:11]));
+	soft   sft344a_12
+	( 
+	.in(wire_sft344a_in[12:12]),
+	.out(wire_sft344a_out[12:12]));
+	soft   sft344a_13
+	( 
+	.in(wire_sft344a_in[13:13]),
+	.out(wire_sft344a_out[13:13]));
+	soft   sft344a_14
+	( 
+	.in(wire_sft344a_in[14:14]),
+	.out(wire_sft344a_out[14:14]));
+	soft   sft344a_15
+	( 
+	.in(wire_sft344a_in[15:15]),
+	.out(wire_sft344a_out[15:15]));
+	soft   sft344a_16
+	( 
+	.in(wire_sft344a_in[16:16]),
+	.out(wire_sft344a_out[16:16]));
+	soft   sft344a_17
+	( 
+	.in(wire_sft344a_in[17:17]),
+	.out(wire_sft344a_out[17:17]));
+	soft   sft344a_18
+	( 
+	.in(wire_sft344a_in[18:18]),
+	.out(wire_sft344a_out[18:18]));
+	soft   sft344a_19
+	( 
+	.in(wire_sft344a_in[19:19]),
+	.out(wire_sft344a_out[19:19]));
+	soft   sft344a_20
+	( 
+	.in(wire_sft344a_in[20:20]),
+	.out(wire_sft344a_out[20:20]));
+	soft   sft344a_21
+	( 
+	.in(wire_sft344a_in[21:21]),
+	.out(wire_sft344a_out[21:21]));
+	soft   sft344a_22
+	( 
+	.in(wire_sft344a_in[22:22]),
+	.out(wire_sft344a_out[22:22]));
+	soft   sft344a_23
+	( 
+	.in(wire_sft344a_in[23:23]),
+	.out(wire_sft344a_out[23:23]));
+	soft   sft344a_24
+	( 
+	.in(wire_sft344a_in[24:24]),
+	.out(wire_sft344a_out[24:24]));
+	soft   sft344a_25
+	( 
+	.in(wire_sft344a_in[25:25]),
+	.out(wire_sft344a_out[25:25]));
+	soft   sft344a_26
+	( 
+	.in(wire_sft344a_in[26:26]),
+	.out(wire_sft344a_out[26:26]));
+	soft   sft344a_27
+	( 
+	.in(wire_sft344a_in[27:27]),
+	.out(wire_sft344a_out[27:27]));
+	soft   sft344a_28
+	( 
+	.in(wire_sft344a_in[28:28]),
+	.out(wire_sft344a_out[28:28]));
+	soft   sft344a_29
+	( 
+	.in(wire_sft344a_in[29:29]),
+	.out(wire_sft344a_out[29:29]));
+	soft   sft344a_30
+	( 
+	.in(wire_sft344a_in[30:30]),
+	.out(wire_sft344a_out[30:30]));
+	soft   sft344a_31
+	( 
+	.in(wire_sft344a_in[31:31]),
+	.out(wire_sft344a_out[31:31]));
+	soft   sft344a_32
+	( 
+	.in(wire_sft344a_in[32:32]),
+	.out(wire_sft344a_out[32:32]));
+	soft   sft344a_33
+	( 
+	.in(wire_sft344a_in[33:33]),
+	.out(wire_sft344a_out[33:33]));
+	soft   sft344a_34
+	( 
+	.in(wire_sft344a_in[34:34]),
+	.out(wire_sft344a_out[34:34]));
+	soft   sft344a_35
+	( 
+	.in(wire_sft344a_in[35:35]),
+	.out(wire_sft344a_out[35:35]));
+	soft   sft344a_36
+	( 
+	.in(wire_sft344a_in[36:36]),
+	.out(wire_sft344a_out[36:36]));
+	soft   sft344a_37
+	( 
+	.in(wire_sft344a_in[37:37]),
+	.out(wire_sft344a_out[37:37]));
+	soft   sft344a_38
+	( 
+	.in(wire_sft344a_in[38:38]),
+	.out(wire_sft344a_out[38:38]));
+	soft   sft344a_39
+	( 
+	.in(wire_sft344a_in[39:39]),
+	.out(wire_sft344a_out[39:39]));
+	soft   sft344a_40
+	( 
+	.in(wire_sft344a_in[40:40]),
+	.out(wire_sft344a_out[40:40]));
+	soft   sft344a_41
+	( 
+	.in(wire_sft344a_in[41:41]),
+	.out(wire_sft344a_out[41:41]));
+	soft   sft344a_42
+	( 
+	.in(wire_sft344a_in[42:42]),
+	.out(wire_sft344a_out[42:42]));
+	soft   sft344a_43
+	( 
+	.in(wire_sft344a_in[43:43]),
+	.out(wire_sft344a_out[43:43]));
+	soft   sft344a_44
+	( 
+	.in(wire_sft344a_in[44:44]),
+	.out(wire_sft344a_out[44:44]));
+	soft   sft344a_45
+	( 
+	.in(wire_sft344a_in[45:45]),
+	.out(wire_sft344a_out[45:45]));
+	soft   sft344a_46
+	( 
+	.in(wire_sft344a_in[46:46]),
+	.out(wire_sft344a_out[46:46]));
+	assign
+		wire_sft344a_in = wire_add340_result;
+	soft   sft346a_0
+	( 
+	.in(wire_sft346a_in[0:0]),
+	.out(wire_sft346a_out[0:0]));
+	soft   sft346a_1
+	( 
+	.in(wire_sft346a_in[1:1]),
+	.out(wire_sft346a_out[1:1]));
+	soft   sft346a_2
+	( 
+	.in(wire_sft346a_in[2:2]),
+	.out(wire_sft346a_out[2:2]));
+	soft   sft346a_3
+	( 
+	.in(wire_sft346a_in[3:3]),
+	.out(wire_sft346a_out[3:3]));
+	soft   sft346a_4
+	( 
+	.in(wire_sft346a_in[4:4]),
+	.out(wire_sft346a_out[4:4]));
+	soft   sft346a_5
+	( 
+	.in(wire_sft346a_in[5:5]),
+	.out(wire_sft346a_out[5:5]));
+	soft   sft346a_6
+	( 
+	.in(wire_sft346a_in[6:6]),
+	.out(wire_sft346a_out[6:6]));
+	soft   sft346a_7
+	( 
+	.in(wire_sft346a_in[7:7]),
+	.out(wire_sft346a_out[7:7]));
+	soft   sft346a_8
+	( 
+	.in(wire_sft346a_in[8:8]),
+	.out(wire_sft346a_out[8:8]));
+	soft   sft346a_9
+	( 
+	.in(wire_sft346a_in[9:9]),
+	.out(wire_sft346a_out[9:9]));
+	soft   sft346a_10
+	( 
+	.in(wire_sft346a_in[10:10]),
+	.out(wire_sft346a_out[10:10]));
+	soft   sft346a_11
+	( 
+	.in(wire_sft346a_in[11:11]),
+	.out(wire_sft346a_out[11:11]));
+	soft   sft346a_12
+	( 
+	.in(wire_sft346a_in[12:12]),
+	.out(wire_sft346a_out[12:12]));
+	soft   sft346a_13
+	( 
+	.in(wire_sft346a_in[13:13]),
+	.out(wire_sft346a_out[13:13]));
+	soft   sft346a_14
+	( 
+	.in(wire_sft346a_in[14:14]),
+	.out(wire_sft346a_out[14:14]));
+	soft   sft346a_15
+	( 
+	.in(wire_sft346a_in[15:15]),
+	.out(wire_sft346a_out[15:15]));
+	soft   sft346a_16
+	( 
+	.in(wire_sft346a_in[16:16]),
+	.out(wire_sft346a_out[16:16]));
+	soft   sft346a_17
+	( 
+	.in(wire_sft346a_in[17:17]),
+	.out(wire_sft346a_out[17:17]));
+	soft   sft346a_18
+	( 
+	.in(wire_sft346a_in[18:18]),
+	.out(wire_sft346a_out[18:18]));
+	soft   sft346a_19
+	( 
+	.in(wire_sft346a_in[19:19]),
+	.out(wire_sft346a_out[19:19]));
+	soft   sft346a_20
+	( 
+	.in(wire_sft346a_in[20:20]),
+	.out(wire_sft346a_out[20:20]));
+	soft   sft346a_21
+	( 
+	.in(wire_sft346a_in[21:21]),
+	.out(wire_sft346a_out[21:21]));
+	soft   sft346a_22
+	( 
+	.in(wire_sft346a_in[22:22]),
+	.out(wire_sft346a_out[22:22]));
+	soft   sft346a_23
+	( 
+	.in(wire_sft346a_in[23:23]),
+	.out(wire_sft346a_out[23:23]));
+	soft   sft346a_24
+	( 
+	.in(wire_sft346a_in[24:24]),
+	.out(wire_sft346a_out[24:24]));
+	soft   sft346a_25
+	( 
+	.in(wire_sft346a_in[25:25]),
+	.out(wire_sft346a_out[25:25]));
+	soft   sft346a_26
+	( 
+	.in(wire_sft346a_in[26:26]),
+	.out(wire_sft346a_out[26:26]));
+	soft   sft346a_27
+	( 
+	.in(wire_sft346a_in[27:27]),
+	.out(wire_sft346a_out[27:27]));
+	soft   sft346a_28
+	( 
+	.in(wire_sft346a_in[28:28]),
+	.out(wire_sft346a_out[28:28]));
+	soft   sft346a_29
+	( 
+	.in(wire_sft346a_in[29:29]),
+	.out(wire_sft346a_out[29:29]));
+	soft   sft346a_30
+	( 
+	.in(wire_sft346a_in[30:30]),
+	.out(wire_sft346a_out[30:30]));
+	soft   sft346a_31
+	( 
+	.in(wire_sft346a_in[31:31]),
+	.out(wire_sft346a_out[31:31]));
+	soft   sft346a_32
+	( 
+	.in(wire_sft346a_in[32:32]),
+	.out(wire_sft346a_out[32:32]));
+	soft   sft346a_33
+	( 
+	.in(wire_sft346a_in[33:33]),
+	.out(wire_sft346a_out[33:33]));
+	soft   sft346a_34
+	( 
+	.in(wire_sft346a_in[34:34]),
+	.out(wire_sft346a_out[34:34]));
+	soft   sft346a_35
+	( 
+	.in(wire_sft346a_in[35:35]),
+	.out(wire_sft346a_out[35:35]));
+	soft   sft346a_36
+	( 
+	.in(wire_sft346a_in[36:36]),
+	.out(wire_sft346a_out[36:36]));
+	soft   sft346a_37
+	( 
+	.in(wire_sft346a_in[37:37]),
+	.out(wire_sft346a_out[37:37]));
+	soft   sft346a_38
+	( 
+	.in(wire_sft346a_in[38:38]),
+	.out(wire_sft346a_out[38:38]));
+	assign
+		wire_sft346a_in = {w1233w, {dffe328, {dffe324, {dffe319, {dffe313, {dffe307, {dffe301, {dffe294, {dffe286, {dffe278, {dffe270, {dffe261, {dffe251, {dffe241, {dffe231, {dffe221, {dffe211, {dffe201, {dffe191, {dffe181, {dffe171, {dffe161, {dffe151, {dffe141, {dffe131, {dffe121, {dffe111, {dffe101, {dffe91, {dffe82, {dffe73, {dffe66, {dffe58, {dffe51, {dffe44, {dffe39, {dffe33, {dffe28, dffe23}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
+	soft   sft347a_0
+	( 
+	.in(wire_sft347a_in[0:0]),
+	.out(wire_sft347a_out[0:0]));
+	soft   sft347a_1
+	( 
+	.in(wire_sft347a_in[1:1]),
+	.out(wire_sft347a_out[1:1]));
+	soft   sft347a_2
+	( 
+	.in(wire_sft347a_in[2:2]),
+	.out(wire_sft347a_out[2:2]));
+	soft   sft347a_3
+	( 
+	.in(wire_sft347a_in[3:3]),
+	.out(wire_sft347a_out[3:3]));
+	soft   sft347a_4
+	( 
+	.in(wire_sft347a_in[4:4]),
+	.out(wire_sft347a_out[4:4]));
+	soft   sft347a_5
+	( 
+	.in(wire_sft347a_in[5:5]),
+	.out(wire_sft347a_out[5:5]));
+	soft   sft347a_6
+	( 
+	.in(wire_sft347a_in[6:6]),
+	.out(wire_sft347a_out[6:6]));
+	soft   sft347a_7
+	( 
+	.in(wire_sft347a_in[7:7]),
+	.out(wire_sft347a_out[7:7]));
+	soft   sft347a_8
+	( 
+	.in(wire_sft347a_in[8:8]),
+	.out(wire_sft347a_out[8:8]));
+	soft   sft347a_9
+	( 
+	.in(wire_sft347a_in[9:9]),
+	.out(wire_sft347a_out[9:9]));
+	soft   sft347a_10
+	( 
+	.in(wire_sft347a_in[10:10]),
+	.out(wire_sft347a_out[10:10]));
+	soft   sft347a_11
+	( 
+	.in(wire_sft347a_in[11:11]),
+	.out(wire_sft347a_out[11:11]));
+	soft   sft347a_12
+	( 
+	.in(wire_sft347a_in[12:12]),
+	.out(wire_sft347a_out[12:12]));
+	soft   sft347a_13
+	( 
+	.in(wire_sft347a_in[13:13]),
+	.out(wire_sft347a_out[13:13]));
+	soft   sft347a_14
+	( 
+	.in(wire_sft347a_in[14:14]),
+	.out(wire_sft347a_out[14:14]));
+	soft   sft347a_15
+	( 
+	.in(wire_sft347a_in[15:15]),
+	.out(wire_sft347a_out[15:15]));
+	soft   sft347a_16
+	( 
+	.in(wire_sft347a_in[16:16]),
+	.out(wire_sft347a_out[16:16]));
+	soft   sft347a_17
+	( 
+	.in(wire_sft347a_in[17:17]),
+	.out(wire_sft347a_out[17:17]));
+	soft   sft347a_18
+	( 
+	.in(wire_sft347a_in[18:18]),
+	.out(wire_sft347a_out[18:18]));
+	soft   sft347a_19
+	( 
+	.in(wire_sft347a_in[19:19]),
+	.out(wire_sft347a_out[19:19]));
+	soft   sft347a_20
+	( 
+	.in(wire_sft347a_in[20:20]),
+	.out(wire_sft347a_out[20:20]));
+	soft   sft347a_21
+	( 
+	.in(wire_sft347a_in[21:21]),
+	.out(wire_sft347a_out[21:21]));
+	soft   sft347a_22
+	( 
+	.in(wire_sft347a_in[22:22]),
+	.out(wire_sft347a_out[22:22]));
+	soft   sft347a_23
+	( 
+	.in(wire_sft347a_in[23:23]),
+	.out(wire_sft347a_out[23:23]));
+	soft   sft347a_24
+	( 
+	.in(wire_sft347a_in[24:24]),
+	.out(wire_sft347a_out[24:24]));
+	soft   sft347a_25
+	( 
+	.in(wire_sft347a_in[25:25]),
+	.out(wire_sft347a_out[25:25]));
+	soft   sft347a_26
+	( 
+	.in(wire_sft347a_in[26:26]),
+	.out(wire_sft347a_out[26:26]));
+	soft   sft347a_27
+	( 
+	.in(wire_sft347a_in[27:27]),
+	.out(wire_sft347a_out[27:27]));
+	soft   sft347a_28
+	( 
+	.in(wire_sft347a_in[28:28]),
+	.out(wire_sft347a_out[28:28]));
+	soft   sft347a_29
+	( 
+	.in(wire_sft347a_in[29:29]),
+	.out(wire_sft347a_out[29:29]));
+	soft   sft347a_30
+	( 
+	.in(wire_sft347a_in[30:30]),
+	.out(wire_sft347a_out[30:30]));
+	soft   sft347a_31
+	( 
+	.in(wire_sft347a_in[31:31]),
+	.out(wire_sft347a_out[31:31]));
+	soft   sft347a_32
+	( 
+	.in(wire_sft347a_in[32:32]),
+	.out(wire_sft347a_out[32:32]));
+	soft   sft347a_33
+	( 
+	.in(wire_sft347a_in[33:33]),
+	.out(wire_sft347a_out[33:33]));
+	soft   sft347a_34
+	( 
+	.in(wire_sft347a_in[34:34]),
+	.out(wire_sft347a_out[34:34]));
+	soft   sft347a_35
+	( 
+	.in(wire_sft347a_in[35:35]),
+	.out(wire_sft347a_out[35:35]));
+	soft   sft347a_36
+	( 
+	.in(wire_sft347a_in[36:36]),
+	.out(wire_sft347a_out[36:36]));
+	soft   sft347a_37
+	( 
+	.in(wire_sft347a_in[37:37]),
+	.out(wire_sft347a_out[37:37]));
+	soft   sft347a_38
+	( 
+	.in(wire_sft347a_in[38:38]),
+	.out(wire_sft347a_out[38:38]));
+	assign
+		wire_sft347a_in = {w1233w, {w1233w, {w1233w, {dffe320, {dffe314, {dffe308, {dffe302, {dffe295, {dffe287, {dffe279, {dffe271, {dffe262, {dffe252, {dffe242, {dffe232, {dffe222, {dffe212, {dffe202, {dffe192, {dffe182, {dffe172, {dffe162, {dffe152, {dffe142, {dffe132, {dffe122, {dffe112, {dffe102, {dffe92, {dffe83, {dffe74, {dffe67, {dffe59, {dffe52, {dffe45, {dffe40, {dffe34, {dffe29, dffe24}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
+	soft   sft348a_0
+	( 
+	.in(wire_sft348a_in[0:0]),
+	.out(wire_sft348a_out[0:0]));
+	soft   sft348a_1
+	( 
+	.in(wire_sft348a_in[1:1]),
+	.out(wire_sft348a_out[1:1]));
+	soft   sft348a_2
+	( 
+	.in(wire_sft348a_in[2:2]),
+	.out(wire_sft348a_out[2:2]));
+	soft   sft348a_3
+	( 
+	.in(wire_sft348a_in[3:3]),
+	.out(wire_sft348a_out[3:3]));
+	soft   sft348a_4
+	( 
+	.in(wire_sft348a_in[4:4]),
+	.out(wire_sft348a_out[4:4]));
+	soft   sft348a_5
+	( 
+	.in(wire_sft348a_in[5:5]),
+	.out(wire_sft348a_out[5:5]));
+	soft   sft348a_6
+	( 
+	.in(wire_sft348a_in[6:6]),
+	.out(wire_sft348a_out[6:6]));
+	soft   sft348a_7
+	( 
+	.in(wire_sft348a_in[7:7]),
+	.out(wire_sft348a_out[7:7]));
+	soft   sft348a_8
+	( 
+	.in(wire_sft348a_in[8:8]),
+	.out(wire_sft348a_out[8:8]));
+	soft   sft348a_9
+	( 
+	.in(wire_sft348a_in[9:9]),
+	.out(wire_sft348a_out[9:9]));
+	soft   sft348a_10
+	( 
+	.in(wire_sft348a_in[10:10]),
+	.out(wire_sft348a_out[10:10]));
+	soft   sft348a_11
+	( 
+	.in(wire_sft348a_in[11:11]),
+	.out(wire_sft348a_out[11:11]));
+	soft   sft348a_12
+	( 
+	.in(wire_sft348a_in[12:12]),
+	.out(wire_sft348a_out[12:12]));
+	soft   sft348a_13
+	( 
+	.in(wire_sft348a_in[13:13]),
+	.out(wire_sft348a_out[13:13]));
+	soft   sft348a_14
+	( 
+	.in(wire_sft348a_in[14:14]),
+	.out(wire_sft348a_out[14:14]));
+	soft   sft348a_15
+	( 
+	.in(wire_sft348a_in[15:15]),
+	.out(wire_sft348a_out[15:15]));
+	soft   sft348a_16
+	( 
+	.in(wire_sft348a_in[16:16]),
+	.out(wire_sft348a_out[16:16]));
+	soft   sft348a_17
+	( 
+	.in(wire_sft348a_in[17:17]),
+	.out(wire_sft348a_out[17:17]));
+	soft   sft348a_18
+	( 
+	.in(wire_sft348a_in[18:18]),
+	.out(wire_sft348a_out[18:18]));
+	soft   sft348a_19
+	( 
+	.in(wire_sft348a_in[19:19]),
+	.out(wire_sft348a_out[19:19]));
+	soft   sft348a_20
+	( 
+	.in(wire_sft348a_in[20:20]),
+	.out(wire_sft348a_out[20:20]));
+	soft   sft348a_21
+	( 
+	.in(wire_sft348a_in[21:21]),
+	.out(wire_sft348a_out[21:21]));
+	soft   sft348a_22
+	( 
+	.in(wire_sft348a_in[22:22]),
+	.out(wire_sft348a_out[22:22]));
+	soft   sft348a_23
+	( 
+	.in(wire_sft348a_in[23:23]),
+	.out(wire_sft348a_out[23:23]));
+	soft   sft348a_24
+	( 
+	.in(wire_sft348a_in[24:24]),
+	.out(wire_sft348a_out[24:24]));
+	soft   sft348a_25
+	( 
+	.in(wire_sft348a_in[25:25]),
+	.out(wire_sft348a_out[25:25]));
+	soft   sft348a_26
+	( 
+	.in(wire_sft348a_in[26:26]),
+	.out(wire_sft348a_out[26:26]));
+	soft   sft348a_27
+	( 
+	.in(wire_sft348a_in[27:27]),
+	.out(wire_sft348a_out[27:27]));
+	soft   sft348a_28
+	( 
+	.in(wire_sft348a_in[28:28]),
+	.out(wire_sft348a_out[28:28]));
+	soft   sft348a_29
+	( 
+	.in(wire_sft348a_in[29:29]),
+	.out(wire_sft348a_out[29:29]));
+	soft   sft348a_30
+	( 
+	.in(wire_sft348a_in[30:30]),
+	.out(wire_sft348a_out[30:30]));
+	soft   sft348a_31
+	( 
+	.in(wire_sft348a_in[31:31]),
+	.out(wire_sft348a_out[31:31]));
+	soft   sft348a_32
+	( 
+	.in(wire_sft348a_in[32:32]),
+	.out(wire_sft348a_out[32:32]));
+	soft   sft348a_33
+	( 
+	.in(wire_sft348a_in[33:33]),
+	.out(wire_sft348a_out[33:33]));
+	soft   sft348a_34
+	( 
+	.in(wire_sft348a_in[34:34]),
+	.out(wire_sft348a_out[34:34]));
+	soft   sft348a_35
+	( 
+	.in(wire_sft348a_in[35:35]),
+	.out(wire_sft348a_out[35:35]));
+	soft   sft348a_36
+	( 
+	.in(wire_sft348a_in[36:36]),
+	.out(wire_sft348a_out[36:36]));
+	soft   sft348a_37
+	( 
+	.in(wire_sft348a_in[37:37]),
+	.out(wire_sft348a_out[37:37]));
+	soft   sft348a_38
+	( 
+	.in(wire_sft348a_in[38:38]),
+	.out(wire_sft348a_out[38:38]));
+	assign
+		wire_sft348a_in = {w1233w, {w1233w, {w1233w, {w1233w, {dffe315, {dffe309, {dffe303, {dffe296, {dffe288, {dffe280, {dffe272, {dffe263, {dffe253, {dffe243, {dffe233, {dffe223, {dffe213, {dffe203, {dffe193, {dffe183, {dffe173, {dffe163, {dffe153, {dffe143, {dffe133, {dffe123, {dffe113, {dffe103, {dffe93, {dffe84, {dffe75, {dffe68, {dffe60, {dffe53, {dffe46, {dffe41, {dffe35, {2{w1233w}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
+	soft   sft349a_0
+	( 
+	.in(wire_sft349a_in[0:0]),
+	.out(wire_sft349a_out[0:0]));
+	soft   sft349a_1
+	( 
+	.in(wire_sft349a_in[1:1]),
+	.out(wire_sft349a_out[1:1]));
+	soft   sft349a_2
+	( 
+	.in(wire_sft349a_in[2:2]),
+	.out(wire_sft349a_out[2:2]));
+	soft   sft349a_3
+	( 
+	.in(wire_sft349a_in[3:3]),
+	.out(wire_sft349a_out[3:3]));
+	soft   sft349a_4
+	( 
+	.in(wire_sft349a_in[4:4]),
+	.out(wire_sft349a_out[4:4]));
+	soft   sft349a_5
+	( 
+	.in(wire_sft349a_in[5:5]),
+	.out(wire_sft349a_out[5:5]));
+	soft   sft349a_6
+	( 
+	.in(wire_sft349a_in[6:6]),
+	.out(wire_sft349a_out[6:6]));
+	soft   sft349a_7
+	( 
+	.in(wire_sft349a_in[7:7]),
+	.out(wire_sft349a_out[7:7]));
+	soft   sft349a_8
+	( 
+	.in(wire_sft349a_in[8:8]),
+	.out(wire_sft349a_out[8:8]));
+	soft   sft349a_9
+	( 
+	.in(wire_sft349a_in[9:9]),
+	.out(wire_sft349a_out[9:9]));
+	soft   sft349a_10
+	( 
+	.in(wire_sft349a_in[10:10]),
+	.out(wire_sft349a_out[10:10]));
+	soft   sft349a_11
+	( 
+	.in(wire_sft349a_in[11:11]),
+	.out(wire_sft349a_out[11:11]));
+	soft   sft349a_12
+	( 
+	.in(wire_sft349a_in[12:12]),
+	.out(wire_sft349a_out[12:12]));
+	soft   sft349a_13
+	( 
+	.in(wire_sft349a_in[13:13]),
+	.out(wire_sft349a_out[13:13]));
+	soft   sft349a_14
+	( 
+	.in(wire_sft349a_in[14:14]),
+	.out(wire_sft349a_out[14:14]));
+	soft   sft349a_15
+	( 
+	.in(wire_sft349a_in[15:15]),
+	.out(wire_sft349a_out[15:15]));
+	soft   sft349a_16
+	( 
+	.in(wire_sft349a_in[16:16]),
+	.out(wire_sft349a_out[16:16]));
+	soft   sft349a_17
+	( 
+	.in(wire_sft349a_in[17:17]),
+	.out(wire_sft349a_out[17:17]));
+	soft   sft349a_18
+	( 
+	.in(wire_sft349a_in[18:18]),
+	.out(wire_sft349a_out[18:18]));
+	soft   sft349a_19
+	( 
+	.in(wire_sft349a_in[19:19]),
+	.out(wire_sft349a_out[19:19]));
+	soft   sft349a_20
+	( 
+	.in(wire_sft349a_in[20:20]),
+	.out(wire_sft349a_out[20:20]));
+	soft   sft349a_21
+	( 
+	.in(wire_sft349a_in[21:21]),
+	.out(wire_sft349a_out[21:21]));
+	soft   sft349a_22
+	( 
+	.in(wire_sft349a_in[22:22]),
+	.out(wire_sft349a_out[22:22]));
+	soft   sft349a_23
+	( 
+	.in(wire_sft349a_in[23:23]),
+	.out(wire_sft349a_out[23:23]));
+	soft   sft349a_24
+	( 
+	.in(wire_sft349a_in[24:24]),
+	.out(wire_sft349a_out[24:24]));
+	soft   sft349a_25
+	( 
+	.in(wire_sft349a_in[25:25]),
+	.out(wire_sft349a_out[25:25]));
+	soft   sft349a_26
+	( 
+	.in(wire_sft349a_in[26:26]),
+	.out(wire_sft349a_out[26:26]));
+	soft   sft349a_27
+	( 
+	.in(wire_sft349a_in[27:27]),
+	.out(wire_sft349a_out[27:27]));
+	soft   sft349a_28
+	( 
+	.in(wire_sft349a_in[28:28]),
+	.out(wire_sft349a_out[28:28]));
+	soft   sft349a_29
+	( 
+	.in(wire_sft349a_in[29:29]),
+	.out(wire_sft349a_out[29:29]));
+	soft   sft349a_30
+	( 
+	.in(wire_sft349a_in[30:30]),
+	.out(wire_sft349a_out[30:30]));
+	soft   sft349a_31
+	( 
+	.in(wire_sft349a_in[31:31]),
+	.out(wire_sft349a_out[31:31]));
+	soft   sft349a_32
+	( 
+	.in(wire_sft349a_in[32:32]),
+	.out(wire_sft349a_out[32:32]));
+	soft   sft349a_33
+	( 
+	.in(wire_sft349a_in[33:33]),
+	.out(wire_sft349a_out[33:33]));
+	soft   sft349a_34
+	( 
+	.in(wire_sft349a_in[34:34]),
+	.out(wire_sft349a_out[34:34]));
+	soft   sft349a_35
+	( 
+	.in(wire_sft349a_in[35:35]),
+	.out(wire_sft349a_out[35:35]));
+	soft   sft349a_36
+	( 
+	.in(wire_sft349a_in[36:36]),
+	.out(wire_sft349a_out[36:36]));
+	soft   sft349a_37
+	( 
+	.in(wire_sft349a_in[37:37]),
+	.out(wire_sft349a_out[37:37]));
+	soft   sft349a_38
+	( 
+	.in(wire_sft349a_in[38:38]),
+	.out(wire_sft349a_out[38:38]));
+	assign
+		wire_sft349a_in = wire_add345_result;
+	soft   sft351a_0
+	( 
+	.in(wire_sft351a_in[0:0]),
+	.out(wire_sft351a_out[0:0]));
+	soft   sft351a_1
+	( 
+	.in(wire_sft351a_in[1:1]),
+	.out(wire_sft351a_out[1:1]));
+	soft   sft351a_2
+	( 
+	.in(wire_sft351a_in[2:2]),
+	.out(wire_sft351a_out[2:2]));
+	soft   sft351a_3
+	( 
+	.in(wire_sft351a_in[3:3]),
+	.out(wire_sft351a_out[3:3]));
+	soft   sft351a_4
+	( 
+	.in(wire_sft351a_in[4:4]),
+	.out(wire_sft351a_out[4:4]));
+	soft   sft351a_5
+	( 
+	.in(wire_sft351a_in[5:5]),
+	.out(wire_sft351a_out[5:5]));
+	soft   sft351a_6
+	( 
+	.in(wire_sft351a_in[6:6]),
+	.out(wire_sft351a_out[6:6]));
+	soft   sft351a_7
+	( 
+	.in(wire_sft351a_in[7:7]),
+	.out(wire_sft351a_out[7:7]));
+	soft   sft351a_8
+	( 
+	.in(wire_sft351a_in[8:8]),
+	.out(wire_sft351a_out[8:8]));
+	soft   sft351a_9
+	( 
+	.in(wire_sft351a_in[9:9]),
+	.out(wire_sft351a_out[9:9]));
+	soft   sft351a_10
+	( 
+	.in(wire_sft351a_in[10:10]),
+	.out(wire_sft351a_out[10:10]));
+	soft   sft351a_11
+	( 
+	.in(wire_sft351a_in[11:11]),
+	.out(wire_sft351a_out[11:11]));
+	soft   sft351a_12
+	( 
+	.in(wire_sft351a_in[12:12]),
+	.out(wire_sft351a_out[12:12]));
+	soft   sft351a_13
+	( 
+	.in(wire_sft351a_in[13:13]),
+	.out(wire_sft351a_out[13:13]));
+	soft   sft351a_14
+	( 
+	.in(wire_sft351a_in[14:14]),
+	.out(wire_sft351a_out[14:14]));
+	soft   sft351a_15
+	( 
+	.in(wire_sft351a_in[15:15]),
+	.out(wire_sft351a_out[15:15]));
+	soft   sft351a_16
+	( 
+	.in(wire_sft351a_in[16:16]),
+	.out(wire_sft351a_out[16:16]));
+	soft   sft351a_17
+	( 
+	.in(wire_sft351a_in[17:17]),
+	.out(wire_sft351a_out[17:17]));
+	soft   sft351a_18
+	( 
+	.in(wire_sft351a_in[18:18]),
+	.out(wire_sft351a_out[18:18]));
+	soft   sft351a_19
+	( 
+	.in(wire_sft351a_in[19:19]),
+	.out(wire_sft351a_out[19:19]));
+	soft   sft351a_20
+	( 
+	.in(wire_sft351a_in[20:20]),
+	.out(wire_sft351a_out[20:20]));
+	soft   sft351a_21
+	( 
+	.in(wire_sft351a_in[21:21]),
+	.out(wire_sft351a_out[21:21]));
+	soft   sft351a_22
+	( 
+	.in(wire_sft351a_in[22:22]),
+	.out(wire_sft351a_out[22:22]));
+	soft   sft351a_23
+	( 
+	.in(wire_sft351a_in[23:23]),
+	.out(wire_sft351a_out[23:23]));
+	soft   sft351a_24
+	( 
+	.in(wire_sft351a_in[24:24]),
+	.out(wire_sft351a_out[24:24]));
+	soft   sft351a_25
+	( 
+	.in(wire_sft351a_in[25:25]),
+	.out(wire_sft351a_out[25:25]));
+	soft   sft351a_26
+	( 
+	.in(wire_sft351a_in[26:26]),
+	.out(wire_sft351a_out[26:26]));
+	soft   sft351a_27
+	( 
+	.in(wire_sft351a_in[27:27]),
+	.out(wire_sft351a_out[27:27]));
+	soft   sft351a_28
+	( 
+	.in(wire_sft351a_in[28:28]),
+	.out(wire_sft351a_out[28:28]));
+	soft   sft351a_29
+	( 
+	.in(wire_sft351a_in[29:29]),
+	.out(wire_sft351a_out[29:29]));
+	soft   sft351a_30
+	( 
+	.in(wire_sft351a_in[30:30]),
+	.out(wire_sft351a_out[30:30]));
+	assign
+		wire_sft351a_in = {w1233w, {dffe310, {dffe304, {dffe297, {dffe289, {dffe281, {dffe273, {dffe264, {dffe254, {dffe244, {dffe234, {dffe224, {dffe214, {dffe204, {dffe194, {dffe184, {dffe174, {dffe164, {dffe154, {dffe144, {dffe134, {dffe124, {dffe114, {dffe104, {dffe94, {dffe85, {dffe76, {dffe69, {dffe61, {dffe54, dffe47}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
+	soft   sft352a_0
+	( 
+	.in(wire_sft352a_in[0:0]),
+	.out(wire_sft352a_out[0:0]));
+	soft   sft352a_1
+	( 
+	.in(wire_sft352a_in[1:1]),
+	.out(wire_sft352a_out[1:1]));
+	soft   sft352a_2
+	( 
+	.in(wire_sft352a_in[2:2]),
+	.out(wire_sft352a_out[2:2]));
+	soft   sft352a_3
+	( 
+	.in(wire_sft352a_in[3:3]),
+	.out(wire_sft352a_out[3:3]));
+	soft   sft352a_4
+	( 
+	.in(wire_sft352a_in[4:4]),
+	.out(wire_sft352a_out[4:4]));
+	soft   sft352a_5
+	( 
+	.in(wire_sft352a_in[5:5]),
+	.out(wire_sft352a_out[5:5]));
+	soft   sft352a_6
+	( 
+	.in(wire_sft352a_in[6:6]),
+	.out(wire_sft352a_out[6:6]));
+	soft   sft352a_7
+	( 
+	.in(wire_sft352a_in[7:7]),
+	.out(wire_sft352a_out[7:7]));
+	soft   sft352a_8
+	( 
+	.in(wire_sft352a_in[8:8]),
+	.out(wire_sft352a_out[8:8]));
+	soft   sft352a_9
+	( 
+	.in(wire_sft352a_in[9:9]),
+	.out(wire_sft352a_out[9:9]));
+	soft   sft352a_10
+	( 
+	.in(wire_sft352a_in[10:10]),
+	.out(wire_sft352a_out[10:10]));
+	soft   sft352a_11
+	( 
+	.in(wire_sft352a_in[11:11]),
+	.out(wire_sft352a_out[11:11]));
+	soft   sft352a_12
+	( 
+	.in(wire_sft352a_in[12:12]),
+	.out(wire_sft352a_out[12:12]));
+	soft   sft352a_13
+	( 
+	.in(wire_sft352a_in[13:13]),
+	.out(wire_sft352a_out[13:13]));
+	soft   sft352a_14
+	( 
+	.in(wire_sft352a_in[14:14]),
+	.out(wire_sft352a_out[14:14]));
+	soft   sft352a_15
+	( 
+	.in(wire_sft352a_in[15:15]),
+	.out(wire_sft352a_out[15:15]));
+	soft   sft352a_16
+	( 
+	.in(wire_sft352a_in[16:16]),
+	.out(wire_sft352a_out[16:16]));
+	soft   sft352a_17
+	( 
+	.in(wire_sft352a_in[17:17]),
+	.out(wire_sft352a_out[17:17]));
+	soft   sft352a_18
+	( 
+	.in(wire_sft352a_in[18:18]),
+	.out(wire_sft352a_out[18:18]));
+	soft   sft352a_19
+	( 
+	.in(wire_sft352a_in[19:19]),
+	.out(wire_sft352a_out[19:19]));
+	soft   sft352a_20
+	( 
+	.in(wire_sft352a_in[20:20]),
+	.out(wire_sft352a_out[20:20]));
+	soft   sft352a_21
+	( 
+	.in(wire_sft352a_in[21:21]),
+	.out(wire_sft352a_out[21:21]));
+	soft   sft352a_22
+	( 
+	.in(wire_sft352a_in[22:22]),
+	.out(wire_sft352a_out[22:22]));
+	soft   sft352a_23
+	( 
+	.in(wire_sft352a_in[23:23]),
+	.out(wire_sft352a_out[23:23]));
+	soft   sft352a_24
+	( 
+	.in(wire_sft352a_in[24:24]),
+	.out(wire_sft352a_out[24:24]));
+	soft   sft352a_25
+	( 
+	.in(wire_sft352a_in[25:25]),
+	.out(wire_sft352a_out[25:25]));
+	soft   sft352a_26
+	( 
+	.in(wire_sft352a_in[26:26]),
+	.out(wire_sft352a_out[26:26]));
+	soft   sft352a_27
+	( 
+	.in(wire_sft352a_in[27:27]),
+	.out(wire_sft352a_out[27:27]));
+	soft   sft352a_28
+	( 
+	.in(wire_sft352a_in[28:28]),
+	.out(wire_sft352a_out[28:28]));
+	soft   sft352a_29
+	( 
+	.in(wire_sft352a_in[29:29]),
+	.out(wire_sft352a_out[29:29]));
+	soft   sft352a_30
+	( 
+	.in(wire_sft352a_in[30:30]),
+	.out(wire_sft352a_out[30:30]));
+	assign
+		wire_sft352a_in = {w1233w, {w1233w, {w1233w, {dffe298, {dffe290, {dffe282, {dffe274, {dffe265, {dffe255, {dffe245, {dffe235, {dffe225, {dffe215, {dffe205, {dffe195, {dffe185, {dffe175, {dffe165, {dffe155, {dffe145, {dffe135, {dffe125, {dffe115, {dffe105, {dffe95, {dffe86, {dffe77, {dffe70, {dffe62, {dffe55, dffe48}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
+	soft   sft353a_0
+	( 
+	.in(wire_sft353a_in[0:0]),
+	.out(wire_sft353a_out[0:0]));
+	soft   sft353a_1
+	( 
+	.in(wire_sft353a_in[1:1]),
+	.out(wire_sft353a_out[1:1]));
+	soft   sft353a_2
+	( 
+	.in(wire_sft353a_in[2:2]),
+	.out(wire_sft353a_out[2:2]));
+	soft   sft353a_3
+	( 
+	.in(wire_sft353a_in[3:3]),
+	.out(wire_sft353a_out[3:3]));
+	soft   sft353a_4
+	( 
+	.in(wire_sft353a_in[4:4]),
+	.out(wire_sft353a_out[4:4]));
+	soft   sft353a_5
+	( 
+	.in(wire_sft353a_in[5:5]),
+	.out(wire_sft353a_out[5:5]));
+	soft   sft353a_6
+	( 
+	.in(wire_sft353a_in[6:6]),
+	.out(wire_sft353a_out[6:6]));
+	soft   sft353a_7
+	( 
+	.in(wire_sft353a_in[7:7]),
+	.out(wire_sft353a_out[7:7]));
+	soft   sft353a_8
+	( 
+	.in(wire_sft353a_in[8:8]),
+	.out(wire_sft353a_out[8:8]));
+	soft   sft353a_9
+	( 
+	.in(wire_sft353a_in[9:9]),
+	.out(wire_sft353a_out[9:9]));
+	soft   sft353a_10
+	( 
+	.in(wire_sft353a_in[10:10]),
+	.out(wire_sft353a_out[10:10]));
+	soft   sft353a_11
+	( 
+	.in(wire_sft353a_in[11:11]),
+	.out(wire_sft353a_out[11:11]));
+	soft   sft353a_12
+	( 
+	.in(wire_sft353a_in[12:12]),
+	.out(wire_sft353a_out[12:12]));
+	soft   sft353a_13
+	( 
+	.in(wire_sft353a_in[13:13]),
+	.out(wire_sft353a_out[13:13]));
+	soft   sft353a_14
+	( 
+	.in(wire_sft353a_in[14:14]),
+	.out(wire_sft353a_out[14:14]));
+	soft   sft353a_15
+	( 
+	.in(wire_sft353a_in[15:15]),
+	.out(wire_sft353a_out[15:15]));
+	soft   sft353a_16
+	( 
+	.in(wire_sft353a_in[16:16]),
+	.out(wire_sft353a_out[16:16]));
+	soft   sft353a_17
+	( 
+	.in(wire_sft353a_in[17:17]),
+	.out(wire_sft353a_out[17:17]));
+	soft   sft353a_18
+	( 
+	.in(wire_sft353a_in[18:18]),
+	.out(wire_sft353a_out[18:18]));
+	soft   sft353a_19
+	( 
+	.in(wire_sft353a_in[19:19]),
+	.out(wire_sft353a_out[19:19]));
+	soft   sft353a_20
+	( 
+	.in(wire_sft353a_in[20:20]),
+	.out(wire_sft353a_out[20:20]));
+	soft   sft353a_21
+	( 
+	.in(wire_sft353a_in[21:21]),
+	.out(wire_sft353a_out[21:21]));
+	soft   sft353a_22
+	( 
+	.in(wire_sft353a_in[22:22]),
+	.out(wire_sft353a_out[22:22]));
+	soft   sft353a_23
+	( 
+	.in(wire_sft353a_in[23:23]),
+	.out(wire_sft353a_out[23:23]));
+	soft   sft353a_24
+	( 
+	.in(wire_sft353a_in[24:24]),
+	.out(wire_sft353a_out[24:24]));
+	soft   sft353a_25
+	( 
+	.in(wire_sft353a_in[25:25]),
+	.out(wire_sft353a_out[25:25]));
+	soft   sft353a_26
+	( 
+	.in(wire_sft353a_in[26:26]),
+	.out(wire_sft353a_out[26:26]));
+	soft   sft353a_27
+	( 
+	.in(wire_sft353a_in[27:27]),
+	.out(wire_sft353a_out[27:27]));
+	soft   sft353a_28
+	( 
+	.in(wire_sft353a_in[28:28]),
+	.out(wire_sft353a_out[28:28]));
+	soft   sft353a_29
+	( 
+	.in(wire_sft353a_in[29:29]),
+	.out(wire_sft353a_out[29:29]));
+	soft   sft353a_30
+	( 
+	.in(wire_sft353a_in[30:30]),
+	.out(wire_sft353a_out[30:30]));
+	assign
+		wire_sft353a_in = {w1233w, {w1233w, {w1233w, {w1233w, {dffe291, {dffe283, {dffe275, {dffe266, {dffe256, {dffe246, {dffe236, {dffe226, {dffe216, {dffe206, {dffe196, {dffe186, {dffe176, {dffe166, {dffe156, {dffe146, {dffe136, {dffe126, {dffe116, {dffe106, {dffe96, {dffe87, {dffe78, {dffe71, {dffe63, {2{w1233w}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
+	soft   sft354a_0
+	( 
+	.in(wire_sft354a_in[0:0]),
+	.out(wire_sft354a_out[0:0]));
+	soft   sft354a_1
+	( 
+	.in(wire_sft354a_in[1:1]),
+	.out(wire_sft354a_out[1:1]));
+	soft   sft354a_2
+	( 
+	.in(wire_sft354a_in[2:2]),
+	.out(wire_sft354a_out[2:2]));
+	soft   sft354a_3
+	( 
+	.in(wire_sft354a_in[3:3]),
+	.out(wire_sft354a_out[3:3]));
+	soft   sft354a_4
+	( 
+	.in(wire_sft354a_in[4:4]),
+	.out(wire_sft354a_out[4:4]));
+	soft   sft354a_5
+	( 
+	.in(wire_sft354a_in[5:5]),
+	.out(wire_sft354a_out[5:5]));
+	soft   sft354a_6
+	( 
+	.in(wire_sft354a_in[6:6]),
+	.out(wire_sft354a_out[6:6]));
+	soft   sft354a_7
+	( 
+	.in(wire_sft354a_in[7:7]),
+	.out(wire_sft354a_out[7:7]));
+	soft   sft354a_8
+	( 
+	.in(wire_sft354a_in[8:8]),
+	.out(wire_sft354a_out[8:8]));
+	soft   sft354a_9
+	( 
+	.in(wire_sft354a_in[9:9]),
+	.out(wire_sft354a_out[9:9]));
+	soft   sft354a_10
+	( 
+	.in(wire_sft354a_in[10:10]),
+	.out(wire_sft354a_out[10:10]));
+	soft   sft354a_11
+	( 
+	.in(wire_sft354a_in[11:11]),
+	.out(wire_sft354a_out[11:11]));
+	soft   sft354a_12
+	( 
+	.in(wire_sft354a_in[12:12]),
+	.out(wire_sft354a_out[12:12]));
+	soft   sft354a_13
+	( 
+	.in(wire_sft354a_in[13:13]),
+	.out(wire_sft354a_out[13:13]));
+	soft   sft354a_14
+	( 
+	.in(wire_sft354a_in[14:14]),
+	.out(wire_sft354a_out[14:14]));
+	soft   sft354a_15
+	( 
+	.in(wire_sft354a_in[15:15]),
+	.out(wire_sft354a_out[15:15]));
+	soft   sft354a_16
+	( 
+	.in(wire_sft354a_in[16:16]),
+	.out(wire_sft354a_out[16:16]));
+	soft   sft354a_17
+	( 
+	.in(wire_sft354a_in[17:17]),
+	.out(wire_sft354a_out[17:17]));
+	soft   sft354a_18
+	( 
+	.in(wire_sft354a_in[18:18]),
+	.out(wire_sft354a_out[18:18]));
+	soft   sft354a_19
+	( 
+	.in(wire_sft354a_in[19:19]),
+	.out(wire_sft354a_out[19:19]));
+	soft   sft354a_20
+	( 
+	.in(wire_sft354a_in[20:20]),
+	.out(wire_sft354a_out[20:20]));
+	soft   sft354a_21
+	( 
+	.in(wire_sft354a_in[21:21]),
+	.out(wire_sft354a_out[21:21]));
+	soft   sft354a_22
+	( 
+	.in(wire_sft354a_in[22:22]),
+	.out(wire_sft354a_out[22:22]));
+	soft   sft354a_23
+	( 
+	.in(wire_sft354a_in[23:23]),
+	.out(wire_sft354a_out[23:23]));
+	soft   sft354a_24
+	( 
+	.in(wire_sft354a_in[24:24]),
+	.out(wire_sft354a_out[24:24]));
+	soft   sft354a_25
+	( 
+	.in(wire_sft354a_in[25:25]),
+	.out(wire_sft354a_out[25:25]));
+	soft   sft354a_26
+	( 
+	.in(wire_sft354a_in[26:26]),
+	.out(wire_sft354a_out[26:26]));
+	soft   sft354a_27
+	( 
+	.in(wire_sft354a_in[27:27]),
+	.out(wire_sft354a_out[27:27]));
+	soft   sft354a_28
+	( 
+	.in(wire_sft354a_in[28:28]),
+	.out(wire_sft354a_out[28:28]));
+	soft   sft354a_29
+	( 
+	.in(wire_sft354a_in[29:29]),
+	.out(wire_sft354a_out[29:29]));
+	soft   sft354a_30
+	( 
+	.in(wire_sft354a_in[30:30]),
+	.out(wire_sft354a_out[30:30]));
+	assign
+		wire_sft354a_in = wire_add350_result;
+	soft   sft356a_0
+	( 
+	.in(wire_sft356a_in[0:0]),
+	.out(wire_sft356a_out[0:0]));
+	soft   sft356a_1
+	( 
+	.in(wire_sft356a_in[1:1]),
+	.out(wire_sft356a_out[1:1]));
+	soft   sft356a_2
+	( 
+	.in(wire_sft356a_in[2:2]),
+	.out(wire_sft356a_out[2:2]));
+	soft   sft356a_3
+	( 
+	.in(wire_sft356a_in[3:3]),
+	.out(wire_sft356a_out[3:3]));
+	soft   sft356a_4
+	( 
+	.in(wire_sft356a_in[4:4]),
+	.out(wire_sft356a_out[4:4]));
+	soft   sft356a_5
+	( 
+	.in(wire_sft356a_in[5:5]),
+	.out(wire_sft356a_out[5:5]));
+	soft   sft356a_6
+	( 
+	.in(wire_sft356a_in[6:6]),
+	.out(wire_sft356a_out[6:6]));
+	soft   sft356a_7
+	( 
+	.in(wire_sft356a_in[7:7]),
+	.out(wire_sft356a_out[7:7]));
+	soft   sft356a_8
+	( 
+	.in(wire_sft356a_in[8:8]),
+	.out(wire_sft356a_out[8:8]));
+	soft   sft356a_9
+	( 
+	.in(wire_sft356a_in[9:9]),
+	.out(wire_sft356a_out[9:9]));
+	soft   sft356a_10
+	( 
+	.in(wire_sft356a_in[10:10]),
+	.out(wire_sft356a_out[10:10]));
+	soft   sft356a_11
+	( 
+	.in(wire_sft356a_in[11:11]),
+	.out(wire_sft356a_out[11:11]));
+	soft   sft356a_12
+	( 
+	.in(wire_sft356a_in[12:12]),
+	.out(wire_sft356a_out[12:12]));
+	soft   sft356a_13
+	( 
+	.in(wire_sft356a_in[13:13]),
+	.out(wire_sft356a_out[13:13]));
+	soft   sft356a_14
+	( 
+	.in(wire_sft356a_in[14:14]),
+	.out(wire_sft356a_out[14:14]));
+	soft   sft356a_15
+	( 
+	.in(wire_sft356a_in[15:15]),
+	.out(wire_sft356a_out[15:15]));
+	soft   sft356a_16
+	( 
+	.in(wire_sft356a_in[16:16]),
+	.out(wire_sft356a_out[16:16]));
+	soft   sft356a_17
+	( 
+	.in(wire_sft356a_in[17:17]),
+	.out(wire_sft356a_out[17:17]));
+	soft   sft356a_18
+	( 
+	.in(wire_sft356a_in[18:18]),
+	.out(wire_sft356a_out[18:18]));
+	soft   sft356a_19
+	( 
+	.in(wire_sft356a_in[19:19]),
+	.out(wire_sft356a_out[19:19]));
+	soft   sft356a_20
+	( 
+	.in(wire_sft356a_in[20:20]),
+	.out(wire_sft356a_out[20:20]));
+	soft   sft356a_21
+	( 
+	.in(wire_sft356a_in[21:21]),
+	.out(wire_sft356a_out[21:21]));
+	soft   sft356a_22
+	( 
+	.in(wire_sft356a_in[22:22]),
+	.out(wire_sft356a_out[22:22]));
+	assign
+		wire_sft356a_in = {w1233w, {dffe284, {dffe276, {dffe267, {dffe257, {dffe247, {dffe237, {dffe227, {dffe217, {dffe207, {dffe197, {dffe187, {dffe177, {dffe167, {dffe157, {dffe147, {dffe137, {dffe127, {dffe117, {dffe107, {dffe97, {dffe88, dffe79}}}}}}}}}}}}}}}}}}}}}};
+	soft   sft357a_0
+	( 
+	.in(wire_sft357a_in[0:0]),
+	.out(wire_sft357a_out[0:0]));
+	soft   sft357a_1
+	( 
+	.in(wire_sft357a_in[1:1]),
+	.out(wire_sft357a_out[1:1]));
+	soft   sft357a_2
+	( 
+	.in(wire_sft357a_in[2:2]),
+	.out(wire_sft357a_out[2:2]));
+	soft   sft357a_3
+	( 
+	.in(wire_sft357a_in[3:3]),
+	.out(wire_sft357a_out[3:3]));
+	soft   sft357a_4
+	( 
+	.in(wire_sft357a_in[4:4]),
+	.out(wire_sft357a_out[4:4]));
+	soft   sft357a_5
+	( 
+	.in(wire_sft357a_in[5:5]),
+	.out(wire_sft357a_out[5:5]));
+	soft   sft357a_6
+	( 
+	.in(wire_sft357a_in[6:6]),
+	.out(wire_sft357a_out[6:6]));
+	soft   sft357a_7
+	( 
+	.in(wire_sft357a_in[7:7]),
+	.out(wire_sft357a_out[7:7]));
+	soft   sft357a_8
+	( 
+	.in(wire_sft357a_in[8:8]),
+	.out(wire_sft357a_out[8:8]));
+	soft   sft357a_9
+	( 
+	.in(wire_sft357a_in[9:9]),
+	.out(wire_sft357a_out[9:9]));
+	soft   sft357a_10
+	( 
+	.in(wire_sft357a_in[10:10]),
+	.out(wire_sft357a_out[10:10]));
+	soft   sft357a_11
+	( 
+	.in(wire_sft357a_in[11:11]),
+	.out(wire_sft357a_out[11:11]));
+	soft   sft357a_12
+	( 
+	.in(wire_sft357a_in[12:12]),
+	.out(wire_sft357a_out[12:12]));
+	soft   sft357a_13
+	( 
+	.in(wire_sft357a_in[13:13]),
+	.out(wire_sft357a_out[13:13]));
+	soft   sft357a_14
+	( 
+	.in(wire_sft357a_in[14:14]),
+	.out(wire_sft357a_out[14:14]));
+	soft   sft357a_15
+	( 
+	.in(wire_sft357a_in[15:15]),
+	.out(wire_sft357a_out[15:15]));
+	soft   sft357a_16
+	( 
+	.in(wire_sft357a_in[16:16]),
+	.out(wire_sft357a_out[16:16]));
+	soft   sft357a_17
+	( 
+	.in(wire_sft357a_in[17:17]),
+	.out(wire_sft357a_out[17:17]));
+	soft   sft357a_18
+	( 
+	.in(wire_sft357a_in[18:18]),
+	.out(wire_sft357a_out[18:18]));
+	soft   sft357a_19
+	( 
+	.in(wire_sft357a_in[19:19]),
+	.out(wire_sft357a_out[19:19]));
+	soft   sft357a_20
+	( 
+	.in(wire_sft357a_in[20:20]),
+	.out(wire_sft357a_out[20:20]));
+	soft   sft357a_21
+	( 
+	.in(wire_sft357a_in[21:21]),
+	.out(wire_sft357a_out[21:21]));
+	soft   sft357a_22
+	( 
+	.in(wire_sft357a_in[22:22]),
+	.out(wire_sft357a_out[22:22]));
+	assign
+		wire_sft357a_in = {w1233w, {w1233w, {w1233w, {dffe268, {dffe258, {dffe248, {dffe238, {dffe228, {dffe218, {dffe208, {dffe198, {dffe188, {dffe178, {dffe168, {dffe158, {dffe148, {dffe138, {dffe128, {dffe118, {dffe108, {dffe98, {dffe89, dffe80}}}}}}}}}}}}}}}}}}}}}};
+	soft   sft358a_0
+	( 
+	.in(wire_sft358a_in[0:0]),
+	.out(wire_sft358a_out[0:0]));
+	soft   sft358a_1
+	( 
+	.in(wire_sft358a_in[1:1]),
+	.out(wire_sft358a_out[1:1]));
+	soft   sft358a_2
+	( 
+	.in(wire_sft358a_in[2:2]),
+	.out(wire_sft358a_out[2:2]));
+	soft   sft358a_3
+	( 
+	.in(wire_sft358a_in[3:3]),
+	.out(wire_sft358a_out[3:3]));
+	soft   sft358a_4
+	( 
+	.in(wire_sft358a_in[4:4]),
+	.out(wire_sft358a_out[4:4]));
+	soft   sft358a_5
+	( 
+	.in(wire_sft358a_in[5:5]),
+	.out(wire_sft358a_out[5:5]));
+	soft   sft358a_6
+	( 
+	.in(wire_sft358a_in[6:6]),
+	.out(wire_sft358a_out[6:6]));
+	soft   sft358a_7
+	( 
+	.in(wire_sft358a_in[7:7]),
+	.out(wire_sft358a_out[7:7]));
+	soft   sft358a_8
+	( 
+	.in(wire_sft358a_in[8:8]),
+	.out(wire_sft358a_out[8:8]));
+	soft   sft358a_9
+	( 
+	.in(wire_sft358a_in[9:9]),
+	.out(wire_sft358a_out[9:9]));
+	soft   sft358a_10
+	( 
+	.in(wire_sft358a_in[10:10]),
+	.out(wire_sft358a_out[10:10]));
+	soft   sft358a_11
+	( 
+	.in(wire_sft358a_in[11:11]),
+	.out(wire_sft358a_out[11:11]));
+	soft   sft358a_12
+	( 
+	.in(wire_sft358a_in[12:12]),
+	.out(wire_sft358a_out[12:12]));
+	soft   sft358a_13
+	( 
+	.in(wire_sft358a_in[13:13]),
+	.out(wire_sft358a_out[13:13]));
+	soft   sft358a_14
+	( 
+	.in(wire_sft358a_in[14:14]),
+	.out(wire_sft358a_out[14:14]));
+	soft   sft358a_15
+	( 
+	.in(wire_sft358a_in[15:15]),
+	.out(wire_sft358a_out[15:15]));
+	soft   sft358a_16
+	( 
+	.in(wire_sft358a_in[16:16]),
+	.out(wire_sft358a_out[16:16]));
+	soft   sft358a_17
+	( 
+	.in(wire_sft358a_in[17:17]),
+	.out(wire_sft358a_out[17:17]));
+	soft   sft358a_18
+	( 
+	.in(wire_sft358a_in[18:18]),
+	.out(wire_sft358a_out[18:18]));
+	soft   sft358a_19
+	( 
+	.in(wire_sft358a_in[19:19]),
+	.out(wire_sft358a_out[19:19]));
+	soft   sft358a_20
+	( 
+	.in(wire_sft358a_in[20:20]),
+	.out(wire_sft358a_out[20:20]));
+	soft   sft358a_21
+	( 
+	.in(wire_sft358a_in[21:21]),
+	.out(wire_sft358a_out[21:21]));
+	soft   sft358a_22
+	( 
+	.in(wire_sft358a_in[22:22]),
+	.out(wire_sft358a_out[22:22]));
+	assign
+		wire_sft358a_in = {w1233w, {w1233w, {w1233w, {w1233w, {dffe259, {dffe249, {dffe239, {dffe229, {dffe219, {dffe209, {dffe199, {dffe189, {dffe179, {dffe169, {dffe159, {dffe149, {dffe139, {dffe129, {dffe119, {dffe109, {dffe99, {2{w1233w}}}}}}}}}}}}}}}}}}}}}}};
+	soft   sft359a_0
+	( 
+	.in(wire_sft359a_in[0:0]),
+	.out(wire_sft359a_out[0:0]));
+	soft   sft359a_1
+	( 
+	.in(wire_sft359a_in[1:1]),
+	.out(wire_sft359a_out[1:1]));
+	soft   sft359a_2
+	( 
+	.in(wire_sft359a_in[2:2]),
+	.out(wire_sft359a_out[2:2]));
+	soft   sft359a_3
+	( 
+	.in(wire_sft359a_in[3:3]),
+	.out(wire_sft359a_out[3:3]));
+	soft   sft359a_4
+	( 
+	.in(wire_sft359a_in[4:4]),
+	.out(wire_sft359a_out[4:4]));
+	soft   sft359a_5
+	( 
+	.in(wire_sft359a_in[5:5]),
+	.out(wire_sft359a_out[5:5]));
+	soft   sft359a_6
+	( 
+	.in(wire_sft359a_in[6:6]),
+	.out(wire_sft359a_out[6:6]));
+	soft   sft359a_7
+	( 
+	.in(wire_sft359a_in[7:7]),
+	.out(wire_sft359a_out[7:7]));
+	soft   sft359a_8
+	( 
+	.in(wire_sft359a_in[8:8]),
+	.out(wire_sft359a_out[8:8]));
+	soft   sft359a_9
+	( 
+	.in(wire_sft359a_in[9:9]),
+	.out(wire_sft359a_out[9:9]));
+	soft   sft359a_10
+	( 
+	.in(wire_sft359a_in[10:10]),
+	.out(wire_sft359a_out[10:10]));
+	soft   sft359a_11
+	( 
+	.in(wire_sft359a_in[11:11]),
+	.out(wire_sft359a_out[11:11]));
+	soft   sft359a_12
+	( 
+	.in(wire_sft359a_in[12:12]),
+	.out(wire_sft359a_out[12:12]));
+	soft   sft359a_13
+	( 
+	.in(wire_sft359a_in[13:13]),
+	.out(wire_sft359a_out[13:13]));
+	soft   sft359a_14
+	( 
+	.in(wire_sft359a_in[14:14]),
+	.out(wire_sft359a_out[14:14]));
+	soft   sft359a_15
+	( 
+	.in(wire_sft359a_in[15:15]),
+	.out(wire_sft359a_out[15:15]));
+	soft   sft359a_16
+	( 
+	.in(wire_sft359a_in[16:16]),
+	.out(wire_sft359a_out[16:16]));
+	soft   sft359a_17
+	( 
+	.in(wire_sft359a_in[17:17]),
+	.out(wire_sft359a_out[17:17]));
+	soft   sft359a_18
+	( 
+	.in(wire_sft359a_in[18:18]),
+	.out(wire_sft359a_out[18:18]));
+	soft   sft359a_19
+	( 
+	.in(wire_sft359a_in[19:19]),
+	.out(wire_sft359a_out[19:19]));
+	soft   sft359a_20
+	( 
+	.in(wire_sft359a_in[20:20]),
+	.out(wire_sft359a_out[20:20]));
+	soft   sft359a_21
+	( 
+	.in(wire_sft359a_in[21:21]),
+	.out(wire_sft359a_out[21:21]));
+	soft   sft359a_22
+	( 
+	.in(wire_sft359a_in[22:22]),
+	.out(wire_sft359a_out[22:22]));
+	assign
+		wire_sft359a_in = wire_add355_result;
+	soft   sft361a_0
+	( 
+	.in(wire_sft361a_in[0:0]),
+	.out(wire_sft361a_out[0:0]));
+	soft   sft361a_1
+	( 
+	.in(wire_sft361a_in[1:1]),
+	.out(wire_sft361a_out[1:1]));
+	soft   sft361a_2
+	( 
+	.in(wire_sft361a_in[2:2]),
+	.out(wire_sft361a_out[2:2]));
+	soft   sft361a_3
+	( 
+	.in(wire_sft361a_in[3:3]),
+	.out(wire_sft361a_out[3:3]));
+	soft   sft361a_4
+	( 
+	.in(wire_sft361a_in[4:4]),
+	.out(wire_sft361a_out[4:4]));
+	soft   sft361a_5
+	( 
+	.in(wire_sft361a_in[5:5]),
+	.out(wire_sft361a_out[5:5]));
+	soft   sft361a_6
+	( 
+	.in(wire_sft361a_in[6:6]),
+	.out(wire_sft361a_out[6:6]));
+	soft   sft361a_7
+	( 
+	.in(wire_sft361a_in[7:7]),
+	.out(wire_sft361a_out[7:7]));
+	soft   sft361a_8
+	( 
+	.in(wire_sft361a_in[8:8]),
+	.out(wire_sft361a_out[8:8]));
+	soft   sft361a_9
+	( 
+	.in(wire_sft361a_in[9:9]),
+	.out(wire_sft361a_out[9:9]));
+	soft   sft361a_10
+	( 
+	.in(wire_sft361a_in[10:10]),
+	.out(wire_sft361a_out[10:10]));
+	soft   sft361a_11
+	( 
+	.in(wire_sft361a_in[11:11]),
+	.out(wire_sft361a_out[11:11]));
+	soft   sft361a_12
+	( 
+	.in(wire_sft361a_in[12:12]),
+	.out(wire_sft361a_out[12:12]));
+	soft   sft361a_13
+	( 
+	.in(wire_sft361a_in[13:13]),
+	.out(wire_sft361a_out[13:13]));
+	soft   sft361a_14
+	( 
+	.in(wire_sft361a_in[14:14]),
+	.out(wire_sft361a_out[14:14]));
+	assign
+		wire_sft361a_in = {w1233w, {w_sum_node497w[175], {w_sum_node497w[174], {w_sum_node497w[293], {w_sum_node497w[292], {w_sum_node497w[267], {w_sum_node497w[266], {w_sum_node497w[241], {w_sum_node497w[240], {w_sum_node497w[239], {w_sum_node497w[238], {w_sum_node497w[237], {w_sum_node497w[236], {w_sum_node497w[235:234]}}}}}}}}}}}}}};
+	soft   sft362a_0
+	( 
+	.in(wire_sft362a_in[0:0]),
+	.out(wire_sft362a_out[0:0]));
+	soft   sft362a_1
+	( 
+	.in(wire_sft362a_in[1:1]),
+	.out(wire_sft362a_out[1:1]));
+	soft   sft362a_2
+	( 
+	.in(wire_sft362a_in[2:2]),
+	.out(wire_sft362a_out[2:2]));
+	soft   sft362a_3
+	( 
+	.in(wire_sft362a_in[3:3]),
+	.out(wire_sft362a_out[3:3]));
+	soft   sft362a_4
+	( 
+	.in(wire_sft362a_in[4:4]),
+	.out(wire_sft362a_out[4:4]));
+	soft   sft362a_5
+	( 
+	.in(wire_sft362a_in[5:5]),
+	.out(wire_sft362a_out[5:5]));
+	soft   sft362a_6
+	( 
+	.in(wire_sft362a_in[6:6]),
+	.out(wire_sft362a_out[6:6]));
+	soft   sft362a_7
+	( 
+	.in(wire_sft362a_in[7:7]),
+	.out(wire_sft362a_out[7:7]));
+	soft   sft362a_8
+	( 
+	.in(wire_sft362a_in[8:8]),
+	.out(wire_sft362a_out[8:8]));
+	soft   sft362a_9
+	( 
+	.in(wire_sft362a_in[9:9]),
+	.out(wire_sft362a_out[9:9]));
+	soft   sft362a_10
+	( 
+	.in(wire_sft362a_in[10:10]),
+	.out(wire_sft362a_out[10:10]));
+	soft   sft362a_11
+	( 
+	.in(wire_sft362a_in[11:11]),
+	.out(wire_sft362a_out[11:11]));
+	soft   sft362a_12
+	( 
+	.in(wire_sft362a_in[12:12]),
+	.out(wire_sft362a_out[12:12]));
+	soft   sft362a_13
+	( 
+	.in(wire_sft362a_in[13:13]),
+	.out(wire_sft362a_out[13:13]));
+	soft   sft362a_14
+	( 
+	.in(wire_sft362a_in[14:14]),
+	.out(wire_sft362a_out[14:14]));
+	assign
+		wire_sft362a_in = {w1233w, {w1233w, {w1233w, {w_sum_node497w[173], {w_sum_node497w[172], {w_sum_node497w[147], {w_sum_node497w[146], {w_sum_node497w[121], {w_sum_node497w[120], {w_sum_node497w[119], {w_sum_node497w[118], {w_sum_node497w[117], {w_sum_node497w[116], {w_sum_node497w[115:114]}}}}}}}}}}}}}};
+	soft   sft363a_0
+	( 
+	.in(wire_sft363a_in[0:0]),
+	.out(wire_sft363a_out[0:0]));
+	soft   sft363a_1
+	( 
+	.in(wire_sft363a_in[1:1]),
+	.out(wire_sft363a_out[1:1]));
+	soft   sft363a_2
+	( 
+	.in(wire_sft363a_in[2:2]),
+	.out(wire_sft363a_out[2:2]));
+	soft   sft363a_3
+	( 
+	.in(wire_sft363a_in[3:3]),
+	.out(wire_sft363a_out[3:3]));
+	soft   sft363a_4
+	( 
+	.in(wire_sft363a_in[4:4]),
+	.out(wire_sft363a_out[4:4]));
+	soft   sft363a_5
+	( 
+	.in(wire_sft363a_in[5:5]),
+	.out(wire_sft363a_out[5:5]));
+	soft   sft363a_6
+	( 
+	.in(wire_sft363a_in[6:6]),
+	.out(wire_sft363a_out[6:6]));
+	soft   sft363a_7
+	( 
+	.in(wire_sft363a_in[7:7]),
+	.out(wire_sft363a_out[7:7]));
+	soft   sft363a_8
+	( 
+	.in(wire_sft363a_in[8:8]),
+	.out(wire_sft363a_out[8:8]));
+	soft   sft363a_9
+	( 
+	.in(wire_sft363a_in[9:9]),
+	.out(wire_sft363a_out[9:9]));
+	soft   sft363a_10
+	( 
+	.in(wire_sft363a_in[10:10]),
+	.out(wire_sft363a_out[10:10]));
+	soft   sft363a_11
+	( 
+	.in(wire_sft363a_in[11:11]),
+	.out(wire_sft363a_out[11:11]));
+	soft   sft363a_12
+	( 
+	.in(wire_sft363a_in[12:12]),
+	.out(wire_sft363a_out[12:12]));
+	soft   sft363a_13
+	( 
+	.in(wire_sft363a_in[13:13]),
+	.out(wire_sft363a_out[13:13]));
+	soft   sft363a_14
+	( 
+	.in(wire_sft363a_in[14:14]),
+	.out(wire_sft363a_out[14:14]));
+	assign
+		wire_sft363a_in = {w1233w, {w1233w, {w1233w, {w1233w, {w_sum_node497w[196], {w_sum_node497w[291], {w_sum_node497w[290], {w_sum_node497w[265], {w_sum_node497w[264], {w_sum_node497w[263], {w_sum_node497w[262], {w_sum_node497w[261], {w_sum_node497w[260], {2{w1233w}}}}}}}}}}}}}}};
+	soft   sft364a_0
+	( 
+	.in(wire_sft364a_in[0:0]),
+	.out(wire_sft364a_out[0:0]));
+	soft   sft364a_1
+	( 
+	.in(wire_sft364a_in[1:1]),
+	.out(wire_sft364a_out[1:1]));
+	soft   sft364a_2
+	( 
+	.in(wire_sft364a_in[2:2]),
+	.out(wire_sft364a_out[2:2]));
+	soft   sft364a_3
+	( 
+	.in(wire_sft364a_in[3:3]),
+	.out(wire_sft364a_out[3:3]));
+	soft   sft364a_4
+	( 
+	.in(wire_sft364a_in[4:4]),
+	.out(wire_sft364a_out[4:4]));
+	soft   sft364a_5
+	( 
+	.in(wire_sft364a_in[5:5]),
+	.out(wire_sft364a_out[5:5]));
+	soft   sft364a_6
+	( 
+	.in(wire_sft364a_in[6:6]),
+	.out(wire_sft364a_out[6:6]));
+	soft   sft364a_7
+	( 
+	.in(wire_sft364a_in[7:7]),
+	.out(wire_sft364a_out[7:7]));
+	soft   sft364a_8
+	( 
+	.in(wire_sft364a_in[8:8]),
+	.out(wire_sft364a_out[8:8]));
+	soft   sft364a_9
+	( 
+	.in(wire_sft364a_in[9:9]),
+	.out(wire_sft364a_out[9:9]));
+	soft   sft364a_10
+	( 
+	.in(wire_sft364a_in[10:10]),
+	.out(wire_sft364a_out[10:10]));
+	soft   sft364a_11
+	( 
+	.in(wire_sft364a_in[11:11]),
+	.out(wire_sft364a_out[11:11]));
+	soft   sft364a_12
+	( 
+	.in(wire_sft364a_in[12:12]),
+	.out(wire_sft364a_out[12:12]));
+	soft   sft364a_13
+	( 
+	.in(wire_sft364a_in[13:13]),
+	.out(wire_sft364a_out[13:13]));
+	soft   sft364a_14
+	( 
+	.in(wire_sft364a_in[14:14]),
+	.out(wire_sft364a_out[14:14]));
+	assign
+		wire_sft364a_in = wire_add360_result;
+	soft   sft366a_0
+	( 
+	.in(wire_sft366a_in[0:0]),
+	.out(wire_sft366a_out[0:0]));
+	soft   sft366a_1
+	( 
+	.in(wire_sft366a_in[1:1]),
+	.out(wire_sft366a_out[1:1]));
+	soft   sft366a_2
+	( 
+	.in(wire_sft366a_in[2:2]),
+	.out(wire_sft366a_out[2:2]));
+	soft   sft366a_3
+	( 
+	.in(wire_sft366a_in[3:3]),
+	.out(wire_sft366a_out[3:3]));
+	soft   sft366a_4
+	( 
+	.in(wire_sft366a_in[4:4]),
+	.out(wire_sft366a_out[4:4]));
+	soft   sft366a_5
+	( 
+	.in(wire_sft366a_in[5:5]),
+	.out(wire_sft366a_out[5:5]));
+	soft   sft366a_6
+	( 
+	.in(wire_sft366a_in[6:6]),
+	.out(wire_sft366a_out[6:6]));
+	assign
+		wire_sft366a_in = {w1233w, {w_sum_node497w[171], {w_sum_node497w[170], {w_sum_node497w[289], {w_sum_node497w[288], {w_sum_node497w[287:286]}}}}}};
+	soft   sft367a_0
+	( 
+	.in(wire_sft367a_in[0:0]),
+	.out(wire_sft367a_out[0:0]));
+	soft   sft367a_1
+	( 
+	.in(wire_sft367a_in[1:1]),
+	.out(wire_sft367a_out[1:1]));
+	soft   sft367a_2
+	( 
+	.in(wire_sft367a_in[2:2]),
+	.out(wire_sft367a_out[2:2]));
+	soft   sft367a_3
+	( 
+	.in(wire_sft367a_in[3:3]),
+	.out(wire_sft367a_out[3:3]));
+	soft   sft367a_4
+	( 
+	.in(wire_sft367a_in[4:4]),
+	.out(wire_sft367a_out[4:4]));
+	soft   sft367a_5
+	( 
+	.in(wire_sft367a_in[5:5]),
+	.out(wire_sft367a_out[5:5]));
+	soft   sft367a_6
+	( 
+	.in(wire_sft367a_in[6:6]),
+	.out(wire_sft367a_out[6:6]));
+	assign
+		wire_sft367a_in = {w1233w, {w1233w, {w1233w, {w_sum_node497w[169], {w_sum_node497w[168], {w_sum_node497w[167:166]}}}}}};
+	soft   sft368a_0
+	( 
+	.in(wire_sft368a_in[0:0]),
+	.out(wire_sft368a_out[0:0]));
+	soft   sft368a_1
+	( 
+	.in(wire_sft368a_in[1:1]),
+	.out(wire_sft368a_out[1:1]));
+	soft   sft368a_2
+	( 
+	.in(wire_sft368a_in[2:2]),
+	.out(wire_sft368a_out[2:2]));
+	soft   sft368a_3
+	( 
+	.in(wire_sft368a_in[3:3]),
+	.out(wire_sft368a_out[3:3]));
+	soft   sft368a_4
+	( 
+	.in(wire_sft368a_in[4:4]),
+	.out(wire_sft368a_out[4:4]));
+	soft   sft368a_5
+	( 
+	.in(wire_sft368a_in[5:5]),
+	.out(wire_sft368a_out[5:5]));
+	soft   sft368a_6
+	( 
+	.in(wire_sft368a_in[6:6]),
+	.out(wire_sft368a_out[6:6]));
+	assign
+		wire_sft368a_in = {w1233w, {w1233w, {w1233w, {w1233w, {w1233w, {2{w1233w}}}}}}};
+	soft   sft369a_0
+	( 
+	.in(wire_sft369a_in[0:0]),
+	.out(wire_sft369a_out[0:0]));
+	soft   sft369a_1
+	( 
+	.in(wire_sft369a_in[1:1]),
+	.out(wire_sft369a_out[1:1]));
+	soft   sft369a_2
+	( 
+	.in(wire_sft369a_in[2:2]),
+	.out(wire_sft369a_out[2:2]));
+	soft   sft369a_3
+	( 
+	.in(wire_sft369a_in[3:3]),
+	.out(wire_sft369a_out[3:3]));
+	soft   sft369a_4
+	( 
+	.in(wire_sft369a_in[4:4]),
+	.out(wire_sft369a_out[4:4]));
+	soft   sft369a_5
+	( 
+	.in(wire_sft369a_in[5:5]),
+	.out(wire_sft369a_out[5:5]));
+	soft   sft369a_6
+	( 
+	.in(wire_sft369a_in[6:6]),
+	.out(wire_sft369a_out[6:6]));
+	assign
+		wire_sft369a_in = wire_add365_result;
+	assign
+		dataa_node = {dataa[23:0]},
+		datab_node = {datab[23:0]},
+		final_result_node = {w1868w[47:0]},
+		result = {final_result_node[47:0]},
+		w1233w = 1'b0,
+		w1868w = {dffe339, dffe337, dffe335, dffe332, dffe329, dffe325, dffe321, dffe316, dffe311, dffe305, dffe299, dffe292, dffe285, dffe277, dffe269, dffe260, dffe250, dffe240, dffe230, dffe220, dffe210, dffe200, dffe190, dffe180, dffe170, dffe160, dffe150, dffe140, dffe130, dffe120, dffe110, dffe100, dffe90, dffe81, dffe72, dffe64, dffe56, dffe49, dffe42, dffe36, dffe30, dffe25, dffe20, dffe16, dffe12, dffe9, dffe6, dffe4, dffe2},
+		w_decoder_node496w = {({dataa_node[23:0]} & {24{w_le_datab_node495w[23]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[22]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[21]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[20]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[19]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[18]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[17]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[16]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[15]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[14]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[13]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[12]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[11]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[10]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[9]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[8]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[7]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[6]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[5]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[4]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[3]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[2]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[1]}}), ({dataa_node[23:0]} & {24{w_le_datab_node495w[0]}})},
+		w_le_datab_node495w = {datab_node[23:0]},
+		w_sum_node497w = {wire_sum_adder1aa_11result[24:0], w_decoder_node496w[528], wire_sum_adder1aa_10result[24:0], w_decoder_node496w[480], wire_sum_adder1aa_9result[24:0], w_decoder_node496w[432], wire_sum_adder1aa_8result[24:0], w_decoder_node496w[384], wire_sum_adder1aa_7result[24:0], w_decoder_node496w[336], wire_sum_adder1aa_6result[24:0], w_decoder_node496w[288], wire_sum_adder1aa_5result[24:0], w_decoder_node496w[240], wire_sum_adder1aa_4result[24:0], w_decoder_node496w[192], wire_sum_adder1aa_3result[24:0], w_decoder_node496w[144], wire_sum_adder1aa_2result[24:0], w_decoder_node496w[96], wire_sum_adder1aa_1result[24:0], w_decoder_node496w[48], wire_sum_adder1aa_0result[24:0], w_decoder_node496w[0]};
 endmodule //float_mult_mult
 
-//synthesis_resources = lut 55 reg 136 
+//synthesis_resources = lut 679 reg 474 
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
@@ -205,8 +6105,6 @@ module  float_mult_altfp_mult
 	wire	[24:0]	wire_man_round_adder_dataa;
 	wire	[24:0]	wire_man_round_adder_datab;
 	wire	[24:0]	wire_man_round_adder_result;
-	wire  [23:0]   wire_man_product2_mult_dataa;
-	wire  [23:0]   wire_man_product2_mult_datab;
 	wire  [47:0]   wire_man_product2_mult_result;
 	wire aclr;
 	wire  [9:0]  bias;
@@ -572,7 +6470,7 @@ endmodule
 // Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 // Retrieval info: PRIVATE: FPM_FORMAT STRING "Single"
 // Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Stratix V"
-// Retrieval info: CONSTANT: DEDICATED_MULTIPLIER_CIRCUITRY STRING "YES"
+// Retrieval info: CONSTANT: DEDICATED_MULTIPLIER_CIRCUITRY STRING "NO"
 // Retrieval info: CONSTANT: DENORMAL_SUPPORT STRING "NO"
 // Retrieval info: CONSTANT: EXCEPTION_HANDLING STRING "NO"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "UNUSED"

@@ -48,8 +48,8 @@ agreement for further details.
 	(port
 		(pt 0 104)
 		(input)
-		(text "clk_en" (rect 0 0 63 15)(font "Arial" (font_size 8)))
-		(text "clk_en" (rect 20 98 51 110)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 0 0 42 15)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 20 98 38 110)(font "Arial" (font_size 8)))
 		(line (pt 0 104)(pt 16 104))
 	)
 	(port

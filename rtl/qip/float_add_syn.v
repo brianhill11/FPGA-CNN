@@ -34,7 +34,7 @@
 //agreement for further details.
 
 
-//altfp_add_sub DENORMAL_SUPPORT="NO" DEVICE_FAMILY="Stratix V" DIRECTION="ADD" OPTIMIZE="SPEED" PIPELINE=7 REDUCED_FUNCTIONALITY="NO" WIDTH_EXP=8 WIDTH_MAN=23 clk_en clock dataa datab result
+//altfp_add_sub DENORMAL_SUPPORT="NO" DEVICE_FAMILY="Stratix V" DIRECTION="ADD" OPTIMIZE="SPEED" PIPELINE=7 REDUCED_FUNCTIONALITY="NO" WIDTH_EXP=8 WIDTH_MAN=23 aclr clock dataa datab result
 //VERSION_BEGIN 15.1 cbx_altbarrel_shift 2015:11:24:18:49:55:SJ cbx_altfp_add_sub 2015:11:24:18:49:55:SJ cbx_altpriority_encoder 2015:11:24:18:49:55:SJ cbx_cycloneii 2015:11:24:18:49:55:SJ cbx_lpm_add_sub 2015:11:24:18:49:55:SJ cbx_lpm_compare 2015:11:24:18:49:55:SJ cbx_mgl 2015:11:24:20:43:33:SJ cbx_nadder 2015:11:24:18:49:55:SJ cbx_stratix 2015:11:24:18:49:55:SJ cbx_stratixii 2015:11:24:18:49:55:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
@@ -1725,12 +1725,12 @@ endmodule //float_add_add_sub1
 //synopsys translate_on
 module  float_add_altfp_add_sub
 	( 
-	clk_en,
+	aclr,
 	clock,
 	dataa,
 	datab,
 	result) /* synthesis synthesis_clearbox=1 */;
-	input   clk_en;
+	input   aclr;
 	input   clock;
 	input   [31:0]  dataa;
 	input   [31:0]  datab;
@@ -1738,7 +1738,7 @@ module  float_add_altfp_add_sub
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_off
 `endif
-	tri1   clk_en;
+	tri0   aclr;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_on
 `endif
@@ -1860,7 +1860,6 @@ module  float_add_altfp_add_sub
 	wire	[5:0]	wire_trailing_zeros_limit_comparator_datab;
 	wire	[5:0]	wire_trailing_zeros_limit_comparator_dataa_int;
 	wire	[5:0]	wire_trailing_zeros_limit_comparator_datab_int;
-	wire aclr;
 	wire  add_sub_dffe25_wi;
 	wire  add_sub_dffe25_wo;
 	wire  add_sub_w2;
@@ -1926,6 +1925,7 @@ module  float_add_altfp_add_sub
 	wire  both_inputs_are_infinite_dffe1_wo;
 	wire  both_inputs_are_infinite_dffe25_wi;
 	wire  both_inputs_are_infinite_dffe25_wo;
+	wire clk_en;
 	wire  [7:0]  data_exp_dffe1_wi;
 	wire  [7:0]  data_exp_dffe1_wo;
 	wire  [31:0]  dataa_dffe11_wi;
@@ -2971,7 +2971,6 @@ module  float_add_altfp_add_sub
 		wire_trailing_zeros_limit_comparator_dataa = sticky_bit_cnt_res_w,
 		wire_trailing_zeros_limit_comparator_datab = trailing_zeros_limit_w;
 	assign
-		aclr = 1'b0,
 		add_sub_dffe25_wi = add_sub_w2,
 		add_sub_dffe25_wo = add_sub_dffe25_wi,
 		add_sub_w2 = (~ (dataa_sign_dffe1_wo ^ datab_sign_dffe1_wo)),
@@ -3037,6 +3036,7 @@ module  float_add_altfp_add_sub
 		both_inputs_are_infinite_dffe1_wo = both_inputs_are_infinite_dffe1,
 		both_inputs_are_infinite_dffe25_wi = both_inputs_are_infinite_dffe1_wo,
 		both_inputs_are_infinite_dffe25_wo = both_inputs_are_infinite_dffe25_wi,
+		clk_en = 1'b1,
 		data_exp_dffe1_wi = (({8{(~ exp_amb_mux_dffe15_wo)}} & aligned_dataa_exp_dffe15_wo[7:0]) | ({8{exp_amb_mux_dffe15_wo}} & aligned_datab_exp_dffe15_wo[7:0])),
 		data_exp_dffe1_wo = data_exp_dffe1,
 		dataa_dffe11_wi = dataa,
@@ -3480,13 +3480,13 @@ endmodule //float_add_altfp_add_sub
 `timescale 1 ps / 1 ps
 // synopsys translate_on
 module float_add (
-	clk_en,
+	aclr,
 	clock,
 	dataa,
 	datab,
 	result)/* synthesis synthesis_clearbox = 1 */;
 
-	input	  clk_en;
+	input	  aclr;
 	input	  clock;
 	input	[31:0]  dataa;
 	input	[31:0]  datab;
@@ -3496,7 +3496,7 @@ module float_add (
 	wire [31:0] result = sub_wire0[31:0];
 
 	float_add_altfp_add_sub	float_add_altfp_add_sub_component (
-				.clk_en (clk_en),
+				.aclr (aclr),
 				.clock (clock),
 				.dataa (dataa),
 				.datab (datab),
@@ -3520,12 +3520,12 @@ endmodule
 // Retrieval info: CONSTANT: REDUCED_FUNCTIONALITY STRING "NO"
 // Retrieval info: CONSTANT: WIDTH_EXP NUMERIC "8"
 // Retrieval info: CONSTANT: WIDTH_MAN NUMERIC "23"
-// Retrieval info: USED_PORT: clk_en 0 0 0 0 INPUT NODEFVAL "clk_en"
+// Retrieval info: USED_PORT: aclr 0 0 0 0 INPUT NODEFVAL "aclr"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
 // Retrieval info: USED_PORT: dataa 0 0 32 0 INPUT NODEFVAL "dataa[31..0]"
 // Retrieval info: USED_PORT: datab 0 0 32 0 INPUT NODEFVAL "datab[31..0]"
 // Retrieval info: USED_PORT: result 0 0 32 0 OUTPUT NODEFVAL "result[31..0]"
-// Retrieval info: CONNECT: @clk_en 0 0 0 0 clk_en 0 0 0 0
+// Retrieval info: CONNECT: @aclr 0 0 0 0 aclr 0 0 0 0
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 // Retrieval info: CONNECT: @dataa 0 0 32 0 dataa 0 0 32 0
 // Retrieval info: CONNECT: @datab 0 0 32 0 datab 0 0 32 0
