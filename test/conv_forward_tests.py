@@ -16,7 +16,7 @@ def float_to_hex(f):
 # the test data file will consist of hexadecimal values without the 
 # '0x' prefix since Quartus doesn't like that. 
 # 
-# Each row will contain either:
+# Each row will contain:
 #	[VECTOR_LENGTH*2 + 2] 32-bit floating-point vals 
 #  where row structure (order) is:
 # (1): input data vector of length VECTOR_LENGTH 
