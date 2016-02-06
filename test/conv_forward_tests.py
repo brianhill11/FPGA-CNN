@@ -4,13 +4,9 @@ import csv
 import random
 import struct
 import numpy as np
+import argparse
 
-NUM_TESTS = 10000
-filename = 'test_data/conv_forward_test_data.hex'
-UPPER_RANGE = 100
-LOWER_RANGE = -100
-VECTOR_LENGTH = 8
-DEBUG = 0
+data_file_name = 'test_data/conv_forward_test_data.hex'
 
 # convert floating point value to hex value
 def float_to_hex(f):
@@ -27,7 +23,27 @@ def float_to_hex(f):
 # 
 #####################################################################
 def main():
-	with open( filename, 'wb') as data_f:
+	# parse command line arguments
+	parser = argparse.ArgumentParser()
+	parser.add_argument('--NUM_TESTS', '-n', type=int, default=10000,
+				help='number of tests to generate (default: 10000)')
+	parser.add_argument('--UPPER_RANGE', '-ur', type=int, default=100,
+				help='upper range of random number gen (default: 100)')
+	parser.add_argument('--LOWER_RANGE', '-lr', type=int, default=-100,
+				help='lower range of random number gen (default: -100)')
+	parser.add_argument('--VECTOR_LENGTH', '-l', type=int, default=8,
+				help='input vector length (default: 8)')
+	parser.add_argument('--FILENAME', '-f', default=data_file_name,
+				help='location/filename of data file to create')
+	args = parser.parse_args()	
+
+	NUM_TESTS = args.NUM_TESTS
+	FILENAME = args.FILENAME
+	UPPER_RANGE = args.UPPER_RANGE
+	LOWER_RANGE = args.LOWER_RANGE
+	VECTOR_LENGTH = args.VECTOR_LENGTH
+	
+	with open( FILENAME, 'wb') as data_f:
 		print 'Creating test data file...'
 		f = csv.writer( data_f, delimiter='\t' )
 		# create header for test data file
