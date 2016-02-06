@@ -16,14 +16,12 @@ def float_to_hex(f):
 # '0x' prefix since Quartus doesn't like that. 
 # 
 # Each row will contain:
-#	[VECTOR_LENGTH*2 + 2] 32-bit floating-point vals 
+#	2 32-bit floating-point vals 
 #  where row structure (order) is:
-# (1): input data vector of length VECTOR_LENGTH 
-# (2): weight data vector of length VECTOR_LENGTH 
-# (3): result from the dot product of the input data and weights
-# (4): bias term added to result of dot product (0.0 by default)
+# (1): input 32-bit float
+# (2): result from the ReLU operation
 # 
-# example: //input0, .., inputN, weight0, .., weightN, result, bias_term
+# example: //input0, result
 #####################################################################
 def main():
 	# parse command line arguments
