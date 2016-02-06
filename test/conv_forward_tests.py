@@ -16,11 +16,15 @@ def float_to_hex(f):
 # the test data file will consist of hexadecimal values without the 
 # '0x' prefix since Quartus doesn't like that. 
 # 
-# Each row will contain [VECTOR_LENGTH*2 + 1] 32-bit floating-point vals:
+# Each row will contain either:
+#	[VECTOR_LENGTH*2 + 2] 32-bit floating-point vals 
+#  where row structure (order) is:
 # (1): input data vector of length VECTOR_LENGTH 
 # (2): weight data vector of length VECTOR_LENGTH 
 # (3): result from the dot product of the input data and weights
+# (4): bias term added to result of dot product (0.0 by default)
 # 
+# example: //input0, .., inputN, weight0, .., weightN, result, bias_term
 #####################################################################
 def main():
 	# parse command line arguments
@@ -33,15 +37,21 @@ def main():
 				help='lower range of random number gen (default: -100)')
 	parser.add_argument('--VECTOR_LENGTH', '-l', type=int, default=8,
 				help='input vector length (default: 8)')
+	parser.add_argument('--BIAS_TERM', '-b', action='store_true', default=False,
+				help='flag to include bias term (default: False)')
 	parser.add_argument('--FILENAME', '-f', default=data_file_name,
 				help='location/filename of data file to create')
+	parser.add_argument('--DEBUG', '-d', action='store_true', default=False,
+				help='flag for debug (default: False)')
 	args = parser.parse_args()	
 
 	NUM_TESTS = args.NUM_TESTS
-	FILENAME = args.FILENAME
 	UPPER_RANGE = args.UPPER_RANGE
 	LOWER_RANGE = args.LOWER_RANGE
 	VECTOR_LENGTH = args.VECTOR_LENGTH
+	BIAS_TERM = args.BIAS_TERM
+	FILENAME = args.FILENAME
+	DEBUG = args.DEBUG
 	
 	with open( FILENAME, 'wb') as data_f:
 		print 'Creating test data file...'
@@ -60,6 +70,8 @@ def main():
 			header.append( 'weight' + str(i) )
 		# add result column header
 		header.append( 'result' )
+		# add bias term header
+		header.append('bias_term')
 		# write header 
 		f.writerow( header )
 
@@ -70,6 +82,12 @@ def main():
 			weight_vec = np.random.uniform( LOWER_RANGE, UPPER_RANGE, VECTOR_LENGTH )
 			# take the dot product
 			result = np.dot( input_vec, weight_vec )
+			# if BIAS_TERM, generate random bias term and add to result 
+			if (BIAS_TERM):
+				bias_term = np.random.uniform( LOWER_RANGE, UPPER_RANGE, 1 )
+				result += bias_term
+			else:
+				bias_term = 0.0
 			# add all values to list to be written
 			row = []
 			for i in input_vec:
@@ -77,8 +95,20 @@ def main():
 			for i in weight_vec:
 				row.append( float_to_hex(i) )
 			row.append( float_to_hex(result) )
+			row.append( float_to_hex(bias_term) )
 			# write row to file
-			f.writerow( row )	
+			f.writerow( row )
+			# for debugging/sanity check..
+			if (DEBUG):	
+				row = []
+				for i in input_vec:
+					row.append( i )
+				for i in weight_vec:
+					row.append( i )
+				row.append( float(result) )
+				row.append( float(bias_term) )
+				# write row to file
+				f.writerow( row )
 
 		print 'Finished creating test data file'
 
