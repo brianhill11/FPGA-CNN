@@ -2,12 +2,12 @@
 module relu_backward_opt( input   logic         clk,        //clock signal
                           input   logic         reset,      //reset signal
                           input   logic [31:0]  in_data,    //32-bit float
-                          output  reg   [31:0]  out_data);  //32-bit float
+                          output  logic [31:0]  out_data);  //32-bit float
 
-    parameter NEGATIVE_SLOPE = 0;
+    parameter NEGATIVE_SLOPE = 0.0;
   
     //at rising edge of clock
-    always_ff @(posedge clk, negedge reset) begin 
+    always @(posedge clk, negedge reset) begin 
         //check for reset value, else continue
         if (!reset) begin
             //if value is positive, output the value

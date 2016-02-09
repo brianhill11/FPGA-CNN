@@ -1,5 +1,5 @@
 
-module relu_backward_layer #(parameter WIDTH = 4, parameter NEGATIVE_SLOPE = 0)
+module relu_backward_layer #(parameter WIDTH = 8, parameter NEGATIVE_SLOPE = 0)
                             ( input   logic           clk,                //clock signal
                             input   logic           reset,              //reset signal
                             input   logic [31:0]    in_vec  [WIDTH-1:0],//vector of floats
