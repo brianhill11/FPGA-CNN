@@ -26,24 +26,24 @@ module relu_backward_layer_tb();
 	
 	//instantiate the module
 	relu_backward_layer #(.WIDTH(8), .NEGATIVE_SLOPE(NEG_SLOPE) )
-							relu( .clk(clk), .reset(reset), .in_vec(in_vec), .out_vec(out_vec) );
+							relu( .clk(clk), .reset(reset), .id(32'b0), .in_vec(in_vec), .out_vec(out_vec) );
 					
 	initial begin
 		reset = 0;
 		num_errors = 0;
 		//for all test cases
-		for (i = 0; i < 80; i = i+(WIDTH)) begin
+		for (i = 0; i < MEM_SIZE; i = i+(WIDTH)) begin
 			//for each value in input vector
 			for (j = 0; j < WIDTH; j++) begin
 				//use test input value as input
 				in_vec[j] = test_input[i+j];
 			end
 			//wait for it...
-			#(2*CYCLE)
+			#(CYCLE)
 			//for each value in output vector (same size as input)
 			for (j = 0; j < WIDTH; j++) begin
 				//check output of module against value calculated by Python
-				$display("b: %h\tm:%h", out_vec[j], test_output[i+j]);
+				$display("output: %h\tcalculated:%h", out_vec[j], test_output[i+j]);
 				assert( out_vec[j] == test_output[i+j] );
 				//if we were wrong, increase error count
 				if( out_vec[j] != test_output[i+j] ) begin
