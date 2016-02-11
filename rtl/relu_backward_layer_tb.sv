@@ -1,8 +1,8 @@
-`timescale 1ns/1ns
+`timescale 1ns/100ps
 
 module relu_backward_layer_tb();
 	`include "/home/b/FPGA-CNN/test/test_data/relu_backward_test_data.vh"
-	parameter CYCLE 			= 4;		//clk period
+	parameter CYCLE 			= 5;		//clk period: 5ns = 200Mhz signal
 	parameter NEG_SLOPE 		= 0.0;	//negative slope param
 	parameter WIDTH 			= 8;		//width of input/output vec
 	
@@ -21,7 +21,7 @@ module relu_backward_layer_tb();
 	
 	//forever cycle the clk
 	always begin
-		#(CYCLE/2) clk = ~clk;
+		#(CYCLE/2.0) clk = ~clk;
 	end
 	
 	//instantiate the module
