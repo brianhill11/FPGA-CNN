@@ -1,12 +1,13 @@
-module conv_forward_layer #(parameter WIDTH = 16)
+module conv_forward_layer #(parameter WIDTH = 8)
 									(
-										input logic					clk,
-										input logic					reset,
-										input logic					enable,
-										input logic		[31:0] 	in_data 	[WIDTH-1:0],
-										input logic		[31:0]	weights	[WIDTH-1:0],
-										input logic		[31:0]	bias_term,
-										output logic	[31:0] 	out_data
+										input		logic					clk,
+										input		logic					reset,
+										input		logic		[7:0]		id,
+										input		logic		[31:0] 	in_data 		[WIDTH-1:0],
+										input		logic		[31:0]	weight_vec	[WIDTH-1:0],
+										input		logic		[31:0]	bias_term,
+										output	logic		[31:0]	out_data,
+										output	logic		[7:0]		id_out
 									);
 										
 	logic [31:0] connections [2*WIDTH] ;
@@ -14,14 +15,13 @@ module conv_forward_layer #(parameter WIDTH = 16)
 	genvar i, j;
 	generate 
 		//create float_mult blocks to multiply WIDTH number 
-		//of inputs with weights
+		//of inputs with weight_vec
 		for (i = 0; i < WIDTH; i++) begin : GEN_MULTS
-			wire [31:0] results;
 			float_mult float_mult_inst(
-												.clk_en(enable),
+												.clk_en(!reset),
 												.clock(clk),
 												.dataa(in_data[i]),
-												.datab(weights[i]),
+												.datab(weight_vec[i]),
 												.result(connections[i+WIDTH])
 												);
 		end 
@@ -29,7 +29,7 @@ module conv_forward_layer #(parameter WIDTH = 16)
 		for (i = WIDTH; i > 1; i = i / 2) begin : GEN_SUMS
 			for (j = i; j > i/2 && j != 1; j--) begin : SUM_MULTS
 					float_add float_add_inst(
-												 .aclr(!enable),
+												 .aclr(reset),
 												 .clock(clk),
 												 .dataa(connections[2*j-1]),
 												 .datab(connections[2*j-2]),
@@ -41,15 +41,16 @@ module conv_forward_layer #(parameter WIDTH = 16)
 	
 	//add bias term to sum to produce final sum
 	float_add float_add_bias_term(
-												 .aclr(!enable),
+												 .aclr(reset),
 												 .clock(clk),
 												 .dataa(connections[1]),
-												 .datab(connections[bias_term]),
+												 .datab(bias_term),
 												 .result(connections[0])
 												 );
-	
-		always @(posedge clk) begin
-			out_data <= connections[0];
-		end
+	//write result to output reg + pass id val on
+	always @(posedge clk) begin
+		out_data <= connections[0];
+		id_out = id;
+	end
 
 endmodule 
