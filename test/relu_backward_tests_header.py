@@ -11,17 +11,29 @@ data_file_name = 'test_data/relu_backward_test_data.vh'
 def float_to_hex(f):
 	return format(struct.unpack('<I', struct.pack('<f', f))[0], 'x') 
 
-def build_data_line(vec_name, vec, start_index):
-	# build assignment left of equal sign
-	line = vec_name + '[' + str(start_index) + ':' + str(start_index + len(vec)-1) + '] = '
-	# build array literal
-	line = line + '\'{'
-	# for each val in vector, add to array literal
-	for i in range( 0, len(vec) ):
-		if (i != len(vec)-1):
-			line = line + '32\'h' + float_to_hex( vec[i] ) + ', '
+def build_data_line(vec_name, vec, start_index, hex_or_float):
+	# if given a single float, try statement will fail 
+	try:
+		# build assignment 
+		line = vec_name + '[' + str(start_index) + ':' + str(start_index + len(vec)-1) + '] = \'{'
+		# for each val in vector, add to array literal
+		for i in range( 0, len(vec) ):
+			if (i != len(vec)-1):
+				if (hex_or_float == 'hex'):
+					line = line + '32\'h' + float_to_hex( vec[i] ) + ', '
+				else:
+					line = line + str(vec[i]) + ', '
+			else:
+				if (hex_or_float == 'hex'):
+					line = line + '32\'h' + float_to_hex( vec[i] ) + '};'
+				else:
+					line = line + str(vec[i]) + '};'
+	except TypeError:
+		line = vec_name + '[' + str(start_index) + '] = \'{'
+		if (hex_or_float == 'hex'):
+			line = line + '32\'h' + float_to_hex( vec ) + '};'
 		else:
-			line = line + '32\'h' + float_to_hex( vec[i] ) + '};'
+			line = line + str(vec) + '};'
 	return [line]
 
 #####################################################################
@@ -91,11 +103,14 @@ def main():
 				# add to vectors
 				input_vec.append( input_val )
 				output_vec.append( output_val )
-			f.writerow( build_data_line( 'test_input', input_vec, i ) )
-			f.writerow( build_data_line( 'test_output', output_vec, i ) )
+			f.writerow( build_data_line( 'test_input', input_vec, i, 'hex' ) )
+			f.writerow( build_data_line( 'test_output', output_vec, i, 'hex' ) )
 			# for debugging/sanity check..
-			#if (DEBUG):	
-			#	f.writerow( input_vec + output_vec )	
+			if (DEBUG):	
+				f.writerow( ["//############ DEBUG ############"] )
+				f.writerow( build_data_line( 'test_input', input_vec, i, 'float' ) )
+				f.writerow( build_data_line( 'test_output', output_vec, i, 'float' ) )
+				f.writerow( ["//############ END DEBUG ############"] )
 		# end the 'initial begin' statement
 		f.writerow( ['end'] )
 		# add endif statement
