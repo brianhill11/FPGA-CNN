@@ -74,9 +74,8 @@ def main():
 		f.writerow( ['`define CONV_FORWARD_TEST_H'] )
 		# define memory array 
 		f.writerow( ['reg [31:0] test_input [' + str(VECTOR_LENGTH*NUM_TESTS) + '];'] )
-		f.writerow( ['reg [31:0] test_weights [' + str(VECTOR_LENGTH*NUM_TESTS) + '];'] )
-		f.writerow( ['reg [31:0] test_bias [' + str(NUM_TESTS) + '];'] )
 		f.writerow( ['reg [31:0] test_output [' + str(NUM_TESTS) + '];'] )
+		f.writerow( ['reg [31:0] test_index [' + str(NUM_TESTS) + '];'] )
 		# add 'initial begin'
 		f.writerow( ['initial begin'] )
 		# add data to header file
@@ -89,7 +88,7 @@ def main():
 			# write row to file
 			f.writerow( build_data_line( 'test_input', input_vec, i, 'hex' ) )
 			f.writerow( build_data_line( 'test_output', output, i/VECTOR_LENGTH, 'hex' ) )
-			f.writerow( build_data_line( 'test_index', max_index, i/VECTOR_LENGTH, 'hex' ) )
+			f.writerow( build_data_line( 'test_index', max_index, i/VECTOR_LENGTH, 'float' ) )
 			# for debugging/sanity check..
 			if (DEBUG):	
 				f.writerow( ["//############ DEBUG ############"] )
