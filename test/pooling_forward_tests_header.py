@@ -6,7 +6,7 @@ import struct
 import argparse
 import numpy as np
 
-data_file_name = 'pooling_forward_test_data.vh'
+data_file_name = 'test_data/pooling_forward_test_data.vh'
 
 # convert floating point value to hex value
 def float_to_hex(f):
@@ -70,8 +70,8 @@ def main():
 		print 'Creating test data file...'
 		f = csv.writer( data_f, delimiter='\t' )
 		# create header for test data file
-		f.writerow( ['`ifndef CONV_FORWARD_TEST_H'] )
-		f.writerow( ['`define CONV_FORWARD_TEST_H'] )
+		f.writerow( ['`ifndef POOLING_FORWARD_TEST_H'] )
+		f.writerow( ['`define POOLING_FORWARD_TEST_H'] )
 		# define memory array 
 		f.writerow( ['reg [31:0] test_input [' + str(VECTOR_LENGTH*NUM_TESTS) + '];'] )
 		f.writerow( ['reg [31:0] test_output [' + str(NUM_TESTS) + '];'] )
