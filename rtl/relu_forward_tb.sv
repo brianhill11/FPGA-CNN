@@ -1,97 +1,60 @@
-`timescale 1ns/1ns
+`timescale 1ns/100ps
 
 module relu_forward_tb();
-        parameter CYCLE = 100;
-        parameter WIDTH = 4;
-        parameter negative_slope = $shortrealtobits(0.0001);
+	`include "/nfs/stak/students/z/zhangso/ECE441/relu_forward/test_data/relu_forward_test_data.vh"
+	parameter CYCLE			= 5;	//clk period: 5 ns = 200 MHz signal
+	parameter NEG_SLOPE		= 0.0;	//parameter negative slope
+	parameter WIDTH			= 8;	//width of the input and output vectors
 
-        // initialize registers and variables
-        reg clk;                        // clock
-        reg reset_n;                    // reset
-        shortreal a [WIDTH-1:0];        // float a
-        reg [31:0] b [WIDTH-1:0];               // float b
+	parameter NUM_TEST		= 4000;	//number of test iterations
+	parameter MEM_SIZE		= NUM_TESTS*WIDTH; 
 
-        reg sign;               // 1 bit for random float sign
-        reg [10:0] exp;         // 8 bits for random float sign
-        reg [51:0] mantissa;    // 23 bits for random float mantissa
-        int i, j;               // Used in for-loop
-
-        // create the clock
-        initial begin
-                clk <= 0;
-                forever begin // clock cycles forever
-                        #(CYCLE/2) clk = ~clk;
-                end
-        end
-
-
-
-        // ReLU Forward Activation Layer
-        relu_forward relu( .clk(clk), .reset_n(reset_n), .in_data(a), .out_data(b) );
-
-
-        // Randomizing real numbers in terms of sign, exponents, and mantissa
-        initial begin
-                reset_n = 0;    //initialize reset
-                repeat(10) begin
-                        i = i + 1;
-
-                        // Create an input vector of floats
-                        for (j = 0; j < WIDTH; j = j + 1) begin
-                                // Prints message
-                                $display("Creating Inputs of %d Iterations\n", i);
-                                // Generates a random unsigned value. Positive values have sign = 0.
-                                // Negative values have sign = 1.
-                                sign = $urandom(i) % 2;
-                                // Generates a random unsigned exponent
-                                exp = $urandom(i+2) % 255;
-                                // Generates a random mantissa value
-                                mantissa = $random(i+5);
-                                // concatenate sign bit, exponent value, and mantissa to produce a float
-                                a = {sign, exp, mantissa};
-                        end
-
-                        // Print out the first value in the input vector
-                        $display("The first value in the input vector a[0] is: %b\n", a[0]);
-                        #(3*CYCLE)
-                        // checks the outputs produced after the comparison made
-                        for (j = 0; j < WIDTH; j = j+1) begin
-                                // Displays the iteration to help the user keep track
-                                $display("Interation %d tested with input %d\n", i, j);
-
-                                // if the last bit of the input value is equal to zero, then the
-                                // output should be the same as the input
-                                if($bitstoshortreal(a[j]) > 0e0) begin
-                                        $display("The last bit %f is equal to zero: %b\n", a[j], a[j]);
-                                        $display("The output should equal the input. a[31]: %b c: %b\n", a[j], b[j]);
-                                        assert(a[j] == b[j]);
-                                end
-
-				// Check if the output equals the product of the input and the negative_slope (floating
-				// point multiplication).
-				else if($bitstoshortreal(a[j]) <= 0e0) begin
-					$display("The output equals the product of the input and the negative_slope");
-					$display(" (floating point multiplication\n");
-					$display("%f is less than or equal to zero: %b\n", a[j], a[j]);
-					$display("input a: %b\n", a[j]);
-					$display("negative_slope: %b\n, negative_slope);
+	reg clk, clk_en, reset;
+	reg [31:0] in_data [WIDTH-1:0];	//input vec to module
+	reg [31:0] out_data [WIDTH-1:0];	//output vec from module
+	int i, j, num_errors;
+	
+	//initialize clk
+	initial begin
+		clk = 0;
+	end
+	
+	//forever cycle the clk
+	always begin
+		#(CYCLE/2.0) clk = ~clk;
+	end
+	
+	//instantiate the module
+	relu_forward #(.negative_slope(NEG_SLOPE), .WIDTH(8) )
+		relu( .reset_n(reset), .clk_en(clk_en), .clk(clk), in_data(in_data), .id(32'b0), .out_data(out_data) );
+					
+	initial begin
+		reset = 0;
+		num_errors = 0;
+		//for all test cases
+		for (i = 0; i < MEM_SIZE; i = i+(WIDTH)) begin
+			//for each value in input vector
+			for (j = 0; j < WIDTH; j++) begin
+				//use test input value as input
+				in_data[j] = test_input[i+j];
+			end
+			//wait for it...
+			#(CYCLE)
+			//for each value in output vector (same size as input)
+			for (j = 0; j < WIDTH; j++) begin
+				//check output of module against value calculated by Python
+				$display("output: %h\tcalculated:%h", out_data[j], test_output[i+j]);
+				assert( out_data[j] == test_output[i+j] );
+				//if we were wrong, increase error count
+				if( out_data[j] != test_output[i+j] ) begin
+					num_errors++;
 				end
-
-                                // Otherwise, if the last bit of the input value is equal to one,
-                                // then the output should be the product of the input and the
-                                // negative slope.
-                                else begin
-					$display("The output is a product of the input and the negative slope\n");
-                                        $display("%f is greater than 0: %b\n", a[j], a[j]);
-                                        $display("input a: %b\n",  a[j]);
-                                        $display("negative_slope: %b\n", negative_slope);
-                                end
-
-                        end
-
-                end
-
-                $display("\n\n All tests have passed \n\n");
-        end
+			end
+		end
+		$display("############################################\n");
+		$display("Testing complete!\n");
+		$display("%d of %d tests passed!\n", NUM_TESTS-num_errors, NUM_TESTS);
+		$display("(%f percent)\n", 100*(NUM_TESTS-num_errors)/NUM_TESTS);
+		$display("############################################\n");
+	end
 endmodule
-
