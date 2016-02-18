@@ -107,10 +107,10 @@ def main():
 			f.writerow( build_data_line( 'test_output', output_vec, i, 'hex' ) )
 			# for debugging/sanity check..
 			if (DEBUG):	
-				f.writerow( ["//############ DEBUG ############"] )
+				f.writerow( ["/*############ DEBUG ############"] )
 				f.writerow( build_data_line( 'test_input', input_vec, i, 'float' ) )
 				f.writerow( build_data_line( 'test_output', output_vec, i, 'float' ) )
-				f.writerow( ["//############ END DEBUG ############"] )
+				f.writerow( ["############ END DEBUG ############*/"] )
 		# end the 'initial begin' statement
 		f.writerow( ['end'] )
 		# add endif statement
