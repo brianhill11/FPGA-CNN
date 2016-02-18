@@ -15,7 +15,6 @@ module conv_forward_layer_tb();
 	logic [31:0] weight_vec [WIDTH-1:0];	//weight vec to module
 	logic [31:0] bias_term;						//bias term to module
 	logic [31:0] out;								//output from module
-	logic compare_equal;
 	int i, j, num_errors, num_add_levels, delay;
 	
 	//initialize clk
@@ -28,7 +27,6 @@ module conv_forward_layer_tb();
 		#(CYCLE/2.0) clk = ~clk;
 	end
 	
-
 	//instantiate the module 
 	conv_forward_layer 	#(.WIDTH(WIDTH))
 		conv_forward_inst(
@@ -70,13 +68,12 @@ module conv_forward_layer_tb();
 			//wait for computation to finish
 			#(delay)
 			
-			//$display("output: %h\tcalculated: %h", out, test_output[i/WIDTH]);
 			//if we were wrong, check for rounding error
 			if( out != test_output[i/WIDTH] ) begin
 				//if the number was off because of a rounding error, ignore
 				if ( out - test_output[i/WIDTH] < 32'h000000ff || 
 						test_output[i/WIDTH] - out < 32'h000000ff ) begin
-					//$display("rounding error");
+					//ignore 
 				//otherwise, complain 
 				end else begin
 					assert( out == test_output[i/WIDTH] );
@@ -84,12 +81,12 @@ module conv_forward_layer_tb();
 					num_errors++;
 				end
 			end
-			$display("(%f percent)\n", 100*(NUM_TESTS-num_errors)/NUM_TESTS);
+			$display("(%f percent)\n", 100.0*(NUM_TESTS-num_errors)/NUM_TESTS);
 		end
 		$display("############################################\n");
 		$display("Testing complete!\n");
 		$display("%d of %d tests passed\n", NUM_TESTS-num_errors, NUM_TESTS);
-		$display("(%f percent)\n", 100*(NUM_TESTS-num_errors)/NUM_TESTS);
+		$display("(%f percent)\n", 100.0*(NUM_TESTS-num_errors)/NUM_TESTS);
 		$display("############################################\n");
 	end
 
