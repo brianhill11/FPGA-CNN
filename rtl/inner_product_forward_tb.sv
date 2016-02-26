@@ -1,13 +1,13 @@
-`timescale 1ns/1ns
+`timescale 1ns/100ps
 
 module inner_product_forward_tb();
 	`include "/nfs/stak/students/z/zhangso/ECE441/inner_product_forward/test_data/ip_forward_test_data.vh"
 	parameter CYCLE			= 5;
 	parameter MULT_DELAY		= 5;
 	parameter ADD_DELAY		= 7;
-	parameter WIDTH			= 4;
+	parameter WIDTH			= 8;
 	
-	parameter NUM_TESTS		= 4;
+	parameter NUM_TESTS		= 5000;
 	parameter MEM_SIZE		= NUM_TESTS*WIDTH; 
 
 	reg clk, reset;
@@ -78,7 +78,7 @@ module inner_product_forward_tb();
 		$display("############################################\n");
 		$display("Testing complete!\n");
 		$display("%d of %d tests passed\n", NUM_TESTS-num_errors, NUM_TESTS);
-		$display("(%f percent)\n", 100*(NUM_TESTS-num_errors)/NUM_TESTS);
+		$display("(%f percent)\n", 100.0*(NUM_TESTS-num_errors)/NUM_TESTS);
 		$display("############################################\n");
 	end
 

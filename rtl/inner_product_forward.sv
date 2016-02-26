@@ -7,7 +7,7 @@
  * Both the forward and backward passes can include a bias.
  */
 
-module ip_forward#(parameter WIDTH = 4) 
+module ip_forward#(parameter WIDTH = 8) 
 				(	
 					input logic clk,	//clock signal
 					input logic reset,	//reset
@@ -22,8 +22,7 @@ module ip_forward#(parameter WIDTH = 4)
 	genvar i, j;
 	generate
 		//create float_mult blocks to multiply the WIDTH number of inputs by the weights
-		for (i = 0; i < WIDTH-1; i++) begin : GEN_MULTS
-			wire [31:0] results;
+		for (i = 0; i < WIDTH; i++) begin : GEN_MULTS
 			floating_mult floating_mult_inst(
 					.clk_en(!reset),
 					.clock(clk),
@@ -54,5 +53,3 @@ module ip_forward#(parameter WIDTH = 4)
 	end
 
 endmodule
-
-

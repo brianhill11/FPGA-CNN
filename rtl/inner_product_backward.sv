@@ -10,12 +10,13 @@
  * a constant set to zero by default.
  */
 
-module ip_backward#(parameter WIDTH = 4)
+module ip_backward#(parameter WIDTH = 8)
 			(
 				input logic clk, //clock signal
 				input logic reset, //reset
 				input logic [31:0] in_data [WIDTH-1:0], //input data, vector of floats
 				input logic [31:0] weights [WIDTH-1:0], //weight
+				input logic [31:0] bias,
 				input logic [7:0] in_id,
 				output logic [31:0] out_data, //output data, vector of floats
 				output logic [7:0] out_id
@@ -26,7 +27,6 @@ module ip_backward#(parameter WIDTH = 4)
 	generate
 		//create float_mult blocks to multiply WIDTH number of inputs with weights
 		for (i = 0; i < WIDTH; i++) begin : GEN_MULTS
-			wire [31:0] results;
 			floating_mult floating_mult_inst(
 						.clk_en(!reset),
 						.clock(clk),
@@ -50,9 +50,17 @@ module ip_backward#(parameter WIDTH = 4)
 		end
 	endgenerate
 	
-											
+	//add bias term to sum to produce final sum
+	float_add float_add_bias_term(
+							.aclr(reset),
+							.clock(clk),
+							.dataa(connections[1]),
+							.datab(bias),
+							.result(connections[0])
+							);
+	
 		always @(posedge clk) begin
-			out_data <= connections[1];
+			out_data <= connections[0];
 			out_id <= in_id;
 		end
 	
