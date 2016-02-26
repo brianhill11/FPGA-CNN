@@ -17,9 +17,9 @@ module relu_backward_layer	#(parameter WIDTH = 16, parameter NEGATIVE_SLOPE = 0.
 						relu_ops (	.clk(clk), .reset(reset), 
 										.in_data(in_vec[i]), .out_data(out_vec[i]) );
 			end
-			
-			always @(posedge clk) begin
-				id_out <= id;
-			end
 	endgenerate
+	
+	always @(posedge clk) begin
+		id_out <= id;
+	end
 endmodule

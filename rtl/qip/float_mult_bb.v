@@ -53,7 +53,7 @@ endmodule
 // Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 // Retrieval info: PRIVATE: FPM_FORMAT STRING "Single"
 // Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Stratix V"
-// Retrieval info: CONSTANT: DEDICATED_MULTIPLIER_CIRCUITRY STRING "NO"
+// Retrieval info: CONSTANT: DEDICATED_MULTIPLIER_CIRCUITRY STRING "YES"
 // Retrieval info: CONSTANT: DENORMAL_SUPPORT STRING "NO"
 // Retrieval info: CONSTANT: EXCEPTION_HANDLING STRING "NO"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "UNUSED"

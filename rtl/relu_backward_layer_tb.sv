@@ -6,7 +6,7 @@ module relu_backward_layer_tb();
 	parameter NEG_SLOPE 		= 0.0;	//negative slope param
 	parameter WIDTH 			= 8;		//width of input/output vec
 	
-	parameter NUM_TESTS 		= 4000;	//number of test iterations
+	parameter NUM_TESTS 		= 5000;	//number of test iterations
 	parameter MEM_SIZE		= NUM_TESTS*WIDTH; 
 
 	reg clk, reset;
@@ -26,7 +26,7 @@ module relu_backward_layer_tb();
 	
 	//instantiate the module
 	relu_backward_layer #(.WIDTH(8), .NEGATIVE_SLOPE(NEG_SLOPE) )
-							relu( .clk(clk), .reset(reset), .id(32'b0), .in_vec(in_vec), .out_vec(out_vec) );
+							relu( .clk(clk), .reset(reset), .id(8'b0), .in_vec(in_vec), .out_vec(out_vec) );
 					
 	initial begin
 		reset = 0;

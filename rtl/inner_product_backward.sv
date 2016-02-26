@@ -5,7 +5,7 @@
  * Module: Inner Product Layer (Backward)
  * Description: The inner product layer (backpropagation) takes in the number of filters
  * along with the height and width of the vectors. The bias and weight are used along with
- * floating point multiplicabtion, for dot product, to learn the differences. 
+ * floating point multiplication, for dot product, to learn the differences. 
  * The bias_filler is a constant with a default value of zero, while the weight_filler is
  * a constant set to zero by default.
  */
@@ -27,7 +27,7 @@ module ip_backward#(parameter WIDTH = 8)
 	generate
 		//create float_mult blocks to multiply WIDTH number of inputs with weights
 		for (i = 0; i < WIDTH; i++) begin : GEN_MULTS
-			floating_mult floating_mult_inst(
+			float_mult floating_mult_inst(
 						.clk_en(!reset),
 						.clock(clk),
 						.dataa(in_data[i]),

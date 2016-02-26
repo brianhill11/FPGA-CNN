@@ -1,7 +1,9 @@
 `timescale 1ns/100ps
 
 module inner_product_backward_tb();
-	`include "/nfs/stak/students/z/zhangso/ECE441/inner_product_backward/test_data/ip_backward_test_data.vh"
+	//`include "/nfs/stak/students/z/zhangso/ECE441/inner_product_backward/test_data/ip_backward_test_data.vh"
+	`include "/home/b/FPGA-CNN/test/test_data/inner_product_backward_test_data.vh"
+
 	parameter CYCLE			= 5;
 	parameter MULT_DELAY		= 5;
 	parameter ADD_DELAY		= 7;
@@ -69,10 +71,17 @@ module inner_product_backward_tb();
 			#(delay)
 			
 			$display("output: %h\tcalculated: %h", out, test_output[i/WIDTH]);
-			assert( out == test_output[i/WIDTH] );
-			//if we were wrong, increase error count
 			if( out != test_output[i/WIDTH] ) begin
-				num_errors++;
+				//if the number was off because of a rounding error, ignore
+				if ( out - test_output[i/WIDTH] < 32'h000000ff || 
+						test_output[i/WIDTH] - out < 32'h000000ff ) begin
+					//ignore 
+				//otherwise, complain 
+				end else begin
+					assert( out == test_output[i/WIDTH] );
+					$display("output: %h\tcalculated: %h", out, test_output[i/WIDTH]);
+					num_errors++;
+				end
 			end
 		end
 		$display("############################################\n");
