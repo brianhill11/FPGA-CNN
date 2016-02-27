@@ -88,13 +88,13 @@ def main():
 			output = (-1) * np.log( np.exp( input_vec[label] ) / np.sum( np.exp( input_vec ) ) )
 			# write row to file
 			f.writerow( build_data_line( 'test_input', input_vec, i, 'hex' ) )
-			f.writerow( build_data_line( 'test_label', label, i/VECTOR_LENGTH, 'float' ) )
+			f.writerow( build_data_line( 'test_label', input_vec[label], i/VECTOR_LENGTH, 'hex' ) )
 			f.writerow( build_data_line( 'test_output', output, i/VECTOR_LENGTH, 'hex' ) )
 			# for debugging/sanity check..
 			if (DEBUG):	
 				f.writerow( ["/*############ DEBUG ############"] )
 				f.writerow( build_data_line( 'test_input', input_vec, i, 'float' ) )
-				f.writerow( build_data_line( 'test_label', label, i/VECTOR_LENGTH, 'float' ) )
+				f.writerow( build_data_line( 'test_label', input_vec[label], i/VECTOR_LENGTH, 'float' ) )
 				f.writerow( build_data_line( 'test_output', output, i/VECTOR_LENGTH, 'float' ) )
 				f.writerow( ["############ END DEBUG ############*/"] )
 
