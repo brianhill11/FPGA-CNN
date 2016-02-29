@@ -75,6 +75,10 @@ def main():
 		# define memory array 
 		f.writerow( ['reg [31:0] test_input [' + str(VECTOR_LENGTH*NUM_TESTS) + '];'] )
 		f.writerow( ['reg [31:0] test_label [' + str(NUM_TESTS) + '];'] )
+		f.writerow( ['reg [31:0] test_sub [' + str(VECTOR_LENGTH*NUM_TESTS) + '];'] )
+		f.writerow( ['reg [31:0] test_exp [' + str(VECTOR_LENGTH*NUM_TESTS) + '];'] )
+		f.writerow( ['reg [31:0] test_sum [' + str(NUM_TESTS) + '];'] )
+		f.writerow( ['reg [31:0] test_div [' + str(NUM_TESTS) + '];'] )
 		f.writerow( ['reg [31:0] test_output [' + str(NUM_TESTS) + '];'] )
 		# add 'initial begin'
 		f.writerow( ['initial begin'] )
@@ -83,18 +87,37 @@ def main():
 			# generate a random vector of floats: LOWER_RANGE <= a < UPPER_RANGE
 			input_vec = np.random.uniform( LOWER_RANGE, UPPER_RANGE, VECTOR_LENGTH )
 			# generate a random integer label from 0 < UPPER_RANGE
-			label = np.random.randint( 0, VECTOR_LENGTH )
+			#label = np.random.randint( 0, VECTOR_LENGTH )
+			label = np.argmax( input_vec )
+			# scale input vector by subtracting label value from all values to prevent overflow 
+			scaled_input_vec = np.subtract( input_vec, np.repeat( input_vec[label], VECTOR_LENGTH ) )
+			# compute exp of every element in input_vec
+			exp_vec = np.exp( scaled_input_vec )
+			# calculate sum of exp_vec
+			exp_vec_sum = np.sum( exp_vec )
+			# exp of scaled label value
+			exp_label = np.exp( scaled_input_vec[label] )
+			# divide exp of label by sum of all exps
+			div = np.divide( exp_label, exp_vec_sum )
 			# compute the log loss
-			output = (-1) * np.log( np.exp( input_vec[label] ) / np.sum( np.exp( input_vec ) ) )
+			output = np.multiply( np.log( div ), -1.0 )
 			# write row to file
 			f.writerow( build_data_line( 'test_input', input_vec, i, 'hex' ) )
 			f.writerow( build_data_line( 'test_label', input_vec[label], i/VECTOR_LENGTH, 'hex' ) )
+			f.writerow( build_data_line( 'test_sub', scaled_input_vec, i, 'hex' ) )
+			f.writerow( build_data_line( 'test_exp', exp_vec, i, 'hex' ) )
+			f.writerow( build_data_line( 'test_sum', exp_vec_sum, i/VECTOR_LENGTH, 'hex' ) )
+			f.writerow( build_data_line( 'test_div', div, i/VECTOR_LENGTH, 'hex' ) )
 			f.writerow( build_data_line( 'test_output', output, i/VECTOR_LENGTH, 'hex' ) )
 			# for debugging/sanity check..
 			if (DEBUG):	
 				f.writerow( ["/*############ DEBUG ############"] )
 				f.writerow( build_data_line( 'test_input', input_vec, i, 'float' ) )
 				f.writerow( build_data_line( 'test_label', input_vec[label], i/VECTOR_LENGTH, 'float' ) )
+				f.writerow( build_data_line( 'test_sub', scaled_input_vec, i, 'float' ) )
+				f.writerow( build_data_line( 'test_exp', exp_vec, i, 'float' ) )
+				f.writerow( build_data_line( 'test_sum', exp_vec_sum, i/VECTOR_LENGTH, 'float' ) )
+				f.writerow( build_data_line( 'test_div', div, i/VECTOR_LENGTH, 'float' ) )
 				f.writerow( build_data_line( 'test_output', output, i/VECTOR_LENGTH, 'float' ) )
 				f.writerow( ["############ END DEBUG ############*/"] )
 
