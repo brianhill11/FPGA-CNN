@@ -5,7 +5,7 @@ module conv_forward_layer #(parameter WIDTH = 8)
 										input		logic		[7:0]		id,
 										input		logic		[31:0] 	in_data 		[WIDTH-1:0],
 										input		logic		[31:0]	weight_vec	[WIDTH-1:0],
-										input		logic		[31:0]	bias_term,
+//										input		logic		[31:0]	bias_term,
 										output	logic		[31:0]	out_data,
 										output	logic		[7:0]		id_out
 									);
@@ -40,16 +40,16 @@ module conv_forward_layer #(parameter WIDTH = 8)
 	endgenerate
 	
 	//add bias term to sum to produce final sum
-	float_add float_add_bias_term(
-												 .aclr(reset),
-												 .clock(clk),
-												 .dataa(connections[1]),
-												 .datab(bias_term),
-												 .result(connections[0])
-												 );
+//	float_add float_add_bias_term(
+//												 .aclr(reset),
+//												 .clock(clk),
+//												 .dataa(connections[1]),
+//												 .datab(bias_term),
+//												 .result(connections[0])
+//												 );
 	//write result to output reg + pass id val on
 	always @(posedge clk) begin
-		out_data <= connections[0];
+		out_data <= connections[1];
 		id_out = id;
 	end
 
