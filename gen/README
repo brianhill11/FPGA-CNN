@@ -1,0 +1,15 @@
+* Automatically generate RTL to implement and C code to access AFU control registers.
+* Each register is mapped to a unique 32 bit register
+* 64 bit registers are supported
+* Each register can have a unique reset wire
+
+
+1. Create spec file format
+
+# comment
+register name, number of bits [, reset signal name]
+
+
+2. Generate code from afu_csr.spec file:
+
+make
